@@ -168,6 +168,20 @@
       "height": 4000,
       "site_path": "/images/mamta-nursing-team.webp",
       "site_bytes": 117486
+    },
+    {
+      "local_file": "Dr Kanak 1.PNG",
+      "source_name": "Dr Kanak 1.PNG — hospital clinical setting",
+      "mime_type": "image/png",
+      "alt": "Dr Kanak Ramnani in a hospital clinical care setting",
+      "purpose": "Vaccination landing page genuine doctor photograph",
+      "visual_review": "Cropped to show the doctor without identifiable patient or caregiver faces.",
+      "selection_status": "selected",
+      "site_path": "/images/dr-kanak-hospital-care-2026.webp",
+      "site_bytes": 26700,
+      "width": 640,
+      "height": 800,
+      "source_context": "User-provided hospital photo, October 2026"
     }
   ],
   "excluded_files": [
