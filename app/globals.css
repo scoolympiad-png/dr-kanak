@@ -639,3 +639,20 @@ body{background:#fffdf9}
 @media(prefers-reduced-motion:reduce){
  .kanak-care-carousel-dots button,.kanak-care-carousel-arrows button{transition:none}
 }
+/* Vaccination photo carousel — explicit pause control for automatic playback. */
+.kanak-care-carousel-playback{
+ display:inline-flex;align-items:center;justify-content:center;gap:8px;
+ min-height:43px;padding:8px 13px;border:1px solid #a8d1dc;
+ background:#fff;color:#175d77;border-radius:999px;
+ cursor:pointer;font-size:13px;font-weight:750;line-height:1.25;
+ transition:background .2s ease,transform .2s ease;
+}
+.kanak-care-carousel-playback:hover{background:#e7f8fa;transform:translateY(-2px)}
+.kanak-care-carousel-playback>span:first-child{display:inline-grid;place-items:center;min-width:13px;font-size:15px;line-height:1}
+@media(max-width:760px){
+ .kanak-care-carousel-controls{flex-wrap:wrap}
+ .kanak-care-carousel-playback{font-size:12px;min-height:40px;padding:7px 11px}
+}
+@media(prefers-reduced-motion:reduce){
+ .kanak-care-carousel-playback{transition:none}
+}
