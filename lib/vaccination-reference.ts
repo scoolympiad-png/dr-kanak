@@ -55,8 +55,8 @@ export const mamtaPrintedCardEarlyMilestones: readonly PrintedCardMilestone[] = 
 ] as const;
 
 export const vaccinationEditorialReferences = [
-  'Mamta Super Speciality Hospital: printed immunisation card, photograph provided October 2026',
-  'Indian Academy of Pediatrics: IAP-ACVIP 2025 recommendations, published April 2026',
-  'Government of India, Ministry of Health & Family Welfare: National Immunisation Schedule',
-  'WHO / UNICEF: global immunisation impact and coverage reviews, 2024–2026',
+  'Mamta Hospital vaccination guidance',
+  'Indian Academy of Pediatrics immunisation recommendations',
+  'Government of India National Immunisation Schedule',
+  'World Health Organization and UNICEF research',
 ] as const;
