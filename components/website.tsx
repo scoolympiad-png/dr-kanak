@@ -58,7 +58,7 @@ function EmergencyContacts(){return <div className="emergency-contacts"><h2>Get 
 function Vaccination(){return <>
  <section className="section container vaccine-hub vaccine-hub-new">
   <div className="vaccine-hub-main">
-   <span className="vaccine-kicker"><Icon name="heart"/> A thoughtful start for growing families</span>
+   <span className="vaccine-kicker"><Icon name="heart"/> Child vaccination care</span>
    <h2>Small moments.<br/><em>Lifelong protection.</em></h2>
    <p className="lead">A clear guide to your child’s vaccines, from the very first visit.</p>
    <p>Explore each age, keep your child's vaccination records and ask Dr Kanak about the next visit.</p>
@@ -68,18 +68,10 @@ function Vaccination(){return <>
    </div>
    
   </div>
-  <div className="vaccine-family-art" aria-label="Illustrated preparation for a child’s vaccination visit">
-   <div className="vaccine-art-star vaccine-art-star-one" aria-hidden="true">✦</div>
-   <div className="vaccine-art-star vaccine-art-star-two" aria-hidden="true">✳</div>
-   <div className="vaccine-family-circle"><Icon name="heart"/></div>
-   <div className="vaccine-family-card">
-    <span><Icon name="calendar"/> Visit checklist</span>
-    <div><Icon name="check"/> Your child's records</div>
-    <div><Icon name="check"/> Questions for the doctor</div>
-    <div><Icon name="check"/> Next visit confirmed by the team</div>
-   </div>
-   <div className="vaccine-family-message">A little preparation.<br/><strong>A lot of reassurance.</strong></div>
-  </div>
+  <figure className="vaccine-hero-photo">
+   <img src="/images/dr-kanak-clinic.webp" alt="Dr Kanak Ramnani at Mamta Hospital" width="1067" height="1600" loading="eager"/>
+   <figcaption><Icon name="heart"/> Caring for every growing milestone.</figcaption>
+  </figure>
  </section>
  <section className="vaccine-milestone-section section" id="mamta-vaccine-card">
   <div className="container">
