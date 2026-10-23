@@ -196,6 +196,32 @@
       "width": 640,
       "height": 800,
       "source_context": "Provided in Mamta project resources, October 2026"
+    },
+    {
+      "local_file": "IMG_2628.JPG",
+      "source_name": "Dr Kanak newborn consultation — supplied 23 October 2026",
+      "mime_type": "image/jpeg",
+      "alt": "Dr Kanak caring for a baby during a parent consultation",
+      "purpose": "Vaccination and newborn-care photo carousel",
+      "visual_review": "Original user-supplied clinical image; child's face and accompanying adult's visible facial features softened to obscure identity. Not a depiction of vaccination administration.",
+      "selection_status": "selected",
+      "site_path": "/images/dr-kanak-newborn-consultation-private.webp",
+      "site_bytes": 30944,
+      "source_context": "User-provided hospital photograph, October 2026; processed for patient privacy",
+      "privacy_note": "Keep the unmodified photo private. Public asset obscures identifying patient details; confirm hospital photograph permissions."
+    },
+    {
+      "local_file": "WhatsApp Image 2025-09-19 at 1.11.41 PM.jpeg.jpg",
+      "source_name": "Dr Kanak consulting a child, user provided October 2026",
+      "mime_type": "image/jpeg",
+      "alt": "Dr Kanak during a child health consultation",
+      "purpose": "Patient education and vaccination photo carousel",
+      "visual_review": "Original user-supplied consultation image with child's face blurred before publication; no claims about medical outcomes.",
+      "selection_status": "selected",
+      "site_path": "/images/dr-kanak-consultation-child-private.webp",
+      "site_bytes": 49158,
+      "source_context": "User-provided clinical photograph, October 2026; child's facial identity obscured",
+      "privacy_note": "Public gallery copy should not identify the child, imply vaccination administration, or show private medical details."
     }
   ],
   "excluded_files": [
