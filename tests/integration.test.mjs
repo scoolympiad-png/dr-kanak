@@ -83,6 +83,9 @@ test('website v1 adapter maps only adult contact and verifies durable tenant rec
   assert.equal(mapped.form_type,'callback_request');
   assert.equal(mapped.event_id,'12345678-1234-1234-1234-123456789abc');
   assert.equal(mapped.metadata.service_requested,'Vaccination reminder callback enquiry');
+  assert.equal(mapped.metadata.contact_reply_consent,true);
+  assert.equal(mapped.metadata.consent_version,'contact-reply-v1');
+  assert.equal(Number.isNaN(Date.parse(mapped.metadata.consent_recorded_at)),false);
   assert.deepEqual(Object.keys(mapped.patient_data).sort(),['name','phone']);
   assert.equal(mapped.patient_data.name,'Test Guardian');
   assert.equal(mapped.patient_data.phone,'+919999900000');
