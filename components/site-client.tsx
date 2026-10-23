@@ -64,7 +64,53 @@ function Callback({config}:{config:Config|null}){
  return <><h2>A call at the right time.</h2><p>Use an adult’s contact details. Please keep medical details and documents out of this form.</p>{done?<div role="status" className="notice sage">{status}</div>:<form onSubmit={submit} className="callback-form"><label>Your name<input name="name" required minLength={2} maxLength={80} autoComplete="name"/></label><label>Mobile number<input name="phone" type="tel" inputMode="tel" required maxLength={18} autoComplete="tel" placeholder="+91 …"/></label><div className="form-row"><label>How can we help?<select name="intent"><option value="appointment">Appointment</option><option value="vaccination">Vaccination visit</option><option value="reminder-enrolment">Ask about care reminders</option><option value="general">General enquiry</option></select></label><label>Reply language<select name="language"><option value="en">English</option><option value="hi">हिन्दी</option></select></label></div><label className="honeypot" aria-hidden="true">Website<input name="website" tabIndex={-1} autoComplete="off"/></label><label className="checkbox"><input type="checkbox" name="consent" required/><span>I am an adult and agree that Mamta may contact me about this request. <a href="/privacy/">Privacy information</a></span></label>{config.turnstileSiteKey&&<Captcha sitekey={config.turnstileSiteKey} onToken={setToken}/>}<p role="status" className="form-status">{status}</p><button className="button" disabled={busy||!token}>{busy?'Sending…':'Request callback'} <Icon name="arrow"/></button><p className="small-copy">For urgent care, call the emergency service. This form is not monitored for emergencies.</p></form>}</>;
 }
 
-export function AgeExplorer(){const[selected,setSelected]=useState(0);const a=ages[selected];return <div className="age-explorer"><div className="age-tabs" role="tablist" aria-label="Child’s stage">{ages.map((x,i)=><button id={`age-tab-${i}`} aria-controls="age-panel" aria-selected={selected===i} role="tab" tabIndex={selected===i?0:-1} key={x.slug} onKeyDown={e=>{if(['ArrowRight','ArrowLeft','Home','End'].includes(e.key)){e.preventDefault();const n=e.key==='Home'?0:e.key==='End'?ages.length-1:(selected+(e.key==='ArrowRight'?1:-1)+ages.length)%ages.length;setSelected(n);document.getElementById(`age-tab-${n}`)?.focus()}}} onClick={()=>setSelected(i)}><Icon name={x.icon}/><strong>{x.name}</strong><small>{x.age}</small></button>)}</div><div className={`age-panel ${a.colour}`} id="age-panel" role="tabpanel" aria-labelledby={`age-tab-${selected}`}><div><span className="eyebrow">{a.age}</span><h3>{a.summary}</h3><a className="text-link" href={`/care-by-age/${a.slug}/`}>Explore {a.name.toLowerCase()} care <Icon name="arrow"/></a></div><ul>{a.topics.map(t=><li key={t}><Icon name="check"/>{t}</li>)}</ul><span className="age-big-icon"><Icon name={a.icon}/></span></div></div>}
+export function AgeExplorer(){
+ const[selected,setSelected]=useState(0);
+ const a=ages[selected];
+ return <div className="age-explorer">
+  <div className="age-explorer-intro">
+   <div><span className="age-explorer-kicker"><Icon name="heart"/> A little help at every age</span><p>Choose your child's stage to find relevant questions, helpful reading and care options.</p></div>
+   <span className="age-stage-count" aria-hidden="true">7 stages of growing up <Icon name="sprout"/></span>
+  </div>
+  <div className="age-tabs" role="tablist" aria-label="Explore child health by age">
+   {ages.map((x,i)=><button
+    id={`age-tab-${i}`} key={x.slug} type="button"
+    aria-controls="age-panel" aria-selected={selected===i} role="tab"
+    tabIndex={selected===i?0:-1}
+    onKeyDown={e=>{
+     if(['ArrowRight','ArrowLeft','Home','End'].includes(e.key)){
+      e.preventDefault();
+      const n=e.key==='Home'?0:e.key==='End'?ages.length-1:(selected+(e.key==='ArrowRight'?1:-1)+ages.length)%ages.length;
+      setSelected(n);
+      document.getElementById(`age-tab-${n}`)?.focus();
+     }
+    }}
+    onClick={()=>setSelected(i)}>
+     <span className="age-tab-number" aria-hidden="true">{String(i+1).padStart(2,'0')}</span>
+     <span className="age-tab-illustration"><Icon name={x.icon}/></span>
+     <strong>{x.name}</strong><small>{x.age}</small>
+    </button>)}
+  </div>
+  <div className={`age-panel age-panel-premium ${a.colour}`} id="age-panel" role="tabpanel" tabIndex={0} aria-labelledby={`age-tab-${selected}`}>
+   <div className="age-panel-primary">
+    <span className="age-panel-kicker"><Icon name={a.icon}/> Stage {selected+1} of {ages.length} · {a.age}</span>
+    <h3>{a.summary}</h3>
+    <p>Every child grows at their own pace. Here are a few topics worth exploring together.</p>
+    <div className="age-panel-actions">
+     <a className="button" href={`/care-by-age/${a.slug}/`}>Explore {a.name.toLowerCase()} <Icon name="arrow"/></a>
+     <a className="age-panel-guide" href={`/parent-resources/${a.guide}/`}><Icon name="book"/> Read a parent guide <Icon name="arrow"/></a>
+    </div>
+   </div>
+   <div className="age-panel-topics">
+    <span className="age-topics-heading"><Icon name="heart"/> Helpful topics at this age</span>
+    <ul>{a.topics.map(t=><li key={t}><span className="age-topic-check"><Icon name="check"/></span><span>{t}</span></li>)}</ul>
+    <a className="age-related-care" href={a.care}>Find related care <Icon name="arrow"/></a>
+    <span className="age-topic-decoration" aria-hidden="true"><Icon name={a.icon}/></span>
+   </div>
+  </div>
+  <p className="age-explorer-footnote"><Icon name="shield"/> Age ranges are for browsing general information, not an individual developmental assessment. Ask Dr Kanak's team about personal concerns.</p>
+ </div>;
+}
 
 export function SearchView({index}:{index:{path:string;title:string;summary:string;eyebrow?:string}[]}){const[q,setQ]=useState('');const results=index.filter(p=>`${p.title} ${p.summary} ${p.eyebrow}`.toLowerCase().includes(q.trim().toLowerCase()));return <div className="search-view"><label className="search-field"><Icon name="search"/><span className="sr-only">Search topics</span><input type="search" value={q} onChange={e=>setQ(e.target.value)} placeholder="Try feeding, growth, newborn or vaccination…" autoComplete="off" maxLength={100}/></label><p className="small-copy" aria-live="polite">{results.length} {results.length===1?'page':'pages'} found. Search stays in this page and is not added to the address.</p><div className="search-results">{results.map(p=><a href={p.path} key={p.path}><span className="eyebrow">{p.eyebrow||'Explore'}</span><h2>{p.title}<Icon name="arrow"/></h2><p>{p.summary}</p></a>)}</div>{!results.length&&<p>Try another word, or <a href="/visit/">contact the hospital team</a>.</p>}</div>}
 
