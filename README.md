@@ -54,6 +54,8 @@ The external Cloudflare build sets the public canonical URL to `https://drkanak.
 
 See **[docs/LAUNCH.md](docs/LAUNCH.md)** for nameservers, DNS, custom domains, secrets and the exact remaining live-service prerequisites. See **[integrations/patient-os/CONTRACT.md](integrations/patient-os/CONTRACT.md)** before connecting the clinical care system.
 
+See **[docs/REFERENCE-MAP.md](docs/REFERENCE-MAP.md)** for the requested Dr Dina design/navigation comparison and the deliberate Dr Kanak-specific content choices. Every push to `main` and pull request runs type, content, integration/policy and production build checks in GitHub Actions.
+
 ## Maintain
 
 - Main content: `lib/core-pages.ts`, `lib/stage-content.ts`, `lib/parent-guides.json`.
