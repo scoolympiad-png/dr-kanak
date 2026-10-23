@@ -22,7 +22,7 @@ export function SiteNavigation(){
  return <>
   
   <header className="site-header"><div className="container header-inner">
-   <a className="brand" href="/" aria-label="Dr Kanak Ramnani home"><span className="brand-symbol"><Icon name="sprout"/></span><span><strong>Dr Kanak Ramnani</strong><small>PAEDIATRICIAN · MAMTA HOSPITAL</small></span></a>
+   <a className="brand" href="/" aria-label="Dr Kanak Ramnani home"><img className="brand-mark" src="/images/dr-kanak-logo.svg" alt="" aria-hidden="true" width="54" height="54"/><span><strong>Dr Kanak Ramnani</strong><small>PAEDIATRICIAN · MAMTA HOSPITAL</small></span></a>
    <button className="icon-button mobile-toggle" aria-label={menu?'Close navigation':'Open navigation'} aria-expanded={menu} aria-controls="main-nav" onClick={()=>setMenu(!menu)}><Icon name={menu?'close':'menu'}/></button>
    <nav className={menu?'main-nav open':'main-nav'} id="main-nav" aria-label="Main navigation">
     <a href="/about/">Meet Dr Kanak</a>
