@@ -1,7 +1,7 @@
 import type {ReactNode} from 'react';
 import {ages,careAreas,site,sources,type PageData} from '@/lib/site-config';
 import {getPage,guides,searchIndex,sectionId} from '@/lib/pages';
-import {AgeExplorer,CareAccess,SearchView,VaccinationPhotoCarousel} from './site-client';
+import {AgeExplorer,CareAccess,SearchView,VaccinationPhotoCarousel,VaccinationScheduleNavigator} from './site-client';
 import {Icon} from './icon';
 import {mamtaPrintedCardEarlyMilestones,vaccinationEditorialReferences} from '@/lib/vaccination-reference';
 
@@ -53,34 +53,38 @@ export function HomePage(){return <>
  <section className="section container faq-home"><SectionHeading eyebrow="Let’s make the next step easier" title="A few things you may be wondering."/><FAQs items={[{q:'How do I arrange a consultation with Dr Kanak?',a:'Contact Mamta’s appointment desk by phone, WhatsApp or the hospital appointment page. Ask the team to confirm current availability, consultation fees and the time before travelling.'},{q:'What should I bring to the first visit?',a:'Bring your child’s vaccination card, previous prescriptions, discharge papers, relevant reports and a list of current medicines. Write down the questions you would most like to discuss.'},{q:'Can I read the parent guides without an account?',a:'Yes. The parent library is open to browse without sharing your child’s details. Personal records and care reminders require an authorised, verified care service.'},{q:'Where can I ask about missed vaccines?',a:'Start with the vaccination centre and arrange a clinical review. Bring all available vaccination records, including doses given at other clinics.'}]}/></section><VisitBand/>
  </>}
 
-function PageIntro({p}:{p:PageData}){return <div className={`page-intro ${p.kind==='emergency'?'emergency-intro':''}`}><div className="container"><nav className="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><Icon name="chevron"/><span>{p.eyebrow||p.title}</span></nav><span className="eyebrow">{p.eyebrow||'For your family'}</span><h1>{p.title}</h1><p>{p.summary}</p></div></div>}
+function PageIntro({p}:{p:PageData}){return <div className={`page-intro ${p.kind==='emergency'?'emergency-intro':''} ${p.path==='/vaccination/schedule/'?'vax-schedule-page-intro':''}`}><div className="container"><nav className="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><Icon name="chevron"/><span>{p.eyebrow||p.title}</span></nav><span className="eyebrow">{p.eyebrow||'For your family'}</span><h1>{p.title}</h1><p>{p.summary}</p></div></div>}
 function Related({paths}:{paths:string[]}){return <section className="related"><span className="eyebrow">Your next helpful read</span><h2>Keep exploring.</h2><div className="related-grid">{paths.map(path=>{const p=getPage(path);return <a key={path} href={path}>{p?.title||(path.startsWith('http')?'Contact Mamta Hospital':path)}<Icon name={path.startsWith('http')?'external':'arrow'}/></a>})}</div></section>}
 function Sources({p}:{p:PageData}){return <div className="source-note"><span className="eyebrow">About this information</span><p>General parent education · Updated {site.updated}</p><p>This page helps you prepare for a conversation with your child’s clinician. It is not an individual diagnosis, treatment or vaccination plan.</p>{p.sources?.length?<details><summary>Sources & further reading <Icon name="down"/></summary><ul>{p.sources.map(s=><li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title}<Icon name="external"/></a></li>)}</ul></details>:null}</div>}
-function VaccinationSixToTwelveMonths(){
- const months=[
-  {age:'6 months',tone:'peach',icon:'sun',labels:['Influenza 1 / TCV'],tip:'Bring the record from earlier visits.'},
-  {age:'7 months',tone:'blue',icon:'heart',labels:['Influenza 2'],tip:'Ask the care team about follow-up doses.'},
-  {age:'9 months',tone:'sage',icon:'sprout',labels:['MMR 1','MCV 1'],tip:'Review earlier doses together.'},
-  {age:'12 months',tone:'lavender',icon:'shield',labels:['Hepatitis A 1','JE 1'],tip:'Keep the updated card safe for the next visit.'}
- ] as const;
- return <section className="vaccination-next-year" aria-label="Vaccination card milestones from six to twelve months">
-  <div className="vaccination-next-year-heading">
-   <span className="eyebrow">Growing through the first year</span>
-   <h2>Little steps, stronger protection.</h2>
-   <p>Explore the ages shown on Mamta Hospital’s printed vaccination card. Your child’s paediatrician will confirm which vaccines and timings apply.</p>
+function VaccinationScheduleWelcome(){return <>
+ <section className="vax-schedule-intro-panel" aria-label="Your family's vaccination guide">
+  <div className="vax-schedule-intro-copy">
+   <span className="vax-small-label"><Icon name="heart"/> Growing healthy, together</span>
+   <h2>A little planning for <em>a healthier tomorrow.</em></h2>
+   <p>Choose your child's age, understand the vaccination card and make the next visit easier.</p>
+   <div className="vax-intro-buttons"><a className="button" href="#age-guide">Explore by age <Icon name="down"/></a><a className="button outline" href="/visit/">Plan a visit <Icon name="arrow"/></a></div>
   </div>
-  <div className="vaccination-next-year-grid">{months.map(x=><article className={`vaccination-next-year-card month-${x.tone}`} key={x.age}>
-   <span className="vaccination-next-year-icon"><Icon name={x.icon}/></span>
-   <h3>{x.age}</h3>
-   <span className="vaccination-card-label">On the hospital card</span>
-   <ul>{x.labels.map(label=><li key={label}>{label}</li>)}</ul>
-   <p>{x.tip}</p>
-  </article>)}</div>
-  <div className="vaccination-next-year-note"><Icon name="heart"/><span>Your child’s vaccination record and medical needs guide the next step. Bring the card to Dr Kanak’s team for a personalised review.</span></div>
- </section>;
-}
+  <div className="vax-schedule-intro-art" aria-hidden="true">
+   <div className="vax-intro-big-heart"><Icon name="heart"/></div>
+   <span className="vax-intro-flower flower-one">✿</span>
+   <span className="vax-intro-flower flower-two">✳</span>
+   <div className="vax-intro-little-card"><Icon name="calendar"/><span>Every visit,<br/><strong>a little more peace of mind.</strong></span></div>
+  </div>
+ </section>
+ <VaccinationScheduleNavigator/>
+ <section className="vax-practical-steps" aria-label="What families can do next">
+  <div><span className="eyebrow">For your next visit</span><h2>Three simple things to remember.</h2></div>
+  <div className="vax-practical-grid">
+   <div><span className="vax-practical-icon"><Icon name="book"/></span><h3>Bring the card</h3><p>Include any doses given at another clinic or government health centre.</p></div>
+   <div><span className="vax-practical-icon"><Icon name="chat"/></span><h3>Ask what’s next</h3><p>Your doctor checks the child’s age, past doses and vaccine products.</p></div>
+   <div><span className="vax-practical-icon"><Icon name="calendar"/></span><h3>Keep the date</h3><p>Write down the next confirmed visit before heading home.</p></div>
+  </div>
+  <div className="vax-help-links"><a href="/vaccination/catch-up/">Missed a vaccination visit? <Icon name="arrow"/></a><a href="/vaccination/after-care/">Care after vaccination <Icon name="arrow"/></a></div>
+ </section>
+ <div className="vax-evidence-byline"><Icon name="shield"/><span>Guidance informed by India’s National Immunisation Schedule, Indian Academy of Pediatrics immunisation resources and World Health Organization vaccination research. Your child's schedule is confirmed during clinical care.</span></div>
+ </>}
 
-function Article({p}:{p:PageData}){return <div className="container article-layout"><aside className="article-aside"><span className="eyebrow">On this page</span>{p.sections?.map(s=><a key={s.heading} href={`#${sectionId(s.heading)}`}>{s.heading}</a>)}{p.faqs?.length?<a href="#questions">Common questions</a>:null}<div className="aside-care"><Icon name="heart"/><strong>A question about your child?</strong><p>Bring it to your next visit.</p><TextLink href="/visit/">Talk with Mamta</TextLink></div></aside><article className="article">{p.path==='/vaccination/schedule/'&&<VaccinationSixToTwelveMonths/>}<div className="article-meta"><Icon name="book"/>Parent education<span>·</span>{site.updated}</div>{p.image&&<img className="article-image" src={p.image} alt={p.kind==='about'?'Dr Kanak Ramnani at her consultation desk':'Mamta Hospital emergency department'} width="1200" height="800"/>}{p.kind==='emergency'&&<EmergencyContacts/>}{p.sections?.map(s=><section id={sectionId(s.heading)} key={s.heading}><h2>{s.heading}</h2>{s.paragraphs.map(t=><p key={t}>{t}</p>)}{s.items&&<ul>{s.items.map(t=><li key={t}>{t}</li>)}</ul>}</section>)}{p.faqs?.length?<section id="questions"><h2>Common questions</h2><FAQs items={p.faqs}/></section>:null}{p.kind==='about'&&<div className="notice sage"><h2>Dr Kanak at Mamta</h2><p>Confirm the hospital’s current profile, appointment availability and consultation details directly with the team.</p><TextLink href={site.doctorUrl}>Read the official hospital profile</TextLink></div>}<Sources p={p}/>{p.related?.length?<Related paths={p.related}/>:null}</article></div>}
+function Article({p}:{p:PageData}){return <div className="container article-layout"><aside className="article-aside"><span className="eyebrow">On this page</span>{p.sections?.map(s=><a key={s.heading} href={`#${sectionId(s.heading)}`}>{s.heading}</a>)}{p.faqs?.length?<a href="#questions">Common questions</a>:null}<div className="aside-care"><Icon name="heart"/><strong>A question about your child?</strong><p>Bring it to your next visit.</p><TextLink href="/visit/">Talk with Mamta</TextLink></div></aside><article className={`article ${p.path==='/vaccination/schedule/'?'vax-schedule-article':''}`}>{p.path==='/vaccination/schedule/'&&<VaccinationScheduleWelcome/>}<div className="article-meta"><Icon name="book"/>Parent education<span>·</span>{site.updated}</div>{p.image&&<img className="article-image" src={p.image} alt={p.kind==='about'?'Dr Kanak Ramnani at her consultation desk':'Mamta Hospital emergency department'} width="1200" height="800"/>}{p.kind==='emergency'&&<EmergencyContacts/>}{p.sections?.map(s=><section id={sectionId(s.heading)} key={s.heading}><h2>{s.heading}</h2>{s.paragraphs.map(t=><p key={t}>{t}</p>)}{s.items&&<ul>{s.items.map(t=><li key={t}>{t}</li>)}</ul>}</section>)}{p.faqs?.length?<section id="questions"><h2>Common questions</h2><FAQs items={p.faqs}/></section>:null}{p.kind==='about'&&<div className="notice sage"><h2>Dr Kanak at Mamta</h2><p>Confirm the hospital’s current profile, appointment availability and consultation details directly with the team.</p><TextLink href={site.doctorUrl}>Read the official hospital profile</TextLink></div>}<Sources p={p}/>{p.related?.length?<Related paths={p.related}/>:null}</article></div>}
 function EmergencyContacts(){return <div className="emergency-contacts"><h2>Get help now</h2><a className="button" href={`tel:${site.emergency}`}><Icon name="phone"/>Mamta emergency: {site.emergencyLabel}</a><a className="button outline" href={`tel:${site.ambulance}`}>Mamta ambulance: +91 92853 55676</a><p>Use the nearest appropriate emergency service. Do not delay help while arranging care at a particular hospital.</p></div>}
 
 function Vaccination(){return <>
