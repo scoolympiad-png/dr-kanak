@@ -62,7 +62,7 @@ function VaccinationScheduleWelcome(){return <>
    <span className="vax-small-label"><Icon name="heart"/> Growing healthy, together</span>
    <h2>A little planning for <em>a healthier tomorrow.</em></h2>
    <p>Choose your child's age, understand the vaccination card and make the next visit easier.</p>
-   <div className="vax-intro-buttons"><a className="button" href="#age-guide">Explore by age <Icon name="down"/></a><a className="button outline" href="/visit/">Plan a visit <Icon name="arrow"/></a></div>
+   <div className="vax-intro-buttons"><a className="button" href="#age-guide">Explore by age <Icon name="down"/></a><a className="button outline" href="/downloads/dr-kanak-family-vaccination-companion.pdf" download>Download vaccine card <Icon name="arrow"/></a></div>
   </div>
   <div className="vax-schedule-intro-art" aria-hidden="true">
    <div className="vax-intro-big-heart"><Icon name="heart"/></div>
@@ -72,6 +72,19 @@ function VaccinationScheduleWelcome(){return <>
   </div>
  </section>
  <VaccinationScheduleNavigator/>
+ <section className="vax-download-section" id="download-vaccine-card" aria-labelledby="vax-download-title">
+  <div className="vax-download-art" aria-hidden="true"><span className="vax-download-icon"><Icon name="book"/></span><span className="vax-download-deco">✦</span><span className="vax-download-deco second">✿</span><div className="vax-download-mini-card"><Icon name="heart"/> My vaccination companion</div></div>
+  <div className="vax-download-copy">
+   <span className="eyebrow">Made for busy parents</span>
+   <h2 id="vax-download-title">Your child's vaccination card, wherever you go.</h2>
+   <p>Save a colourful guide with India's public vaccination milestones, space for past doses and your next confirmed visit.</p>
+   <div className="vax-download-actions">
+    <a className="button" href="/downloads/dr-kanak-family-vaccination-companion.pdf" download aria-label="Download Dr Kanak family vaccination companion PDF">Download free PDF <Icon name="arrow"/></a>
+    <a href="/visit/" className="vax-download-visit">Ask Dr Kanak <Icon name="arrow"/></a>
+   </div>
+   <span className="vax-download-privacy"><Icon name="shield"/> No login needed. Fill the card privately and bring it to your visit.</span>
+  </div>
+ </section>
  <section className="vax-practical-steps" aria-label="What families can do next">
   <div><span className="eyebrow">For your next visit</span><h2>Three simple things to remember.</h2></div>
   <div className="vax-practical-grid">
@@ -97,7 +110,7 @@ function Vaccination(){return <>
    <div className="button-row">
     <a className="button" href="/visit/">Plan a vaccination review <Icon name="arrow"/></a>
     <a className="button outline" href="#mamta-vaccine-card">Explore the age guide <Icon name="down"/></a>
-   </div>
+   </div><a className="vax-landing-download" href="/downloads/dr-kanak-family-vaccination-companion.pdf" download><Icon name="book"/> Save our free vaccination card <Icon name="arrow"/></a>
    
   </div>
   <figure className="vaccine-hero-photo">
