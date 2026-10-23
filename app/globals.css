@@ -848,3 +848,34 @@ body{background:#fffdf9}
 .vax-landing-download:focus-visible{outline:3px solid #1887a5;outline-offset:4px}
 @media(max-width:900px){.vax-download-section{grid-template-columns:1fr;gap:14px}.vax-download-art{min-height:145px}.vax-download-icon{width:90px;height:90px;border-radius:25px}.vax-download-icon .icon{width:55px;height:55px}}
 @media(max-width:760px){.vax-download-section{padding:15px;margin:23px 0 31px;border-radius:21px}.vax-download-art{min-height:138px}.vax-download-copy{padding:11px 6px 15px}.article .vax-download-copy h2{font-size:27px}.article .vax-download-copy p{font-size:15px}.vax-download-actions .button{font-size:14px}}
+/* Vaccination reminders — visitor-facing guardian gateway, no child PII collected. */
+.vax-reminder-entry{background:linear-gradient(118deg,#fff6df 0%,#e8f8f9 43%,#f5eaff 100%);border:2px solid #d5e8e9;border-radius:27px;padding:27px 29px 30px;margin:30px 0 37px;box-shadow:0 14px 35px #1d6a8914;scroll-margin-top:110px}
+.vax-reminder-topline{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.vax-reminder-label{display:inline-flex;align-items:center;gap:7px;border-radius:30px;background:#fffc;padding:8px 12px;border:1px solid #e5e7e0;font-size:13px;font-weight:800;color:#195c70}
+.vax-reminder-label .icon{width:17px;height:17px;color:#d97092}
+.vax-reminder-art{font-size:32px;color:#ebb457;line-height:1}
+.vax-reminder-main{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(260px,.88fr);gap:28px;align-items:center}
+.vax-reminder-copy h2{font-size:clamp(26px,2.9vw,36px);line-height:1.17;letter-spacing:-.038em;color:#174e6a;margin:13px 0}
+.vax-reminder-copy>p:not(.vax-reminder-helper){font-size:16px;color:#426573;line-height:1.65;max-width:580px;margin:0}
+.vax-reminder-actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin-top:21px}
+.vax-reminder-actions .button{font-size:14px;min-height:47px;padding:11px 17px}
+.vax-reminder-secondary{display:inline-flex;gap:6px;align-items:center;color:#135c79;font-size:14px;font-weight:800}
+.vax-reminder-secondary .icon{width:17px;height:17px}
+.vax-reminder-secondary:hover{text-decoration:underline;text-underline-offset:3px}
+.vax-reminder-helper{display:flex;align-items:flex-start;gap:8px;margin:20px 0 0!important;font-size:12px!important;line-height:1.6!important;color:#5a707a!important;max-width:590px}
+.vax-reminder-helper .icon{flex:none;width:17px;height:17px;color:#408779;margin-top:2px}
+.vax-reminder-steps{list-style:none;counter-reset:none;background:#ffffffcb;border:1px solid #d8e8e7;border-radius:22px;padding:18px 19px;margin:0;display:grid;gap:8px}
+.vax-reminder-steps li{display:flex;gap:12px;align-items:center;padding:7px 2px}
+.vax-reminder-steps li+li{border-top:1px dashed #d2e7e7;padding-top:13px}
+.vax-reminder-steps li>span{width:47px;height:47px;flex:none;display:grid;place-items:center;background:#e5f5f5;border-radius:16px;color:#247c8c}
+.vax-reminder-steps li:nth-child(2)>span{background:#ffebea;color:#ba6a91}
+.vax-reminder-steps li:nth-child(3)>span{background:#fff0d4;color:#b38322}
+.vax-reminder-steps li>span .icon{width:25px;height:25px}
+.vax-reminder-steps li strong{display:block;font-size:15px;line-height:1.45;color:#245468}
+.vax-reminder-steps li small{display:block;margin-top:3px;font-size:13px;line-height:1.5;color:#496977}
+.vax-reminder-actions button:focus-visible,.vax-reminder-actions a:focus-visible{outline:3px solid #0d7895;outline-offset:4px}
+.vax-reminder-portal-links{display:flex;flex-wrap:wrap;gap:13px;margin:18px 0}
+.vax-reminder-portal-links a{display:inline-flex;align-items:center;gap:6px;background:#e7f6fa;padding:12px 15px;border-radius:27px;color:#145e79;font-size:14px;font-weight:800}
+.vax-reminder-portal-links a .icon{width:18px;height:18px}
+@media(max-width:920px){.vax-reminder-main{grid-template-columns:1fr}.vax-reminder-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.vax-reminder-steps li{align-items:flex-start}.vax-reminder-steps li+li{border-top:0;padding-top:7px}}
+@media(max-width:760px){.vax-reminder-entry{padding:19px 16px 21px;margin:24px 0;border-radius:22px}.vax-reminder-main{gap:17px}.vax-reminder-copy h2{font-size:28px}.vax-reminder-copy>p:not(.vax-reminder-helper){font-size:15px}.vax-reminder-actions .button{font-size:14px}.vax-reminder-steps{grid-template-columns:1fr;padding:14px 17px}.vax-reminder-steps li+li{border-top:1px dashed #d2e7e7;padding-top:12px}.vax-reminder-steps li strong{font-size:15px}.vax-reminder-steps li small{font-size:13px}}
