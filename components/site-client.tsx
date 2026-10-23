@@ -196,3 +196,57 @@ export function VaccinationPhotoCarousel(){
   </div>
  </div>;
 }
+type VaccineAgeBand={id:string;age:string;subtitle:string;tone:string;icon:string;summary:string;fromCard:readonly string[];indiaNote:string;ask:string};
+const vaccineAgeBands:readonly VaccineAgeBand[]=[
+ {id:'birth',age:'Birth',subtitle:'The first days',tone:'peach',icon:'sprout',summary:'A fresh beginning, with essential early protection.',fromCard:['BCG','Hepatitis B','Oral polio (OPV 0)'],indiaNote:'India’s public programme also includes BCG, hepatitis B birth dose and OPV 0.',ask:'Were all birth doses recorded in my baby’s card?'},
+ {id:'early-weeks',age:'6–14 weeks',subtitle:'Early baby visits',tone:'blue',icon:'sun',summary:'The early weeks include a series of important clinic visits.',fromCard:['DTP','IPV','Hib','PCV','Rotavirus','Hepatitis B'],indiaNote:'The public schedule includes visits at 6, 10 and 14 weeks, with several vaccines given across those visits.',ask:'Which combinations were used, and what is recorded?'},
+ {id:'first-year',age:'6–12 months',subtitle:'A busy first year',tone:'mint',icon:'heart',summary:'As your baby grows, keep the vaccination record up to date.',fromCard:['Influenza','TCV','MMR / measles-containing vaccine','Hepatitis A','JE'],indiaNote:'The public schedule includes the first measles–rubella dose at 9–12 months. JE applies in designated areas.',ask:'Which vaccines are appropriate for my child’s history and location?'},
+ {id:'toddler',age:'13–24 months',subtitle:'Toddler milestones',tone:'lavender',icon:'footprints',summary:'Bring the early records along for booster and catch-up discussions.',fromCard:['MMR','PCV','Varicella','DTP / IPV / Hib boosters','Hepatitis A'],indiaNote:'The public schedule includes a second MR dose and DPT/polio boosters during 16–24 months; JE depends on location.',ask:'Which follow-up or booster doses should we discuss?'},
+ {id:'preschool',age:'2–6 years',subtitle:'Preschool years',tone:'yellow',icon:'puzzle',summary:'Review protection as your child becomes more active and independent.',fromCard:['Varicella','DTP booster','MMR'],indiaNote:'The public programme includes a DPT booster at about 5–6 years.',ask:'Are the preschool and school-entry records complete?'},
+ {id:'school-teen',age:'9–14 years',subtitle:'School and early teens',tone:'sky',icon:'book',summary:'Older children also benefit from a vaccination-record review.',fromCard:['Tdap','HPV','Td'],indiaNote:'The public schedule includes Td at 10 years. HPV recommendations and programme eligibility should be discussed individually.',ask:'Which school-age and adolescent vaccines apply now?'},
+ {id:'older-teen',age:'15–18 years',subtitle:'Later teenage years',tone:'rose',icon:'shield',summary:'A final review can help carry accurate records into adulthood.',fromCard:['Td','HPV'],indiaNote:'The public programme includes Td at 16 years; other vaccines depend on previous doses and clinical advice.',ask:'What should we review before the next life stage?'}
+] as const;
+
+export function VaccinationScheduleNavigator(){
+ const[selected,setSelected]=useState(0);
+ const stage=vaccineAgeBands[selected];
+ return <section className="vax-schedule-explorer" id="age-guide" aria-label="Explore your child's vaccination age guide">
+  <div className="vax-schedule-explorer-heading">
+   <span className="eyebrow">Find your child’s stage</span>
+   <h2>Every age has a little story.</h2>
+   <p>Select an age to explore common vaccination topics. Your child's doctor will confirm the right vaccine products and timing.</p>
+  </div>
+  <div className="vax-stage-tabs" role="tablist" aria-label="Vaccination age groups">
+   {vaccineAgeBands.map((band,i)=><button type="button" id={`vax-age-${i}`} role="tab" aria-selected={i===selected} aria-controls="vax-stage-panel" tabIndex={i===selected?0:-1} className={`vax-stage-tab tone-${band.tone} ${i===selected?'selected':''}`} key={band.id}
+    onClick={()=>setSelected(i)}
+    onKeyDown={e=>{
+     if(['ArrowRight','ArrowLeft','Home','End'].includes(e.key)){
+      e.preventDefault();
+      const next=e.key==='Home'?0:e.key==='End'?vaccineAgeBands.length-1:(selected+(e.key==='ArrowRight'?1:-1)+vaccineAgeBands.length)%vaccineAgeBands.length;
+      setSelected(next);
+      document.getElementById(`vax-age-${next}`)?.focus();
+     }
+    }}>
+    <span className="vax-tab-icon"><Icon name={band.icon}/></span>
+    <strong>{band.age}</strong><small>{band.subtitle}</small>
+   </button>)}
+  </div>
+  <div className={`vax-stage-detail tone-${stage.tone}`} id="vax-stage-panel" role="tabpanel" aria-labelledby={`vax-age-${selected}`} tabIndex={0}>
+   <div className="vax-stage-narrative">
+    <span className="vax-stage-counter">Stage {selected+1} of {vaccineAgeBands.length}</span>
+    <h3>{stage.age}: {stage.subtitle.toLowerCase()}</h3>
+    <p>{stage.summary}</p>
+    <div className="vax-timing-note"><Icon name="shield"/><span>{stage.indiaNote}</span></div>
+    <div className="vax-stage-cta"><a className="button" href="/visit/">Ask Dr Kanak <Icon name="arrow"/></a><a href="/vaccination/catch-up/" className="vax-stage-catchup">Missed a visit? <Icon name="arrow"/></a></div>
+   </div>
+   <div className="vax-stage-details-card">
+    <span className="vax-card-tag"><Icon name="book"/> From Mamta’s vaccination card</span>
+    <h4>Vaccines to discuss</h4>
+    <div className="vax-vaccine-chips">{stage.fromCard.map(item=><span key={item}>{item}</span>)}</div>
+    <div className="vax-ask"><Icon name="chat"/><p><strong>Ask at your visit</strong>{stage.ask}</p></div>
+    <p className="vax-card-tip">These names come from the hospital’s printed card. They may represent components of combination vaccines and are not a list of injections due for every child.</p>
+   </div>
+  </div>
+  <div className="vax-explorer-foot"><Icon name="heart"/><span>Bring your vaccination card to every visit. Your paediatrician can match past doses with the appropriate next steps.</span></div>
+ </section>;
+}
