@@ -326,3 +326,100 @@ body{background:#fffdf9}
  .footer-main{grid-template-columns:1fr 1fr}
  .footer-map-frame iframe{min-height:235px}
 }
+/* Update 4 — premium child-development stage explorer, accessible keyboard navigation. */
+.age-explorer{background:#fffdfb;border:2px solid #cfe5e9;border-radius:28px;overflow:hidden;box-shadow:0 15px 38px #195a711a}
+.age-explorer-intro{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 30px;background:linear-gradient(110deg,#eaf9ff,#fff5e8 46%,#f7efff);border-bottom:1px solid #dce7e8}
+.age-explorer-intro>div{min-width:0}
+.age-explorer-kicker{display:flex;align-items:center;gap:8px;color:#175a76;font-size:15px;font-weight:800;line-height:1.4}
+.age-explorer-kicker .icon{width:19px;height:19px;color:#dc698d}
+.age-explorer-intro p{font-size:16px;line-height:1.6;color:#425f70;margin:8px 0 0;max-width:620px}
+.age-stage-count{display:flex;align-items:center;gap:9px;border:1px solid #b9d9dc;border-radius:30px;padding:10px 14px;font-size:13px;font-weight:750;color:#225d70;white-space:nowrap;background:#ffffffb8}
+.age-stage-count .icon{width:19px;height:19px;color:#4c9883}
+.age-tabs{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:9px;padding:17px;background:#fff}
+.age-tabs button{position:relative;min-width:0;min-height:156px;border:2px solid transparent;border-radius:19px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:18px 7px 15px;text-align:center;transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease;scroll-margin:10px}
+.age-tabs button:nth-child(1){background:#ffebde}
+.age-tabs button:nth-child(2){background:#e0f5ff}
+.age-tabs button:nth-child(3){background:#e4f6da}
+.age-tabs button:nth-child(4){background:#ede5fc}
+.age-tabs button:nth-child(5){background:#fff1c7}
+.age-tabs button:nth-child(6){background:#dbf0fb}
+.age-tabs button:nth-child(7){background:#fbe6ef}
+.age-tabs button:hover{transform:translateY(-3px);box-shadow:0 7px 16px #1552691d;filter:saturate(1.06)}
+.age-tabs button[aria-selected=true]{border-color:#0d7b9b;background:#eafaff;box-shadow:inset 0 -4px 0 #147e9c,0 8px 21px #0a769b25;transform:translateY(-2px)}
+.age-tabs button:focus-visible{outline:3px solid #0e6d8b;outline-offset:3px}
+.age-tab-number{position:absolute;top:11px;left:12px;font-size:11px;font-weight:800;letter-spacing:.08em;color:#456975}
+.age-tab-illustration{display:grid;place-content:center;width:62px;height:62px;background:#ffffffb8;border-radius:21px;box-shadow:0 4px 0 #ffffff6b;transform:rotate(-5deg)}
+.age-tab-illustration .icon{width:36px;height:36px;color:#216f85;transform:rotate(5deg)}
+.age-tabs button:nth-child(1) .age-tab-illustration .icon{color:#b56250}
+.age-tabs button:nth-child(3) .age-tab-illustration .icon{color:#42875e}
+.age-tabs button:nth-child(4) .age-tab-illustration .icon{color:#7858a9}
+.age-tabs button:nth-child(5) .age-tab-illustration .icon{color:#a17719}
+.age-tabs button:nth-child(7) .age-tab-illustration .icon{color:#a65378}
+.age-tabs strong{font-size:14px;font-weight:800;line-height:1.27;color:#234961}
+.age-tabs small{font-size:11px;line-height:1.32;font-weight:600;color:#466775}
+.age-panel-premium{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:25px;align-items:stretch;min-height:296px;padding:28px;background:linear-gradient(118deg,#f3fbfe,#fff7ed)}
+.age-panel-premium.peach{background:linear-gradient(125deg,#fff0e8,#fff9ec)}
+.age-panel-premium.blue{background:linear-gradient(125deg,#ebf8fd,#e9f1ff)}
+.age-panel-premium.sage{background:linear-gradient(125deg,#e9f7ec,#f4fbdf)}
+.age-panel-premium.lavender{background:linear-gradient(125deg,#f5edff,#eef5fc)}
+.age-panel-premium.yellow{background:linear-gradient(125deg,#fff9db,#f4fae9)}
+.age-panel-primary{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;max-width:none;padding:6px 10px}
+.age-panel-kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid #d3e5e8;border-radius:999px;background:#ffffffd9;color:#235a72;font-weight:750;font-size:13px;line-height:1.4}
+.age-panel-kicker .icon{width:18px;height:18px}
+.age-panel-premium h3{font:800 clamp(26px,2.5vw,35px)/1.22 var(--sans);letter-spacing:-.045em;color:#214b63;margin:19px 0 12px;max-width:540px}
+.age-panel-primary>p{font-size:16px;line-height:1.65;color:#416072;max-width:480px;margin:0 0 22px}
+.age-panel-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.age-panel-actions .button{font-size:15px;min-height:47px;padding:12px 17px}
+.age-panel-guide{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:800;color:#145b75;border-bottom:1px solid #65b5c9;min-height:43px}
+.age-panel-guide .icon{width:17px;height:17px}
+.age-panel-guide:hover{text-decoration:underline;text-underline-offset:4px}
+.age-panel-topics{position:relative;overflow:hidden;background:#fffefded;border:1px solid #d6e7e8;border-radius:24px;padding:26px;box-shadow:0 10px 30px #1b667d12;display:flex;flex-direction:column;justify-content:center}
+.age-topics-heading{position:relative;z-index:1;display:flex;align-items:center;gap:9px;color:#245d73;font-size:16px;font-weight:850;line-height:1.4}
+.age-topics-heading .icon{width:20px;height:20px;color:#d26c89}
+.age-panel-topics ul{position:relative;z-index:1;list-style:none;display:grid;gap:12px;margin:18px 0 22px;padding:0;font-size:15px;line-height:1.45}
+.age-panel-topics li{display:flex;align-items:center;gap:11px;white-space:normal;margin:0;font-weight:650;color:#345668}
+.age-topic-check{display:grid;place-items:center;flex:0 0 25px;width:25px;height:25px;border-radius:50%;background:#d9f4e2;color:#207b53}
+.age-topic-check .icon{width:16px;height:16px}
+.age-related-care{position:relative;z-index:1;display:inline-flex;align-items:center;gap:7px;color:#116584;font-size:14px;font-weight:800;line-height:1.5;width:fit-content}
+.age-related-care .icon{width:17px;height:17px}
+.age-related-care:hover{text-decoration:underline;text-underline-offset:4px}
+.age-topic-decoration{position:absolute;right:-35px;bottom:-35px;opacity:.07;transform:rotate(-15deg);pointer-events:none}
+.age-topic-decoration .icon{width:190px;height:190px}
+.age-explorer-footnote{display:flex;gap:9px;align-items:flex-start;background:#f9fcfd;padding:14px 28px 19px;border-top:1px solid #dce7e8;color:#4d6775;font-size:13px;line-height:1.55}
+.age-explorer-footnote .icon{flex:none;width:17px;height:17px;color:#43859a;margin-top:2px}
+@media(max-width:1150px){
+ .age-tabs{display:flex;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:15px;overscroll-behavior-x:contain;gap:10px}
+ .age-tabs button{flex:0 0 135px;scroll-snap-align:start;min-height:156px}
+ .age-tabs strong{font-size:14px}
+ .age-tabs small{font-size:11px}
+ .age-panel-premium{grid-template-columns:1fr .9fr}
+}
+@media(max-width:760px){
+ .age-explorer{border-radius:22px}
+ .age-explorer-intro{display:block;padding:21px 20px}
+ .age-explorer-kicker{font-size:14px}
+ .age-explorer-intro p{font-size:15px}
+ .age-stage-count{width:fit-content;margin-top:13px;font-size:12px;padding:7px 11px}
+ .age-tabs{padding:12px;gap:8px}
+ .age-tabs button{flex-basis:126px;min-height:146px;padding:17px 6px 12px;border-radius:16px}
+ .age-tab-illustration{width:57px;height:57px;border-radius:19px}
+ .age-tab-illustration .icon{width:31px;height:31px}
+ .age-tabs strong{font-size:14px}
+ .age-tabs small{font-size:11px}
+ .age-panel-premium{display:grid;grid-template-columns:1fr;gap:13px;padding:15px;min-height:0}
+ .age-panel-primary{padding:12px 8px 5px}
+ .age-panel-kicker{font-size:12px}
+ .age-panel-premium h3{font-size:29px;max-width:500px;margin:16px 0 10px}
+ .age-panel-primary>p{font-size:15px;margin:0 0 17px}
+ .age-panel-actions{gap:9px}
+ .age-panel-actions .button{font-size:14px}
+ .age-panel-guide{font-size:14px}
+ .age-panel-topics{padding:22px 19px;border-radius:20px}
+ .age-topics-heading{font-size:15px}
+ .age-panel-topics ul{font-size:15px;gap:11px;margin:16px 0 20px}
+ .age-explorer-footnote{padding:13px 18px 17px;font-size:12px}
+}
+@media(max-width:390px){
+ .age-panel-actions{flex-direction:column;align-items:flex-start}
+ .age-panel-premium h3{font-size:26px}
+}
