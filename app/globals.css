@@ -121,3 +121,73 @@ body{background:#fffdf9}
   .hero-care-chips .parent-library-widget{min-height:34px;font-size:12px;padding:6px 12px}
   .hero-care-chips .parent-library-widget .icon{width:14px;height:14px}
 }
+/* Phase 2 — typography accessibility and hierarchy, 23 Oct 2026.
+   Scoped overrides preserve the approved Dr Kanak colour palette and layout. */
+.site-header .main-nav{font-size:15px;gap:clamp(12px,1.15vw,20px)}
+.site-header .main-nav>a:not(.button),.site-header .main-nav>details>summary{font-size:15px;line-height:1.45}
+.site-header .main-nav .button.small{font-size:15px;min-height:46px;padding-inline:17px}
+.site-header .nav-dropdown a{font-size:15px;line-height:1.5}
+.site-header .nav-dropdown small{font-size:13px;line-height:1.4}
+.brand small{font-size:10px;letter-spacing:.09em;line-height:1.4}
+.eyebrow,.hero-eyebrow{font-size:12px;line-height:1.5;letter-spacing:.1em}
+.quick-links>a{font-size:14px;line-height:1.35;letter-spacing:.01em;min-height:116px}
+.section-heading p{font-size:17px;line-height:1.7}
+.section-heading>.text-link{font-size:15px;line-height:1.5}
+.care-card h3,.care-card h2{line-height:1.35}
+.care-card p{font-size:16px;line-height:1.7}
+.care-card .text-link,.care-card a{font-size:15px;line-height:1.5}
+.guide-copy .eyebrow{font-size:12px;line-height:1.4}
+.guide-copy p{font-size:16px;line-height:1.7}
+.guide-copy .text-link{font-size:15px}
+.age-tabs strong{font-size:15px;line-height:1.3}
+.age-tabs small{font-size:12px;line-height:1.4}
+.age-panel ul{font-size:15px;line-height:1.55}
+.age-panel h3{font-size:clamp(24px,2.1vw,30px)}
+.topic-strip{font-size:15px;line-height:1.5}
+.text-link{font-size:15px;line-height:1.5}
+.small-copy{font-size:15px;line-height:1.7}
+.story-copy p:not(.lead){font-size:16px;line-height:1.8}
+.vaccine-feature p{font-size:17px;line-height:1.65}
+.vaccine-feature-card p{font-size:15px;line-height:1.65}
+.contact-dock>a,.contact-dock>button{font-size:13px;line-height:1.35;padding:12px 17px}
+.assistant-launch{font-size:13px;line-height:1.35}
+.article p{font-size:17px;line-height:1.8}
+.article-meta{font-size:13px}
+.hero-care-chips>a:not(.parent-library-widget){font-size:14px;line-height:1.35}
+.hero-care-chips .parent-library-widget{font-size:14px}
+@media(min-width:1021px) and (max-width:1200px){
+  .site-header .main-nav{gap:10px}
+  .site-header .main-nav>a:not(.button),.site-header .main-nav>details>summary{font-size:14px}
+  .site-header .main-nav .button.small{font-size:14px;padding-inline:13px}
+}
+@media(max-width:1020px){
+  .site-header .main-nav.open>a:not(.button),.site-header .main-nav.open>details>summary{font-size:16px;line-height:1.5}
+  .site-header .main-nav.open .nav-dropdown a{font-size:15px;line-height:1.5}
+  .site-header .main-nav.open .nav-dropdown small{font-size:13px}
+  .site-header .main-nav.open .button.small{font-size:16px}
+  .age-tabs button{min-height:136px}
+}
+@media(max-width:760px){
+  .brand small{font-size:9px;letter-spacing:.07em}
+  .eyebrow,.hero-eyebrow{font-size:11px}
+  .section-heading p{font-size:16px}
+  .quick-links>a{font-size:13px;line-height:1.35;min-height:108px;padding:14px 7px}
+  .care-card p{font-size:15.5px;line-height:1.7}
+  .care-card .text-link,.care-card a{font-size:15px}
+  .guide-copy p{font-size:16px;line-height:1.65}
+  .age-tabs strong{font-size:14px}
+  .age-tabs small{font-size:12px}
+  .age-panel ul{font-size:15px}
+  .age-panel li{white-space:normal}
+  .topic-strip{font-size:14px}
+  .vaccine-feature p{font-size:16px}
+  .hero-care-chips>a:not(.parent-library-widget),.hero-care-chips .parent-library-widget{font-size:12px}
+  .contact-dock>a,.contact-dock>button{font-size:12px;line-height:1.25;padding:7px 3px}
+  .assistant-launch{font-size:13px}
+  .article p{font-size:16px;line-height:1.75}
+  .article-meta{font-size:12px}
+}
+@media(max-width:370px){
+  .quick-links>a{font-size:12px}
+  .contact-dock>a,.contact-dock>button{font-size:11px}
+}
