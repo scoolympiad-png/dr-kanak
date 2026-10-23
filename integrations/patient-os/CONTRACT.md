@@ -28,6 +28,12 @@ The CRM ingress must return a successful HTTP status and JSON `{"accepted":true,
 
 Unconfigured requests return 503. Upstream refusal, timeout or an unrecognised receipt cannot appear as a successful submission. No patient contact data is written to browser storage or URL parameters. Add platform rate limiting to the ingress; CAPTCHA is not a substitute for rate controls.
 
+## Source-verified Mamta CRM website-v1 compatibility adapter — staged, not activated
+
+The public callback can optionally use the existing CRM tenant website ingress through `CRM_INTEGRATION_MODE=legacy-website-v1`, `CRM_WEBSITE_INGRESS_URL` (encrypted server secret), and `MAMTA_TENANT_ID`. The adapter translates the adult-only callback fields to `website_lead` and validates the CRM's `WebsiteIngressResult` against the original enquiry ID before acknowledging receipt. It never creates Patient OS vaccination data or enrolls a reminder.
+
+**No live tenant, CRM endpoint version, secret, or Patient OS portal has been verified here.** The mode stays inactive until a Mamta-specific test and authorised production configuration. Review [MAMTA-INTEGRATION-READINESS.md](./MAMTA-INTEGRATION-READINESS.md) for exact source findings, security controls and the sequence for activation.
+
 ## Vaccination reminder contact gateway — public stage implemented
 
 The vaccination schedule and `/my-child/reminders/` show a parent-facing reminder interest card. When the existing server-authorised callback ingress is available, the CTA opens the existing Turnstile-protected enquiry form preselected to `reminder-enrolment`. Otherwise, it presents the hospital's telephone contact. If `PATIENT_OS_PORTAL_URL` is configured, guardians can open the existing secure portal as a separate action.
