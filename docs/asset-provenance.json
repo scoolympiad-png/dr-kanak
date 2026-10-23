@@ -182,6 +182,20 @@
       "width": 640,
       "height": 800,
       "source_context": "User-provided hospital photo, October 2026"
+    },
+    {
+      "local_file": "WhatsApp Image 2025-09-03 at 10.17.37 AM.jpeg.jpg",
+      "source_name": "Dr Kanak recorded child-health discussion photograph",
+      "mime_type": "image/jpeg",
+      "alt": "Dr Kanak speaking during a recorded discussion about child health",
+      "purpose": "Parent education and video discussion area",
+      "visual_review": "Cropped to the doctor alone with no visible patients or children.",
+      "selection_status": "selected",
+      "site_path": "/images/dr-kanak-conversation-2026.webp",
+      "site_bytes": 31770,
+      "width": 640,
+      "height": 800,
+      "source_context": "Provided in Mamta project resources, October 2026"
     }
   ],
   "excluded_files": [
