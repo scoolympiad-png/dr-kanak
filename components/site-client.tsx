@@ -125,25 +125,74 @@ const kanakCarePhotos=[
 
 export function VaccinationPhotoCarousel(){
  const [active,setActive]=useState(0);
+ const [userPaused,setUserPaused]=useState(false);
+ const [hovered,setHovered]=useState(false);
+ const [focusWithin,setFocusWithin]=useState(false);
+ const [pageVisible,setPageVisible]=useState(true);
+ const [inView,setInView]=useState(true);
+ const [prefersReducedMotion,setPrefersReducedMotion]=useState(false);
+ const [announceManual,setAnnounceManual]=useState(false);
+ const carouselRef=useRef<HTMLDivElement>(null);
+
+ useEffect(()=>{
+  const motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  const onMotionChange=()=>setPrefersReducedMotion(motion.matches);
+  onMotionChange();
+  motion.addEventListener('change',onMotionChange);
+  const onVisibilityChange=()=>setPageVisible(!document.hidden);
+  onVisibilityChange();
+  document.addEventListener('visibilitychange',onVisibilityChange);
+  const observer=new IntersectionObserver(
+    ([entry])=>setInView(Boolean(entry?.isIntersecting)),
+    {threshold:0.2}
+  );
+  if(carouselRef.current)observer.observe(carouselRef.current);
+  return()=>{
+   motion.removeEventListener('change',onMotionChange);
+   document.removeEventListener('visibilitychange',onVisibilityChange);
+   observer.disconnect();
+  };
+ },[]);
+
+ const autoplayActive=!userPaused&&!hovered&&!focusWithin&&pageVisible&&inView&&!prefersReducedMotion;
+ useEffect(()=>{
+  if(!autoplayActive)return;
+  const timer=window.setInterval(()=>{
+   setAnnounceManual(false);
+   setActive(i=>(i+1)%kanakCarePhotos.length);
+  },5000);
+  return()=>window.clearInterval(timer);
+ },[autoplayActive,active]);
+
+ const selectManually=(index:number)=>{
+  setAnnounceManual(true);
+  setActive((index+kanakCarePhotos.length)%kanakCarePhotos.length);
+ };
  const selected=kanakCarePhotos[active];
- const previous=()=>setActive(i=>(i+kanakCarePhotos.length-1)%kanakCarePhotos.length);
- const next=()=>setActive(i=>(i+1)%kanakCarePhotos.length);
- return <div className="kanak-care-carousel" aria-label="Moments of care with Dr Kanak" aria-roledescription="carousel">
+ return <div ref={carouselRef} className="kanak-care-carousel" aria-label="Moments of care with Dr Kanak" aria-roledescription="carousel"
+  onMouseEnter={()=>setHovered(true)} onMouseLeave={()=>setHovered(false)}
+  onFocusCapture={()=>setFocusWithin(true)}
+  onBlurCapture={e=>{if(!e.currentTarget.contains(e.relatedTarget as Node|null))setFocusWithin(false)}}>
   <div className="kanak-care-carousel-view">
    <div className="kanak-care-carousel-photo"><img key={selected.src} src={selected.src} alt={selected.alt} width="1000" height="750" loading="lazy"/></div>
-   <div className="kanak-care-carousel-caption" aria-live="polite" aria-atomic="true">
+   <div className="kanak-care-carousel-caption" aria-live={announceManual?'polite':'off'} aria-atomic="true">
     <span className="eyebrow">Dr Kanak · Mamta Hospital</span><h3>{selected.title}</h3><p>{selected.note}</p>
    </div>
   </div>
   <div className="kanak-care-carousel-controls">
    <span className="kanak-care-carousel-counter">{String(active+1).padStart(2,'0')} / {String(kanakCarePhotos.length).padStart(2,'0')}</span>
    <div className="kanak-care-carousel-dots" aria-label="Choose a photograph">
-    {kanakCarePhotos.map((item,i)=><button type="button" key={item.src} aria-label={`Show photo ${i+1}: ${item.title}`} aria-current={i===active?'true':undefined} className={i===active?'is-current':''} onClick={()=>setActive(i)}/>)}
+    {kanakCarePhotos.map((item,i)=><button type="button" key={item.src} aria-label={`Show photo ${i+1}: ${item.title}`} aria-current={i===active?'true':undefined} className={i===active?'is-current':''} onClick={()=>selectManually(i)}/>)}
    </div>
    <div className="kanak-care-carousel-arrows">
-    <button type="button" onClick={previous} aria-label="Previous photograph"><Icon name="arrow"/></button>
-    <button type="button" onClick={next} aria-label="Next photograph"><Icon name="arrow"/></button>
+    <button type="button" onClick={()=>selectManually(active-1)} aria-label="Previous photograph"><Icon name="arrow"/></button>
+    <button type="button" onClick={()=>selectManually(active+1)} aria-label="Next photograph"><Icon name="arrow"/></button>
    </div>
+   <button type="button" className="kanak-care-carousel-playback" aria-label={userPaused?'Resume automatic slideshow':'Pause automatic slideshow'}
+    aria-pressed={userPaused} onClick={()=>setUserPaused(x=>!x)}>
+    <span aria-hidden="true">{userPaused?'▶':'Ⅱ'}</span>
+    <span>{userPaused?'Play':'Pause'}</span>
+   </button>
   </div>
  </div>;
 }
