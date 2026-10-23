@@ -423,3 +423,138 @@ body{background:#fffdf9}
  .age-panel-actions{flex-direction:column;align-items:flex-start}
  .age-panel-premium h3{font-size:26px}
 }
+/* Vaccination hub phase 1 — original parent-friendly, medically cautious design. */
+.vaccine-hub-new{gap:clamp(24px,4vw,72px);grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);padding-block:54px 67px;align-items:center}
+.vaccine-hub-new .vaccine-hub-main{min-width:0}
+.vaccine-kicker{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid #c5e7e7;background:#eaf9f6;border-radius:999px;font-size:13px;font-weight:850;color:#165f72}
+.vaccine-kicker .icon{width:18px;height:18px;color:#de668a}
+.vaccine-hub-new .vaccine-hub-main h2{font:800 clamp(38px,4vw,61px)/1.11 var(--sans);letter-spacing:-.055em;color:#154966;margin:19px 0}
+.vaccine-hub-new .vaccine-hub-main h2 em{font-style:normal;color:#c35c88}
+.vaccine-hub-new .vaccine-hub-main .lead{font-size:clamp(18px,1.8vw,22px);font-weight:650;line-height:1.48;color:#275a70;max-width:585px}
+.vaccine-hub-new .vaccine-hub-main>p:not(.lead){font-size:16px;line-height:1.75;color:#466776;margin:16px 0 0;max-width:550px}
+.vaccine-hub-new .button-row{gap:14px;margin-top:26px}
+.vaccine-hub-new .button{font-size:15px;min-height:50px}
+.vaccine-hub-new .vaccine-trust-line{display:flex;gap:9px;align-items:flex-start;color:#4a6572;font-size:13px;line-height:1.5;margin-top:24px;max-width:530px}
+.vaccine-trust-line .icon{width:19px;height:19px;flex:none;color:#398b85}
+.vaccine-family-art{min-height:440px;display:flex;align-items:center;justify-content:center;position:relative;isolation:isolate;background:radial-gradient(circle at 50% 50%,#fff 0 13%,transparent 14%),linear-gradient(135deg,#def5fc,#fff2d1 48%,#f7e5f8);border-radius:44% 52% 25% 26% / 35% 42% 24% 20%;border:2px solid #e1e9e8;overflow:hidden}
+.vaccine-family-art:before,.vaccine-family-art:after{content:"";position:absolute;z-index:-1;border:13px solid #ffffff75;border-radius:50%;width:330px;height:330px;left:-90px;top:-95px}
+.vaccine-family-art:after{left:auto;right:-130px;top:auto;bottom:-130px;border-color:#ffffff66}
+.vaccine-family-circle{position:absolute;top:47px;left:50%;transform:translateX(-50%);width:136px;height:136px;border-radius:43% 57% 51% 49%;display:grid;place-content:center;background:linear-gradient(145deg,#9de3dc,#72c7e6);box-shadow:0 15px 35px #14718e24}
+.vaccine-family-circle .icon{width:70px;height:70px;color:#fff;fill:#ffffff59;stroke-width:1.7}
+.vaccine-art-star{position:absolute;font-size:50px;color:#ed9bad}
+.vaccine-art-star-one{top:40px;right:60px}
+.vaccine-art-star-two{bottom:58px;left:37px;color:#e8b855}
+.vaccine-family-card{position:relative;z-index:1;width:min(84%,365px);margin-top:136px;padding:25px 26px;background:#fffefa;border:2px solid #fff;box-shadow:0 18px 40px #1c597c28;border-radius:23px;transform:rotate(-3deg)}
+.vaccine-family-card>span{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:850;color:#20546f;padding-bottom:13px;border-bottom:1px solid #e2ecee}
+.vaccine-family-card>span .icon{width:23px;height:23px;color:#c86c8e}
+.vaccine-family-card>div{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px dashed #d5e6e7;font-size:15px;font-weight:650;color:#395a6b}
+.vaccine-family-card>div .icon{width:22px;height:22px;padding:3px;border-radius:50%;background:#d5f2df;color:#176747}
+.vaccine-family-message{position:absolute;right:15px;bottom:14px;background:#fff0d5;padding:10px 14px;border-radius:14px;text-align:center;transform:rotate(5deg);font:15px/1.45 var(--serif);color:#6e5434;box-shadow:0 5px 13px #9b84551a}
+.vaccine-family-message strong{color:#a44872}
+.vaccine-milestone-section{background:linear-gradient(165deg,#f5fbfc,#fff9f0 50%,#f9f6ff);border-block:1px solid #deeaeb;scroll-margin-top:105px}
+.vaccine-milestone-heading{display:flex;gap:25px;align-items:flex-end;justify-content:space-between;margin-bottom:31px}
+.vaccine-milestone-heading h2{font-size:clamp(31px,3.6vw,46px);line-height:1.17;letter-spacing:-.045em;color:#19506d;margin:8px 0 14px}
+.vaccine-milestone-heading p{font-size:17px;line-height:1.65;max-width:780px;color:#466575}
+.vaccine-milestone-heading .text-link{flex:none;font-size:15px}
+.vaccine-milestone-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.vaccine-milestone-card{min-width:0;border:2px solid #e7e5e0;border-radius:24px;padding:23px 22px;position:relative;overflow:hidden;box-shadow:0 10px 25px #19587916;display:flex;flex-direction:column}
+.vaccine-milestone-card:after{content:"✦";position:absolute;right:22px;top:85px;font-size:25px;color:#ffffff80}
+.milestone-peach{background:#ffeade;border-color:#f8d3bd}
+.milestone-blue{background:#e0f4fd;border-color:#c4e3f0}
+.milestone-mint{background:#e1f6e7;border-color:#c5e4cc}
+.milestone-lavender{background:#f0e7ff;border-color:#decdf4}
+.vaccine-milestone-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.vaccine-milestone-icon{width:72px;height:72px;display:grid;place-content:center;background:#ffffffb9;border-radius:22px;transform:rotate(-6deg);box-shadow:0 5px 0 #ffffff6b}
+.vaccine-milestone-icon .icon{width:39px;height:39px;color:#1d7891;transform:rotate(6deg)}
+.milestone-peach .vaccine-milestone-icon .icon{color:#b76b51}
+.milestone-mint .vaccine-milestone-icon .icon{color:#4b8d68}
+.milestone-lavender .vaccine-milestone-icon .icon{color:#8a62a6}
+.vaccine-stage-number{font-size:12px;letter-spacing:.05em;color:#496877;font-weight:850}
+.vaccine-milestone-card h3{font-size:26px;letter-spacing:-.035em;color:#214d65;margin:22px 0 10px}
+.vaccine-milestone-card>p{font-size:15px;line-height:1.6;color:#425f6a;margin:0 0 22px;min-height:73px}
+.vaccine-milestone-card details{margin-top:auto;background:#ffffffb9;border:1px solid #ffffffc9;border-radius:15px;overflow:hidden}
+.vaccine-milestone-card summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 12px;cursor:pointer;color:#185970;font-size:14px;font-weight:800;line-height:1.4}
+.vaccine-milestone-card summary::-webkit-details-marker{display:none}
+.vaccine-milestone-card summary .icon{width:18px;height:18px;flex:none}
+.vaccine-milestone-card details[open] summary .icon{transform:rotate(180deg)}
+.vaccine-milestone-card summary:focus-visible{outline:3px solid #147f9c;outline-offset:-4px}
+.vaccine-milestone-card ul{list-style:none;padding:3px 15px 16px;margin:0;display:grid;gap:10px}
+.vaccine-milestone-card li{display:flex;align-items:flex-start;gap:7px;font-size:14px;line-height:1.4;color:#35596b}
+.vaccine-milestone-card li .icon{width:16px;height:16px;flex:none;color:#1a8667;margin-top:2px}
+.vaccine-card-clarification{display:flex;align-items:flex-start;gap:13px;padding:21px 23px;margin-top:24px;background:#fff;border:1px solid #cce3e8;border-left:5px solid #1684a2;border-radius:18px}
+.vaccine-card-clarification>.icon{width:24px;height:24px;color:#20758e;flex:none}
+.vaccine-card-clarification strong{font-size:16px;line-height:1.5;color:#1c5068}
+.vaccine-card-clarification p{font-size:14px;line-height:1.7;color:#425f70;margin:8px 0 0}
+.vaccine-evidence-band{background:linear-gradient(100deg,#146487,#356c9a 58%,#8066a7);padding:38px 0;color:#fff}
+.vaccine-evidence-layout{display:flex;align-items:center;gap:25px}
+.vaccine-evidence-icon{width:92px;height:92px;display:grid;place-content:center;border-radius:28px;background:#ffffff27;flex:none}
+.vaccine-evidence-icon .icon{width:54px;height:54px;color:#fff}
+.vaccine-evidence-band .eyebrow{font-size:12px;color:#d5f9ff}
+.vaccine-evidence-band h2{font-size:clamp(26px,2.65vw,35px);line-height:1.2;margin:6px 0 9px;color:#fff}
+.vaccine-evidence-band p{font-size:16px;line-height:1.68;max-width:890px;color:#edf9ff}
+.vaccine-evidence-source{display:block;font-size:12px;color:#e9f0ff;font-weight:650;margin-top:9px}
+.vaccine-links .care-card{border-radius:23px;min-height:285px}
+.vaccine-links .care-card .icon-disc{width:67px;height:67px}
+.vaccine-links .care-card .icon-disc .icon{width:32px;height:32px}
+.vaccine-links .care-card p{font-size:16px;line-height:1.65}
+.vaccine-links .care-card .text-link{font-size:15px;margin-top:20px}
+.reminder-story>div>p{font-size:16px;line-height:1.72}
+.reminder-story .care-steps h3{font-size:18px}
+.reminder-story .care-steps p{font-size:15px;line-height:1.6}
+.vaccine-reference-note{padding:25px 27px 31px;border-radius:20px;background:#f3faf9;border:1px solid #d6e7e9;margin-bottom:35px}
+.vaccine-reference-note>.eyebrow{font-size:12px}
+.vaccine-reference-note>p{font-size:15px;line-height:1.65;color:#415e6e;margin:10px 0}
+.vaccine-reference-note ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px 25px;list-style:none;padding:10px 0 12px;margin:0}
+.vaccine-reference-note li{display:flex;align-items:flex-start;gap:8px;font-size:14px;line-height:1.6;color:#285970}
+.vaccine-reference-note li .icon{width:18px;height:18px;color:#29886b;flex:none;margin-top:2px}
+.vaccine-reference-note .vaccine-review-notice{font-size:13px;color:#52717d;margin-bottom:0}
+@media(max-width:1150px){
+ .vaccine-milestone-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .vaccine-milestone-card>p{min-height:0}
+ .vaccine-hub-new{gap:30px}
+ .vaccine-family-art{min-height:410px}
+}
+@media(max-width:760px){
+ .vaccine-hub-new{grid-template-columns:1fr;gap:22px;padding-block:37px 47px}
+ .vaccine-hub-new .vaccine-hub-main h2{font-size:clamp(35px,9vw,47px)}
+ .vaccine-hub-new .vaccine-hub-main .lead{font-size:18px}
+ .vaccine-hub-new .vaccine-hub-main>p:not(.lead){font-size:15px}
+ .vaccine-hub-new .button-row{align-items:flex-start;flex-wrap:wrap;gap:10px}
+ .vaccine-hub-new .button{min-height:46px;font-size:14px}
+ .vaccine-family-art{min-height:370px;border-radius:33% 40% 18% 18%}
+ .vaccine-family-circle{top:28px;width:115px;height:115px}
+ .vaccine-family-circle .icon{width:64px;height:64px}
+ .vaccine-family-card{margin-top:115px;padding:20px;width:min(88%,360px)}
+ .vaccine-family-card>span{font-size:17px}
+ .vaccine-family-card>div{font-size:14px;padding:10px 0}
+ .vaccine-family-message{font-size:12px;right:10px;bottom:10px}
+ .vaccine-milestone-heading{display:block}
+ .vaccine-milestone-heading h2{font-size:32px}
+ .vaccine-milestone-heading p{font-size:16px}
+ .vaccine-milestone-heading .text-link{display:inline-flex;margin-top:14px}
+ .vaccine-milestone-grid{gap:12px}
+ .vaccine-milestone-card{padding:19px 15px;border-radius:21px}
+ .vaccine-milestone-icon{width:57px;height:57px;border-radius:19px}
+ .vaccine-milestone-icon .icon{width:33px;height:33px}
+ .vaccine-milestone-card h3{font-size:22px;margin-top:18px}
+ .vaccine-milestone-card>p{font-size:14px;line-height:1.55}
+ .vaccine-milestone-card summary{font-size:13px}
+ .vaccine-milestone-card li{font-size:13px}
+ .vaccine-card-clarification{padding:18px 16px}
+ .vaccine-card-clarification strong{font-size:15px}
+ .vaccine-card-clarification p{font-size:13px}
+ .vaccine-evidence-layout{display:block}
+ .vaccine-evidence-icon{width:68px;height:68px;border-radius:19px;margin-bottom:15px}
+ .vaccine-evidence-icon .icon{width:38px;height:38px}
+ .vaccine-evidence-band h2{font-size:26px}
+ .vaccine-evidence-band p{font-size:15px}
+ .vaccine-links .care-card{min-height:0}
+ .vaccine-reference-note ul{grid-template-columns:1fr}
+}
+@media(max-width:440px){
+ .vaccine-milestone-grid{grid-template-columns:1fr}
+ .vaccine-milestone-card{min-height:0}
+ .vaccine-milestone-card>p{margin-bottom:16px}
+ .vaccine-family-art{min-height:330px}
+ .vaccine-family-card{margin-top:95px}
+}
