@@ -3,6 +3,7 @@ import {ages,careAreas,site,sources,type PageData} from '@/lib/site-config';
 import {getPage,guides,searchIndex,sectionId} from '@/lib/pages';
 import {AgeExplorer,CareAccess,SearchView} from './site-client';
 import {Icon} from './icon';
+import {mamtaPrintedCardEarlyMilestones,vaccinationEditorialReferences} from '@/lib/vaccination-reference';
 
 export function TextLink({href,children}:{href:string;children:ReactNode}){return <a className="text-link" href={href}>{children}<Icon name="arrow"/></a>}
 export function SectionHeading({eyebrow,title,children,link,linkText}:{eyebrow:string;title:string;children?:ReactNode;link?:string;linkText?:string}){return <div className="section-heading"><div><span className="eyebrow">{eyebrow}</span><h2>{title}</h2>{children&&<p>{children}</p>}</div>{link&&<TextLink href={link}>{linkText||'Explore more'}</TextLink>}</div>}
@@ -54,7 +55,83 @@ function Sources({p}:{p:PageData}){return <div className="source-note"><span cla
 function Article({p}:{p:PageData}){return <div className="container article-layout"><aside className="article-aside"><span className="eyebrow">On this page</span>{p.sections?.map(s=><a key={s.heading} href={`#${sectionId(s.heading)}`}>{s.heading}</a>)}{p.faqs?.length?<a href="#questions">Common questions</a>:null}<div className="aside-care"><Icon name="heart"/><strong>A question about your child?</strong><p>Bring it to your next visit.</p><TextLink href="/visit/">Talk with Mamta</TextLink></div></aside><article className="article"><div className="article-meta"><Icon name="book"/>Parent education<span>·</span>{site.updated}</div>{p.image&&<img className="article-image" src={p.image} alt={p.kind==='about'?'Dr Kanak Ramnani at her consultation desk':'Mamta Hospital emergency department'} width="1200" height="800"/>}{p.kind==='emergency'&&<EmergencyContacts/>}{p.sections?.map(s=><section id={sectionId(s.heading)} key={s.heading}><h2>{s.heading}</h2>{s.paragraphs.map(t=><p key={t}>{t}</p>)}{s.items&&<ul>{s.items.map(t=><li key={t}>{t}</li>)}</ul>}</section>)}{p.faqs?.length?<section id="questions"><h2>Common questions</h2><FAQs items={p.faqs}/></section>:null}{p.kind==='about'&&<div className="notice sage"><h2>Dr Kanak at Mamta</h2><p>Confirm the hospital’s current profile, appointment availability and consultation details directly with the team.</p><TextLink href={site.doctorUrl}>Read the official hospital profile</TextLink></div>}<Sources p={p}/>{p.related?.length?<Related paths={p.related}/>:null}</article></div>}
 function EmergencyContacts(){return <div className="emergency-contacts"><h2>Get help now</h2><a className="button" href={`tel:${site.emergency}`}><Icon name="phone"/>Mamta emergency: {site.emergencyLabel}</a><a className="button outline" href={`tel:${site.ambulance}`}>Mamta ambulance: +91 92853 55676</a><p>Use the nearest appropriate emergency service. Do not delay help while arranging care at a particular hospital.</p></div>}
 
-function Vaccination(){return <><section className="section container vaccine-hub"><div className="vaccine-hub-main"><span className="icon-disc blue large"><Icon name="shield"/></span><h2>Start with your child’s card.</h2><p className="lead">The most useful starting point is the record of what has actually been given.</p><p>Bring every available card, including doses from other hospitals, government centres or schools. Ask the clinician to review the record and write down the next visit.</p><div className="button-row"><a className="button" href="/visit/">Arrange a vaccination review <Icon name="arrow"/></a><a className="text-link" href="/vaccination/schedule/">Understand the schedule <Icon name="arrow"/></a></div></div><div className="paper-card"><div className="paper-card-head"><Icon name="calendar"/><span>Ready for the next visit?</span></div><ul>{['All vaccination cards & dose records','Previous reactions or allergies to discuss','Current medicines and health concerns','Questions about the next planned visit'].map(t=><li key={t}><Icon name="check"/>{t}</li>)}</ul><p>Your clinician reviews the history.<br/>Your family knows the next step.</p></div></section><section className="soft-section section"><div className="container"><SectionHeading eyebrow="A clearer path" title="Find the question on your mind."/><div className="vaccine-links">{['schedule','catch-up','after-care','teen-hpv','faq'].map((s,i)=>{const p=getPage(`/vaccination/${s}/`)!;return <a key={s} className="care-card" href={p.path}><span className={`icon-disc ${['blue','peach','sage','lavender','yellow'][i]}`}><Icon name={['calendar','clock','heart','leaf','chat'][i]}/></span><h3>{p.title}</h3><p>{p.summary}</p><span className="text-link">Read more <Icon name="arrow"/></span></a>})}</div></div></section><section className="section container reminder-story"><div><span className="eyebrow">A little support between visits</span><h2>The right reminder starts<br/>with the right record.</h2><p>Ask Mamta about enrolment in its care reminder service. Personalised reminders need a clinician-reviewed plan, verified guardian access and your chosen contact preferences.</p><TextLink href="/my-child/reminders/">About your child’s care reminders</TextLink></div><ol className="care-steps"><li><span>1</span><div><h3>Review together</h3><p>The clinical team checks the record and agrees on a plan.</p></div></li><li><span>2</span><div><h3>Choose how to stay in touch</h3><p>Confirm the guardian’s contact details, language and consent.</p></div></li><li><span>3</span><div><h3>Keep the plan current</h3><p>Tell the team about changes and vaccinations received elsewhere.</p></div></li></ol></section><div className="container"><Sources p={{path:'/vaccination/',title:'',summary:'',sources:[sources.vaccines,sources.vaccineUpdate,sources.uWin]}}/></div><VisitBand/></>}
+function Vaccination(){return <>
+ <section className="section container vaccine-hub vaccine-hub-new">
+  <div className="vaccine-hub-main">
+   <span className="vaccine-kicker"><Icon name="heart"/> A thoughtful start for growing families</span>
+   <h2>Small moments.<br/><em>Lifelong protection.</em></h2>
+   <p className="lead">Understand the vaccination card. Keep a clear record. Know what to ask at the next visit.</p>
+   <p>Every child's vaccination history is different. Dr Kanak and the Mamta care team can review the card, explain the products used and help plan the appropriate next visit.</p>
+   <div className="button-row">
+    <a className="button" href="/visit/">Plan a vaccination review <Icon name="arrow"/></a>
+    <a className="button outline" href="#mamta-vaccine-card">Explore the age guide <Icon name="down"/></a>
+   </div>
+   <div className="vaccine-trust-line"><Icon name="shield"/> Based on Mamta's printed card and current Indian guidance. Not an individual prescription.</div>
+  </div>
+  <div className="vaccine-family-art" aria-label="Illustrated preparation for a child’s vaccination visit">
+   <div className="vaccine-art-star vaccine-art-star-one" aria-hidden="true">✦</div>
+   <div className="vaccine-art-star vaccine-art-star-two" aria-hidden="true">✳</div>
+   <div className="vaccine-family-circle"><Icon name="heart"/></div>
+   <div className="vaccine-family-card">
+    <span><Icon name="calendar"/> Visit checklist</span>
+    <div><Icon name="check"/> Your child's records</div>
+    <div><Icon name="check"/> Questions for the doctor</div>
+    <div><Icon name="check"/> Next visit confirmed by the team</div>
+   </div>
+   <div className="vaccine-family-message">A little preparation.<br/><strong>A lot of reassurance.</strong></div>
+  </div>
+ </section>
+ <section className="vaccine-milestone-section section" id="mamta-vaccine-card">
+  <div className="container">
+   <div className="vaccine-milestone-heading">
+    <div><span className="eyebrow">From Mamta Hospital's vaccination card</span><h2>Baby's early vaccination milestones.</h2><p>Start with the first four age rows from the printed hospital card. Tap a stage to explore the labels recorded on the card; your clinician confirms the correct plan for your child.</p></div>
+    <a className="text-link" href="/vaccination/schedule/">How schedules work <Icon name="arrow"/></a>
+   </div>
+   <div className="vaccine-milestone-grid">
+    {mamtaPrintedCardEarlyMilestones.map((m,i)=><article className={`vaccine-milestone-card milestone-${m.tone}`} key={m.key}>
+     <div className="vaccine-milestone-top"><span className="vaccine-milestone-icon"><Icon name={m.symbol}/></span><span className="vaccine-stage-number">{String(i+1).padStart(2,'0')} / 04</span></div>
+     <h3>{m.label}</h3>
+     <p>{m.familyNote}</p>
+     <details><summary>What the printed card lists <Icon name="down"/></summary><ul>{m.recordedLabels.map(label=><li key={label}><Icon name="check"/>{label}</li>)}</ul></details>
+    </article>)}
+   </div>
+   <div className="vaccine-card-clarification" role="note">
+    <Icon name="shield"/>
+    <div><strong>A guide to the printed card — not your child's personal schedule.</strong>
+     <p>These entries are transcribed from a blank Mamta Hospital immunisation-card template, not a confirmed list of doses currently offered or given. Government UIP and IAP clinical recommendations may differ; combination products, previous doses and individual circumstances change the plan. Always follow the treating clinician's reviewed record.</p>
+    </div>
+   </div>
+  </div>
+ </section>
+ <section className="vaccine-evidence-band" aria-label="Why vaccination matters">
+  <div className="container vaccine-evidence-layout">
+   <span className="vaccine-evidence-icon"><Icon name="shield"/></span>
+   <div><span className="eyebrow">Why immunisation matters</span><h2>Protection made possible by generations of progress.</h2><p>A WHO-led analysis estimated that global vaccination efforts saved approximately <strong>154 million lives between 1974 and 2024</strong>. Keeping accurate records and reviewing missed appointments supports that shared goal.</p><span className="vaccine-evidence-source">Research context: WHO / UNICEF global immunisation impact study, 2024.</span></div>
+  </div>
+ </section>
+ <section className="soft-section section"><div className="container">
+  <SectionHeading eyebrow="Helpful next steps" title="Find the question on your mind.">Understand the schedule, prepare for a visit or learn what to discuss after vaccination.</SectionHeading>
+  <div className="vaccine-links">{['schedule','catch-up','after-care','teen-hpv','faq'].map((s,i)=>{const p=getPage(`/vaccination/${s}/`)!;return <a key={s} className="care-card" href={p.path}><span className={`icon-disc ${['blue','peach','sage','lavender','yellow'][i]}`}><Icon name={['calendar','clock','heart','leaf','chat'][i]}/></span><h3>{p.title}</h3><p>{p.summary}</p><span className="text-link">Read more <Icon name="arrow"/></span></a>})}</div>
+ </div></section>
+ <section className="section container reminder-story">
+  <div><span className="eyebrow">Patient OS — future care reminders</span><h2>First, a verified record.<br/>Then, the right reminder.</h2>
+   <p>Our planned Patient OS journey will begin with a clinician-reviewed record, guardian verification and consent. Personalised reminder enrolment is not active on this public page yet.</p>
+   <TextLink href="/my-child/reminders/">How care reminders will work</TextLink>
+  </div>
+  <ol className="care-steps">
+   <li><span>1</span><div><h3>Review together</h3><p>The clinical team checks the vaccination history and writes a plan.</p></div></li>
+   <li><span>2</span><div><h3>Confirm guardian details</h3><p>Verified contact information and appropriate permission are required.</p></div></li>
+   <li><span>3</span><div><h3>Keep the record current</h3><p>Future reminders should reflect new doses and changes approved by the care team.</p></div></li>
+  </ol>
+ </section>
+ <section className="container vaccine-reference-note" aria-label="Editorial reference names">
+  <span className="eyebrow">Clinical and public-health reference framework</span>
+  <p>Reference names are provided for transparency; this section does not include external links.</p>
+  <ul>{vaccinationEditorialReferences.map(name=><li key={name}><Icon name="check"/>{name}</li>)}</ul>
+  <p className="vaccine-review-notice">This is general education. Hospital vaccination services and the latest clinical protocol must be confirmed with Mamta. Content is not a substitute for a professional assessment.</p>
+ </section>
+ <VisitBand/>
+</>}
 
 function Visit(){return <><section className="section container visit-grid"><div className="visit-info"><span className="eyebrow">Appointments with Dr Kanak</span><h2>We’ll help you find<br/>a good time to visit.</h2><p>Please contact Mamta to confirm Dr Kanak’s consultation availability, fees and the service you need.</p><a className="call-number" href={`tel:${site.phone}`}><Icon name="phone"/>{site.phoneLabel}</a><div className="button-row"><a className="button" href={site.appointmentUrl} target="_blank" rel="noopener noreferrer">Hospital appointment page <Icon name="external"/></a><a className="button outline" href={site.whatsapp} target="_blank" rel="noopener noreferrer">WhatsApp Mamta <Icon name="chat"/></a></div><p className="small-copy">A request is not a confirmed appointment. Please wait for the hospital team’s confirmation before travelling.</p><div className="address-card"><Icon name="pin"/><div><h3>{site.hospital}</h3><p>{site.address}</p><a className="text-link" href={site.maps} target="_blank" rel="noopener noreferrer">Get directions <Icon name="external"/></a></div></div></div><div className="visit-photo"><img src="/images/mamta-exterior.webp" width="1067" height="1600" alt="Exterior of Mamta Super Speciality Hospital in Mowa, Raipur"/><span>Mamta Hospital · Mowa, Raipur</span></div></section><section className="section soft-section"><div className="container"><SectionHeading eyebrow="A little preparation helps" title="What to bring with you."/><div className="prep-grid">{[{icon:'book',title:'Your child’s records',text:'Vaccination cards, previous prescriptions, relevant reports and discharge papers.'},{icon:'chat',title:'Your questions',text:'The changes you have noticed, when they began and the questions that matter most to you.'},{icon:'heart',title:'The everyday details',text:'Current medicines, allergies and information about care your child receives elsewhere.'}].map(x=><div className="care-card" key={x.title}><span className="icon-disc sage"><Icon name={x.icon}/></span><h3>{x.title}</h3><p>{x.text}</p></div>)}</div></div></section><section className="container section"><div className="notice urgent"><h2>Need urgent help?</h2><p>For a severe or rapidly worsening problem, seek emergency care now. Do not wait for a callback or WhatsApp reply.</p><TextLink href="/emergency/">Emergency contacts and guidance</TextLink></div></section></>}
 
