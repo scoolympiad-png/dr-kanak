@@ -558,3 +558,14 @@ body{background:#fffdf9}
  .vaccine-family-art{min-height:330px}
  .vaccine-family-card{margin-top:95px}
 }
+/* October visitor-first refinement: genuine Dr Kanak clinic photograph, quiet banner. */
+.vaccine-hub-new{gap:clamp(28px,4vw,60px)}
+.vaccine-hub-new .vaccine-hub-main h2{font-size:clamp(38px,3.75vw,55px);line-height:1.11}
+.vaccine-hub-new .vaccine-hub-main .lead{font-size:clamp(18px,1.65vw,20px)}
+.vaccine-hub-new .vaccine-hub-main>p:not(.lead){font-size:16px;line-height:1.6}
+.vaccine-hero-photo{position:relative;min-width:0;height:clamp(355px,36vw,490px);overflow:hidden;border-radius:38% 38% 22px 22px;background:linear-gradient(145deg,#edf5fa,#ffeef3);border:8px solid #f2fafb;box-shadow:0 13px 29px #1155741a;margin:0}
+.vaccine-hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 32%}
+.vaccine-hero-photo figcaption{position:absolute;bottom:15px;left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100% - 28px);display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid #ffffffa9;border-radius:999px;background:#ffffffed;padding:9px 13px;font-size:14px;font-weight:800;color:#145c78;box-shadow:0 8px 24px #09476222}
+.vaccine-hero-photo figcaption .icon{height:18px;width:18px;color:#d46e93}
+@media(max-width:760px){.vaccine-hero-photo{height:370px;border-radius:36% 36% 20px 20px;border-width:5px}.vaccine-hero-photo figcaption{font-size:12px;padding:8px 11px}.vaccine-hub-new .vaccine-hub-main h2{font-size:clamp(35px,9vw,46px)}}
+@media(max-width:410px){.vaccine-hero-photo{height:310px}}
