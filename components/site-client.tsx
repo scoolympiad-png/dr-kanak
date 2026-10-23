@@ -115,3 +115,35 @@ export function AgeExplorer(){
 export function SearchView({index}:{index:{path:string;title:string;summary:string;eyebrow?:string}[]}){const[q,setQ]=useState('');const results=index.filter(p=>`${p.title} ${p.summary} ${p.eyebrow}`.toLowerCase().includes(q.trim().toLowerCase()));return <div className="search-view"><label className="search-field"><Icon name="search"/><span className="sr-only">Search topics</span><input type="search" value={q} onChange={e=>setQ(e.target.value)} placeholder="Try feeding, growth, newborn or vaccination…" autoComplete="off" maxLength={100}/></label><p className="small-copy" aria-live="polite">{results.length} {results.length===1?'page':'pages'} found. Search stays in this page and is not added to the address.</p><div className="search-results">{results.map(p=><a href={p.path} key={p.path}><span className="eyebrow">{p.eyebrow||'Explore'}</span><h2>{p.title}<Icon name="arrow"/></h2><p>{p.summary}</p></a>)}</div>{!results.length&&<p>Try another word, or <a href="/visit/">contact the hospital team</a>.</p>}</div>}
 
 export function CareAccess(){const c=useConfig();return <div className="portal-card"><span className="icon-disc sage"><Icon name="lock"/></span><h2>Your family’s care, kept personal.</h2><p>Clinical records and vaccination plans need a verified guardian account. Please use the hospital’s authorised service or ask the care team for help.</p>{c?.portalUrl?<a className="button" href={c.portalUrl} target="_blank" rel="noopener noreferrer">Open secure care portal <Icon name="external"/></a>:<><a className="button" href={`tel:${site.phone}`}>Ask Mamta about access <Icon name="phone"/></a><p className="small-copy">Online record access and personalised reminders are not available through this website at present.</p></>}<div className="portal-links"><a href="/my-child/vaccination-card/">Vaccination record</a><a href="/my-child/reminders/">Care reminders</a><a href="/my-child/records/">Health records</a><a href="/my-child/preferences/">Contact preferences</a></div><a className="text-link" href="/consent/">Understand consent and reminders <Icon name="arrow"/></a></div>}
+
+const kanakCarePhotos=[
+ {src:'/images/dr-kanak-hospital-care-2026.webp',alt:'Dr Kanak Ramnani at Mamta Hospital',title:'Caring through every milestone',note:'Compassionate care, from the very first days.'},
+ {src:'/images/dr-kanak-newborn-consultation-private.webp',alt:'Dr Kanak speaking with a parent while caring for a baby; identifying patient details obscured',title:'A reassuring start',note:'Guidance for newborns and their families.'},
+ {src:'/images/dr-kanak-consultation-child-private.webp',alt:'Dr Kanak reviewing a child health concern in her clinic; child identity obscured',title:'Little questions matter',note:'Time to listen, explain and care.'},
+ {src:'/images/dr-kanak-conversation-2026.webp',alt:'Dr Kanak talking about child health in an interview',title:'Helping parents feel informed',note:'Clear conversations about growing up.'}
+] as const;
+
+export function VaccinationPhotoCarousel(){
+ const [active,setActive]=useState(0);
+ const selected=kanakCarePhotos[active];
+ const previous=()=>setActive(i=>(i+kanakCarePhotos.length-1)%kanakCarePhotos.length);
+ const next=()=>setActive(i=>(i+1)%kanakCarePhotos.length);
+ return <div className="kanak-care-carousel" aria-label="Moments of care with Dr Kanak" aria-roledescription="carousel">
+  <div className="kanak-care-carousel-view">
+   <div className="kanak-care-carousel-photo"><img key={selected.src} src={selected.src} alt={selected.alt} width="1000" height="750" loading="lazy"/></div>
+   <div className="kanak-care-carousel-caption" aria-live="polite" aria-atomic="true">
+    <span className="eyebrow">Dr Kanak · Mamta Hospital</span><h3>{selected.title}</h3><p>{selected.note}</p>
+   </div>
+  </div>
+  <div className="kanak-care-carousel-controls">
+   <span className="kanak-care-carousel-counter">{String(active+1).padStart(2,'0')} / {String(kanakCarePhotos.length).padStart(2,'0')}</span>
+   <div className="kanak-care-carousel-dots" aria-label="Choose a photograph">
+    {kanakCarePhotos.map((item,i)=><button type="button" key={item.src} aria-label={`Show photo ${i+1}: ${item.title}`} aria-current={i===active?'true':undefined} className={i===active?'is-current':''} onClick={()=>setActive(i)}/>)}
+   </div>
+   <div className="kanak-care-carousel-arrows">
+    <button type="button" onClick={previous} aria-label="Previous photograph"><Icon name="arrow"/></button>
+    <button type="button" onClick={next} aria-label="Next photograph"><Icon name="arrow"/></button>
+   </div>
+  </div>
+ </div>;
+}
