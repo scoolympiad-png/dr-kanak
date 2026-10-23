@@ -28,6 +28,21 @@ The CRM ingress must return a successful HTTP status and JSON `{"accepted":true,
 
 Unconfigured requests return 503. Upstream refusal, timeout or an unrecognised receipt cannot appear as a successful submission. No patient contact data is written to browser storage or URL parameters. Add platform rate limiting to the ingress; CAPTCHA is not a substitute for rate controls.
 
+## Vaccination reminder contact gateway — public stage implemented
+
+The vaccination schedule and `/my-child/reminders/` show a parent-facing reminder interest card. When the existing server-authorised callback ingress is available, the CTA opens the existing Turnstile-protected enquiry form preselected to `reminder-enrolment`. Otherwise, it presents the hospital's telephone contact. If `PATIENT_OS_PORTAL_URL` is configured, guardians can open the existing secure portal as a separate action.
+
+The form accepts **adult name, telephone, language, reply consent and request intent only**. It rejects unexpected fields including child identity, date of birth, vaccine details, clinical notes, and uploaded records. The backend requires a matching CRM request receipt to acknowledge acceptance. Contact consent is **not** consent to care reminders. A successful enquiry is a callback request only; it does not create a guardian account, mark a clinical event, schedule a vaccination, opt a family in to messages, or issue a reminder.
+
+Remaining private-service requirements before activation:
+
+- Verify the actual Mamta hospital tenant, Patient OS guardian portal endpoint, CRM enquiry ingress and notification service.
+- Confirm guardian relationship/authority and channel-specific, revocable consent in Patient OS.
+- Import vaccination evidence through an authenticated healthcare workflow, with clinician review and source attribution.
+- Calculate due events only from approved clinical rules and records, not from this public age guide.
+- Use a durable scheduler, approved templates, quiet hours, opt-out handling and replay-safe webhooks.
+- Perform test-tenant end-to-end receipt, notification and cancellation verification before enabling any real family.
+
 ## Chat and portal — configurable handoff implemented
 
 - `PATIENT_OS_CHAT_URL`: an approved HTTPS address of the existing assistant. The navigator opens it explicitly in a new tab. This keeps its own authentication boundary and avoids assuming iframe support.
