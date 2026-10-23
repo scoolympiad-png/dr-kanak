@@ -33,7 +33,7 @@ export function SiteNavigation(){
     <a className="nav-search" href="/search/" aria-label="Search the website"><Icon name="search"/></a>
     <a className="button small" href="/visit/">Plan a visit <Icon name="arrow"/></a>
    </nav>
-  </div></header><div className="utility-bar"><div className="container"><a href="/parent-resources/">Read the parent library <Icon name="arrow"/></a><div><a href="/about/">About Dr Kanak</a><a href="/resources/">Resources</a><a href="/media/">Media</a><a href="/hi/" lang="hi">हिन्दी</a><a className="utility-care" href="/my-child/">Your child’s care <Icon name="heart"/></a></div></div></div>
+  </div></header>
   <div className="contact-dock" aria-label="Contact and appointments"><button onClick={()=>setModal('callback')}><Icon name="phone"/><span>Request callback</span></button><a href={`tel:${site.phone}`}><Icon name="phone"/><span>Call Mamta</span></a><a href={site.whatsapp} target="_blank" rel="noopener noreferrer"><Icon name="chat"/><span>WhatsApp</span></a><a href="/visit/"><Icon name="calendar"/><span>Appointment</span></a></div>
   <button className="assistant-launch" onClick={()=>setModal('chat')} aria-label="Open care navigator"><Icon name="chat"/><span>How can we help?</span></button>
   {modal==='callback'&&<Dialog title="Request a callback" onClose={close}><Callback config={c}/></Dialog>}
