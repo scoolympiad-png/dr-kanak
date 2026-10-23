@@ -684,3 +684,141 @@ body{background:#fffdf9}
  .vaccination-next-year-heading>p{font-size:15px}
  .vaccination-next-year-note{font-size:13px}
 }
+/* Vaccination schedule — parent-first age guide, 2026. */
+.vax-schedule-page-intro{background:linear-gradient(115deg,#fff1d9 0%,#e7f8fb 47%,#f5e8fa 100%);padding-bottom:34px}
+.vax-schedule-page-intro .breadcrumbs{font-size:13px;margin-bottom:23px}
+.vax-schedule-page-intro .eyebrow{font-size:13px}
+.vax-schedule-page-intro h1{font-size:clamp(39px,4.4vw,58px);line-height:1.1;max-width:1000px;color:#194e68}
+.vax-schedule-page-intro .container>p{font-size:18px;line-height:1.6}
+.vax-schedule-layout{grid-template-columns:190px minmax(0,1fr);gap:clamp(25px,4vw,55px);align-items:start}
+.vax-schedule-layout .article-aside>a{font-size:14px;line-height:1.5}
+.vax-schedule-article{max-width:none;min-width:0}
+.vax-schedule-article .article-meta{font-size:13px;letter-spacing:.01em;margin:35px 0 22px}
+.vax-schedule-article>section:not(.vax-schedule-explorer){max-width:990px}
+.vax-schedule-intro-panel{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:28px;align-items:center;min-height:335px;padding:24px 25px 24px 35px;background:linear-gradient(120deg,#f6fbfd 0%,#fff4e7 55%,#fff0f6 100%);border:2px solid #dfeaed;border-radius:29px;overflow:hidden;box-shadow:0 15px 35px #164e6414}
+.vax-schedule-intro-copy{min-width:0}
+.vax-small-label{display:inline-flex;align-items:center;gap:7px;background:#e9f7f5;color:#216578;font-size:13px;font-weight:800;padding:8px 11px;border:1px solid #c8e7e5;border-radius:100px}
+.vax-small-label .icon{height:16px;width:16px;color:#dc7396}
+.vax-schedule-intro-copy h2{font-size:clamp(30px,3.2vw,42px);line-height:1.13;letter-spacing:-.045em;color:#184e68;margin:17px 0 14px}
+.vax-schedule-intro-copy h2 em{font-style:normal;color:#b65a82}
+.vax-schedule-intro-copy>p{font-size:17px;line-height:1.6;color:#446474;max-width:520px}
+.vax-intro-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.vax-intro-buttons .button{font-size:15px;min-height:48px;padding:12px 16px}
+.vax-schedule-intro-art{position:relative;height:295px;background:radial-gradient(circle at 55% 40%,#b7e8e1 0%,#d2edf7 43%,#ebf0ff 71%,transparent 72%);display:flex;align-items:center;justify-content:center;isolation:isolate}
+.vax-intro-big-heart{display:grid;place-items:center;height:125px;width:125px;border-radius:42% 58% 50% 50%;background:linear-gradient(145deg,#f49cbd,#d77daa);transform:rotate(-7deg);box-shadow:0 16px 30px #b4619633}
+.vax-intro-big-heart .icon{height:76px;width:76px;color:white;transform:rotate(7deg)}
+.vax-intro-flower{position:absolute;font-size:43px;line-height:1}
+.vax-intro-flower.flower-one{top:35px;right:30px;color:#f1bc59}
+.vax-intro-flower.flower-two{bottom:31px;left:19px;color:#a897db}
+.vax-intro-little-card{position:absolute;left:25%;bottom:5px;display:flex;gap:10px;align-items:center;background:#fffefa;border-radius:16px;padding:15px;box-shadow:0 8px 20px #20577521;transform:rotate(-4deg);font-size:14px;line-height:1.38;color:#476273}
+.vax-intro-little-card strong{color:#a65485}
+.vax-intro-little-card .icon{width:29px;height:29px;color:#1788a3;flex:none}
+.vax-schedule-explorer{background:#fff;border:2px solid #d5e9ed;border-radius:28px;padding:27px;margin:33px 0 36px;box-shadow:0 13px 36px #175c7812;scroll-margin-top:120px}
+.vax-schedule-explorer-heading .eyebrow{font-size:13px;color:#147f9a}
+.vax-schedule-explorer-heading h2{color:#1c506c;font-size:clamp(30px,3vw,40px);letter-spacing:-.045em;margin:9px 0 10px;line-height:1.22}
+.vax-schedule-explorer-heading p{font-size:16px;line-height:1.65;max-width:780px;color:#496775;margin:0 0 20px}
+.vax-stage-tabs{display:flex;gap:9px;overflow-x:auto;scroll-snap-type:x proximity;scroll-padding-inline:5px;padding:5px 5px 16px;overscroll-behavior-x:contain}
+.vax-stage-tab{flex:1 0 120px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:132px;max-width:185px;padding:12px 9px;border:2px solid transparent;border-radius:19px;text-align:center;cursor:pointer;scroll-snap-align:start;transition:transform .16s ease,box-shadow .16s ease;box-shadow:0 4px 10px #214e6010}
+.vax-stage-tab.tone-peach{background:#ffebdd}.vax-stage-tab.tone-blue{background:#e1f3fc}
+.vax-stage-tab.tone-mint{background:#e0f6e6}.vax-stage-tab.tone-lavender{background:#f0e7ff}
+.vax-stage-tab.tone-yellow{background:#fff0c3}.vax-stage-tab.tone-sky{background:#dbf1ff}
+.vax-stage-tab.tone-rose{background:#fbe4ed}
+.vax-stage-tab.selected{border-color:#117b9b;box-shadow:inset 0 -4px 0 #1984a0,0 8px 18px #1b7e9b22;transform:translateY(-2px)}
+.vax-stage-tab:hover{transform:translateY(-3px)}
+.vax-stage-tab:focus-visible{outline:3px solid #0d6f8f;outline-offset:3px}
+.vax-tab-icon{height:43px;width:43px;border-radius:15px;background:#ffffffb8;display:grid;place-items:center;color:#1e6e87}
+.vax-tab-icon .icon{height:25px;width:25px}
+.vax-stage-tab strong{font-size:14px;line-height:1.2;font-weight:800;color:#214a65}
+.vax-stage-tab small{font-size:12px;line-height:1.3;color:#526e7a}
+.vax-stage-detail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px;border-radius:23px;padding:22px;background:linear-gradient(125deg,#eff9fc,#fff7eb);border:1px solid #deebea}
+.vax-stage-detail.tone-peach{background:linear-gradient(125deg,#fff1e7,#fff8eb)}
+.vax-stage-detail.tone-blue{background:linear-gradient(125deg,#ecf8ff,#f3fbff)}
+.vax-stage-detail.tone-mint{background:linear-gradient(125deg,#eaf9ee,#f8fff2)}
+.vax-stage-detail.tone-lavender{background:linear-gradient(125deg,#f7f0ff,#f4f8ff)}
+.vax-stage-detail.tone-yellow{background:linear-gradient(125deg,#fff8da,#fffdf0)}
+.vax-stage-detail.tone-sky{background:linear-gradient(125deg,#e7f5ff,#effbff)}
+.vax-stage-detail.tone-rose{background:linear-gradient(125deg,#fff0f6,#fff8ec)}
+.vax-stage-narrative{padding:10px 7px 12px}
+.vax-stage-counter{display:inline-block;background:#fff9;border:1px solid #d6e5e5;padding:7px 11px;border-radius:22px;font-size:12px;font-weight:800;color:#315b70}
+.vax-stage-narrative h3{font-size:clamp(25px,2.65vw,32px);line-height:1.22;letter-spacing:-.035em;color:#23536b;margin:16px 0 10px}
+.vax-stage-narrative>p{font-size:16px;line-height:1.68;color:#4d6a76;margin:0 0 18px}
+.vax-timing-note{display:flex;gap:10px;align-items:flex-start;background:#fff9;border:1px solid #e1e9e5;padding:13px;border-radius:14px;color:#3f6372;font-size:14px;line-height:1.6}
+.vax-timing-note .icon{flex:none;height:21px;width:21px;color:#3c8c84;margin-top:1px}
+.vax-stage-cta{display:flex;flex-wrap:wrap;align-items:center;gap:13px;margin-top:18px}
+.vax-stage-cta .button{font-size:14px;padding:11px 15px;min-height:45px}
+.vax-stage-catchup{display:inline-flex;gap:7px;align-items:center;font-size:14px;line-height:1.45;font-weight:750;color:#1a6681}
+.vax-stage-catchup .icon{height:17px;width:17px}
+.vax-stage-details-card{padding:24px;background:#fffc;border-radius:22px;border:1px solid #d4e7e8;box-shadow:0 7px 24px #1c576a15}
+.vax-card-tag{display:flex;align-items:center;gap:8px;color:#27718a;font-size:13px;font-weight:800}
+.vax-card-tag .icon{height:18px;width:18px}
+.vax-stage-details-card h4{font-size:23px;line-height:1.25;color:#20516e;margin:13px 0 15px;letter-spacing:-.025em}
+.vax-vaccine-chips{display:flex;flex-wrap:wrap;gap:8px}
+.vax-vaccine-chips span{display:inline-flex;align-items:center;background:#e8f7fa;border:1px solid #cce9ee;border-radius:50px;padding:7px 11px;font-size:13px;line-height:1.3;font-weight:750;color:#205a74}
+.vax-ask{display:flex;gap:10px;align-items:flex-start;margin-top:18px;padding:13px 14px;border-radius:14px;background:#fff1d3}
+.vax-ask>.icon{height:21px;width:21px;flex:none;color:#ac7a27;margin-top:2px}
+.vax-ask p{margin:0;font-size:14px;line-height:1.5;color:#665128}
+.vax-ask p strong{display:block;margin-bottom:3px;font-size:13px}
+.vax-stage-details-card .vax-card-tip{margin:14px 0 0;color:#516d79;font-size:12px;line-height:1.55}
+.vax-explorer-foot{display:flex;align-items:flex-start;gap:9px;padding:18px 4px 0;color:#456875;font-size:14px;line-height:1.55}
+.vax-explorer-foot .icon{height:18px;width:18px;color:#bf769b;flex:none;margin-top:1px}
+.vax-practical-steps{padding:8px 0 22px}
+.vax-practical-steps .eyebrow{font-size:12px}
+.vax-practical-steps h2{font-size:clamp(27px,2.8vw,36px);letter-spacing:-.035em;line-height:1.2;color:#1d516e;margin:8px 0 20px}
+.vax-practical-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.vax-practical-grid>div{background:#f0f9fa;border:1px solid #d5e8eb;border-radius:22px;padding:20px 17px}
+.vax-practical-grid>div:nth-child(2){background:#fff4e8;border-color:#f6dfc5}
+.vax-practical-grid>div:nth-child(3){background:#f4efff;border-color:#e6d8fa}
+.vax-practical-icon{display:grid;place-items:center;height:50px;width:50px;border-radius:16px;background:#fffe;color:#1b7894}
+.vax-practical-icon .icon{height:27px;width:27px}
+.vax-practical-grid h3{font-size:20px;line-height:1.27;color:#20506c;margin:14px 0 8px}
+.vax-practical-grid p{font-size:14px;line-height:1.65;color:#496674;margin:0}
+.vax-help-links{display:flex;flex-wrap:wrap;gap:13px;margin-top:18px}
+.vax-help-links a{display:inline-flex;align-items:center;gap:8px;font-weight:750;font-size:14px;color:#176581;padding:12px 15px;background:#e7f6fa;border-radius:30px}
+.vax-help-links a:hover{text-decoration:underline;text-underline-offset:4px}
+.vax-help-links .icon{height:16px;width:16px}
+.vax-evidence-byline{display:flex;align-items:flex-start;gap:9px;background:#f6faf8;border:1px solid #e0eae4;border-radius:14px;padding:15px 16px;color:#526c77;font-size:13px;line-height:1.6}
+.vax-evidence-byline .icon{height:19px;width:19px;flex:none;margin-top:1px;color:#498e7a}
+.vax-schedule-article .article>section{scroll-margin-top:110px}
+.vax-schedule-article>section:not(.vax-schedule-explorer) p{line-height:1.7}
+.vax-schedule-article .source-note{padding:20px;border-radius:17px;background:#f2f9f8}
+.vax-schedule-article .source-note summary{font-size:14px}
+.vax-schedule-article .source-note>p{font-size:13px}
+@media(max-width:1060px){
+ .vax-schedule-layout{grid-template-columns:165px minmax(0,1fr);gap:22px}
+ .vax-schedule-intro-panel{grid-template-columns:1fr;min-height:0;padding:26px}
+ .vax-schedule-intro-art{display:none}
+ .vax-stage-detail{grid-template-columns:1fr}
+ .vax-stage-details-card{padding:22px}
+}
+@media(max-width:760px){
+ .vax-schedule-page-intro{padding:26px 0 30px}
+ .vax-schedule-page-intro h1{font-size:clamp(36px,9vw,46px)}
+ .vax-schedule-page-intro .container>p{font-size:16px}
+ .vax-schedule-layout{display:block;padding-block:30px 70px}
+ .vax-schedule-layout .article-aside{position:static;display:none}
+ .vax-schedule-intro-panel{padding:22px 19px;border-radius:23px}
+ .vax-schedule-intro-copy h2{font-size:33px}
+ .vax-schedule-intro-copy>p{font-size:16px}
+ .vax-intro-buttons .button{font-size:14px;min-height:44px}
+ .vax-schedule-explorer{padding:19px 13px;margin:22px 0 27px;border-radius:22px}
+ .vax-schedule-explorer-heading{padding:0 5px}
+ .vax-schedule-explorer-heading h2{font-size:29px}
+ .vax-schedule-explorer-heading p{font-size:15px}
+ .vax-stage-tab{flex:0 0 122px;min-height:130px}
+ .vax-stage-tab strong{font-size:14px}
+ .vax-stage-detail{padding:12px;gap:10px;border-radius:19px}
+ .vax-stage-narrative{padding:13px 8px}
+ .vax-stage-narrative h3{font-size:25px}
+ .vax-stage-narrative>p{font-size:15px}
+ .vax-timing-note{font-size:13px}
+ .vax-stage-details-card{padding:18px;border-radius:17px}
+ .vax-stage-details-card h4{font-size:22px}
+ .vax-stage-details-card .vax-card-tip{font-size:12px}
+ .vax-explorer-foot{font-size:13px}
+ .vax-practical-grid{grid-template-columns:1fr;gap:10px}
+ .vax-practical-grid>div{padding:17px}
+ .vax-practical-grid h3{font-size:19px}
+ .vax-practical-grid p{font-size:14px}
+ .vax-help-links a{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){.vax-stage-tab{transition:none}}
