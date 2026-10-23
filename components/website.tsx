@@ -1,7 +1,7 @@
 import type {ReactNode} from 'react';
 import {ages,careAreas,site,sources,type PageData} from '@/lib/site-config';
 import {getPage,guides,searchIndex,sectionId} from '@/lib/pages';
-import {AgeExplorer,CareAccess,SearchView} from './site-client';
+import {AgeExplorer,CareAccess,SearchView,VaccinationPhotoCarousel} from './site-client';
 import {Icon} from './icon';
 import {mamtaPrintedCardEarlyMilestones,vaccinationEditorialReferences} from '@/lib/vaccination-reference';
 
@@ -98,6 +98,10 @@ function Vaccination(){return <>
     </div>
    </div>
   </div>
+ </section>
+ <section className="container section vaccination-care-gallery" aria-label="Care moments with Dr Kanak">
+  <SectionHeading eyebrow="Inside Dr Kanak’s world" title="Gentle care. Real moments.">A glimpse of the conversations and care that support growing families.</SectionHeading>
+  <VaccinationPhotoCarousel/>
  </section>
  <section className="vaccine-evidence-band" aria-label="Why vaccination matters">
   <div className="container vaccine-evidence-layout">
