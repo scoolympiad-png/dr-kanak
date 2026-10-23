@@ -60,13 +60,13 @@ function Vaccination(){return <>
   <div className="vaccine-hub-main">
    <span className="vaccine-kicker"><Icon name="heart"/> A thoughtful start for growing families</span>
    <h2>Small moments.<br/><em>Lifelong protection.</em></h2>
-   <p className="lead">Understand the vaccination card. Keep a clear record. Know what to ask at the next visit.</p>
-   <p>Every child's vaccination history is different. Dr Kanak and the Mamta care team can review the card, explain the products used and help plan the appropriate next visit.</p>
+   <p className="lead">A clear guide to your child’s vaccines, from the very first visit.</p>
+   <p>Explore each age, keep your child's vaccination records and ask Dr Kanak about the next visit.</p>
    <div className="button-row">
     <a className="button" href="/visit/">Plan a vaccination review <Icon name="arrow"/></a>
     <a className="button outline" href="#mamta-vaccine-card">Explore the age guide <Icon name="down"/></a>
    </div>
-   <div className="vaccine-trust-line"><Icon name="shield"/> Based on Mamta's printed card and current Indian guidance. Not an individual prescription.</div>
+   
   </div>
   <div className="vaccine-family-art" aria-label="Illustrated preparation for a child’s vaccination visit">
    <div className="vaccine-art-star vaccine-art-star-one" aria-hidden="true">✦</div>
@@ -84,7 +84,7 @@ function Vaccination(){return <>
  <section className="vaccine-milestone-section section" id="mamta-vaccine-card">
   <div className="container">
    <div className="vaccine-milestone-heading">
-    <div><span className="eyebrow">From Mamta Hospital's vaccination card</span><h2>Baby's early vaccination milestones.</h2><p>Start with the first four age rows from the printed hospital card. Tap a stage to explore the labels recorded on the card; your clinician confirms the correct plan for your child.</p></div>
+    <div><span className="eyebrow">Your baby's first milestones</span><h2>Vaccinations, age by age.</h2><p>Explore the vaccines listed on Mamta's card and ask our team what's right for your child.</p></div>
     <a className="text-link" href="/vaccination/schedule/">How schedules work <Icon name="arrow"/></a>
    </div>
    <div className="vaccine-milestone-grid">
@@ -92,13 +92,13 @@ function Vaccination(){return <>
      <div className="vaccine-milestone-top"><span className="vaccine-milestone-icon"><Icon name={m.symbol}/></span><span className="vaccine-stage-number">{String(i+1).padStart(2,'0')} / 04</span></div>
      <h3>{m.label}</h3>
      <p>{m.familyNote}</p>
-     <details><summary>What the printed card lists <Icon name="down"/></summary><ul>{m.recordedLabels.map(label=><li key={label}><Icon name="check"/>{label}</li>)}</ul></details>
+     <details><summary>Explore vaccines <Icon name="down"/></summary><ul>{m.recordedLabels.map(label=><li key={label}><Icon name="check"/>{label}</li>)}</ul></details>
     </article>)}
    </div>
    <div className="vaccine-card-clarification" role="note">
     <Icon name="shield"/>
-    <div><strong>A guide to the printed card — not your child's personal schedule.</strong>
-     <p>These entries are transcribed from a blank Mamta Hospital immunisation-card template, not a confirmed list of doses currently offered or given. Government UIP and IAP clinical recommendations may differ; combination products, previous doses and individual circumstances change the plan. Always follow the treating clinician's reviewed record.</p>
+    <div><strong>Every child's vaccination journey is personal.</strong>
+     <p>Your doctor can help choose the right vaccines and timings based on your child's age, records and health needs. Bring the vaccination card to each visit.</p>
     </div>
    </div>
   </div>
@@ -114,21 +114,21 @@ function Vaccination(){return <>
   <div className="vaccine-links">{['schedule','catch-up','after-care','teen-hpv','faq'].map((s,i)=>{const p=getPage(`/vaccination/${s}/`)!;return <a key={s} className="care-card" href={p.path}><span className={`icon-disc ${['blue','peach','sage','lavender','yellow'][i]}`}><Icon name={['calendar','clock','heart','leaf','chat'][i]}/></span><h3>{p.title}</h3><p>{p.summary}</p><span className="text-link">Read more <Icon name="arrow"/></span></a>})}</div>
  </div></section>
  <section className="section container reminder-story">
-  <div><span className="eyebrow">Patient OS — future care reminders</span><h2>First, a verified record.<br/>Then, the right reminder.</h2>
-   <p>Our planned Patient OS journey will begin with a clinician-reviewed record, guardian verification and consent. Personalised reminder enrolment is not active on this public page yet.</p>
+  <div><span className="eyebrow">Making future visits easier</span><h2>Never lose track<br/>of the next visit.</h2>
+   <p>Keep your child's vaccination card handy. Ask our team about reminder options; personalised online reminders are coming soon.</p>
    <TextLink href="/my-child/reminders/">How care reminders will work</TextLink>
   </div>
   <ol className="care-steps">
    <li><span>1</span><div><h3>Review together</h3><p>The clinical team checks the vaccination history and writes a plan.</p></div></li>
-   <li><span>2</span><div><h3>Confirm guardian details</h3><p>Verified contact information and appropriate permission are required.</p></div></li>
+   <li><span>2</span><div><h3>Confirm guardian details</h3><p>When reminders become available, your family can choose its preferred contact method.</p></div></li>
    <li><span>3</span><div><h3>Keep the record current</h3><p>Future reminders should reflect new doses and changes approved by the care team.</p></div></li>
   </ol>
  </section>
  <section className="container vaccine-reference-note" aria-label="Editorial reference names">
-  <span className="eyebrow">Clinical and public-health reference framework</span>
-  <p>Reference names are provided for transparency; this section does not include external links.</p>
+  <span className="eyebrow">Information you can trust</span>
+  <p>Our vaccination education draws on Indian and international child-health guidance.</p>
   <ul>{vaccinationEditorialReferences.map(name=><li key={name}><Icon name="check"/>{name}</li>)}</ul>
-  <p className="vaccine-review-notice">This is general education. Hospital vaccination services and the latest clinical protocol must be confirmed with Mamta. Content is not a substitute for a professional assessment.</p>
+  <p className="vaccine-review-notice">Vaccine recommendations and timings can differ. Please ask Dr Kanak about the right schedule for your child.</p>
  </section>
  <VisitBand/>
 </>}
