@@ -106,3 +106,18 @@ body{background:#fffdf9}
 @media(max-width:1020px){.brand-mark{height:45px;width:45px}.hero-inner{min-height:500px}.hero-portrait{height:500px}.hero-portrait>img{height:485px;width:340px}.hero-summary{font-size:17px}.hero-specialities{font-size:16px}}
 @media(max-width:760px){.brand-mark{height:43px;width:43px}.hero-copy{padding:30px 0 2px}.hero-specialities{font-size:15px;margin-top:11px}.hero-summary{font-size:17px;margin:15px auto 20px}.hero-care-chips{margin-bottom:20px}.hero-portrait{height:435px}.hero-portrait>img{height:430px;width:308px}.portrait-sun{height:335px}}
 @media(max-width:370px){.brand-mark{height:39px;width:39px}.hero-portrait{height:398px}.hero-portrait>img{height:391px;width:282px}}
+/* Step 1 — Replace the wide parent-library strip with a compact hero widget. */
+.hero-care-chips .parent-library-widget{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  min-height:36px;padding:7px 14px;
+  background:#fff;color:#145b77;border:1px solid #a9dce9;
+  border-radius:999px;box-shadow:0 3px 10px #124d6c17;
+  font-size:13px;font-weight:750;line-height:1.2;
+}
+.hero-care-chips .parent-library-widget .icon{width:16px;height:16px;flex:none}
+.hero-care-chips .parent-library-widget:hover{background:#e9f8fd;box-shadow:0 6px 16px #124d6c20;text-decoration:none;transform:translateY(-1px)}
+.hero-care-chips .parent-library-widget:focus-visible{outline:3px solid #e58c50;outline-offset:3px}
+@media(max-width:760px){
+  .hero-care-chips .parent-library-widget{min-height:34px;font-size:12px;padding:6px 12px}
+  .hero-care-chips .parent-library-widget .icon{width:14px;height:14px}
+}
