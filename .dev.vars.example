@@ -1,0 +1,12 @@
+# Copy to .dev.vars locally. Never commit actual credentials.
+PUBLIC_SITE_URL="http://localhost:5173"
+PUBLIC_LAUNCH="false"
+# Set verified HTTPS handoff URLs when available:
+# PATIENT_OS_CHAT_URL=""
+# PATIENT_OS_PORTAL_URL=""
+# All five settings below are required to enable the public callback form.
+# CRM_ENQUIRY_URL=""
+# CRM_ENQUIRY_SECRET=""
+# MAMTA_TENANT_ID=""
+# TURNSTILE_SITE_KEY=""
+# TURNSTILE_SECRET=""

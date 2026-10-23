@@ -1,0 +1,260 @@
+[
+  {
+    "slug": "feeding",
+    "title": "Feeding your baby with confidence",
+    "summary": "Support for breastfeeding, starting complementary foods and recognising when feeding needs a closer look.",
+    "hindi": {"title": "शिशु के पोषण की देखभाल", "summary": "स्तनपान, छह महीने पर पूरक आहार शुरू करने और भोजन से जुड़ी चिंताओं के लिए सरल मार्गदर्शन।"},
+    "age": "Birth to 2 years",
+    "tags": ["Feeding", "Infants", "Nutrition"],
+    "sections": [
+      {"heading": "A supported start", "paragraphs": ["Feeding is a skill that a parent and baby learn together. WHO recommends only breast milk for the first six months, followed by suitable complementary foods while breastfeeding continues up to two years or beyond. If breastfeeding is difficult or another feeding method is needed, ask for individual support rather than comparing your family with someone else's."]},
+      {"heading": "Notice your baby's signals", "paragraphs": ["Turning towards the breast, bringing hands to the mouth and sucking movements can be early hunger signals. Crying has many causes and is not the only feeding cue. Persistent nipple pain, difficulty attaching or worry about milk transfer deserves a feeding assessment. Weight checks and the baby's urine pattern help the clinician understand how feeding is going."]},
+      {"heading": "When foods join milk", "paragraphs": ["From six months, gradually introduce age appropriate foods alongside milk feeds. Offer small amounts and progress with texture and variety as your baby develops eating skills. Familiar family ingredients can be adapted to a safe consistency; meals do not need to be expensive. Wash hands, use clean utensils and supervise eating. Avoid hard pieces or shapes that could obstruct the airway, including whole nuts and whole grapes. Encourage rather than force feeding."]},
+      {"heading": "Make the consultation practical", "paragraphs": ["Bring the growth record and describe a usual day of feeds. Note any coughing during feeds, vomiting, pain or foods being avoided. Ask which textures to offer next and how to manage any suspected allergy. A baby who cannot feed, becomes unusually sleepy or seems dehydrated needs prompt assessment rather than an online feeding plan."]}
+    ],
+    "faqs": [
+      {"q": "Does every cry mean hunger?", "a": "No. Babies also cry because they need comfort or a change. Look for feeding signals and discuss persistent crying or feeding difficulty."},
+      {"q": "Must complementary foods come from a packet?", "a": "No. Suitable family foods can be prepared hygienically and adapted to the child's eating skills."},
+      {"q": "Can a guide decide whether my baby is gaining enough?", "a": "A clinician needs dated measurements and feeding history to assess growth. Bring the record to your visit."}
+    ],
+    "related": ["newborn-care", "growth-charts", "toddler-nutrition"],
+    "sources": [
+      {"title": "WHO Infant and young child feeding", "url": "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding"},
+      {"title": "IAP How to Breastfeed", "url": "https://iapindia.org/pdf/Ch-039-Breastfeeding.pdf"},
+      {"title": "IAP Complementary Feeding", "url": "https://iapindia.org/pdf/Ch-040-IAP-Parental-Guideline-Complementary-Feeding.pdf"}
+    ],
+    "updated": "2026-10-23"
+  },
+  {
+    "slug": "safe-sleep",
+    "title": "A safer sleep space for your baby",
+    "summary": "Simple sleep-space choices and realistic settling routines for the first year.",
+    "hindi": {"title": "शिशु की सुरक्षित नींद", "summary": "पीठ के बल सुलाना, समतल और सख्त सतह चुनना और सोने की जगह को सुरक्षित रखना।"},
+    "age": "Birth to 12 months",
+    "tags": ["Sleep", "Infants", "Safety"],
+    "sections": [
+      {"heading": "Begin with the sleep space", "paragraphs": ["Place your baby on their back at the start of every sleep, including daytime naps. Use a firm, flat sleep surface intended for infants with a fitted sheet. Keep pillows, loose bedding, soft toys and other soft objects out. A sofa, armchair or inclined product is not a safe substitute for the baby's sleep space. These steps reduce risk; no product can promise to prevent every sleep related death."]},
+      {"heading": "Stay close safely", "paragraphs": ["Keep the baby's own sleep space in your room for at least the first six months. Sharing a room is different from sharing an adult bed. If you bring your baby to you for feeding or comforting, return them to their separate space before you sleep. Make sure every caregiver understands the same arrangements."]},
+      {"heading": "Allow time for a pattern to develop", "paragraphs": ["Young babies wake and feed frequently, and their sleep patterns vary. There is no single timetable that all families should achieve. Daylight and ordinary daytime interaction, followed by quieter evenings, can help distinguish day from night. A simple routine might include changing, a calm cuddle and a short song. Ask for support if exhaustion is making safe care difficult."]},
+      {"heading": "Bring sleep questions to the visit", "paragraphs": ["Write down what worries you: noisy breathing, feeding, long periods of crying or trouble settling. Describe where the baby sleeps and who provides care. The clinician can consider feeding, growth and health alongside the sleep pattern. Breathing difficulty, blue colouring or a baby who is difficult to wake needs urgent medical help rather than routine sleep advice."]}
+    ],
+    "faqs": [
+      {"q": "Do naps need the same precautions?", "a": "Yes. Use the same safe sleep position and clear sleep space for naps and night-time sleep."},
+      {"q": "Does frequent waking mean I have done something wrong?", "a": "No. Babies develop different patterns. Discuss feeding, growth and any health concerns at the visit."},
+      {"q": "Can a sleep accessory guarantee safety?", "a": "No. Focus on the baby's position, a suitable flat surface and an uncluttered sleep space."}
+    ],
+    "related": ["newborn-care", "feeding", "screen-and-play"],
+    "sources": [
+      {"title": "AAP How to Keep Your Sleeping Baby Safe", "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/a-parents-guide-to-safe-sleep.aspx"},
+      {"title": "NHS Helping your baby to sleep", "url": "https://www.nhs.uk/baby/caring-for-a-newborn/helping-your-baby-to-sleep/"},
+      {"title": "IAP Identifying a Sick Newborn", "url": "https://iapindia.org/pdf/1409-Ch-052-Identifying-sick-newborn-IAP-parental-Guideline.pdf"}
+    ],
+    "updated": "2026-10-23"
+  },
+  {
+    "slug": "milestones",
+    "title": "Understanding your child's developmental milestones",
+    "summary": "Notice new skills, enjoy everyday play and know when to ask for a developmental assessment.",
+    "hindi": {"title": "बच्चे के विकास के पड़ाव", "summary": "खेलने, बोलने, सीखने और चलने की नई क्षमताओं पर ध्यान दें और चिंता होने पर समय पर सलाह लें।"},
+    "age": "Infancy to 5 years",
+    "tags": ["Development", "Milestones", "Play"],
+    "sections": [
+      {"heading": "Look at the whole child", "paragraphs": ["Development includes movement, communication, learning and interaction with other people. A child may be practising several skills at the same time. Notice how your child plays with you, responds to sounds, uses their hands and body, and communicates needs. Everyday observations are useful information for a paediatric visit; they are not a test of your parenting."]},
+      {"heading": "Use checklists as a conversation starter", "paragraphs": ["CDC provides milestone resources from two months to five years. An age based checklist can help you organise observations and questions. It cannot diagnose a developmental condition or replace a standardised screening tool. A completed checklist also does not rule out every concern. Share what you see at home even if a chart or an online score seems reassuring."]},
+      {"heading": "Make room for responsive play", "paragraphs": ["Talk, sing, read pictures and respond to your child's attempts to communicate. Offer safe opportunities to reach, explore and move, suited to their current skills. Simple back and forth games with a familiar adult can make practice enjoyable. Activities should be comfortable and supervised. The aim is connection and exploration, rather than pressure to perform for a video or match another child's progress."]},
+      {"heading": "Ask early when something concerns you", "paragraphs": ["Tell the clinician if a skill is not emerging as expected, if movement seems unusual, or if you have concerns about hearing, vision or interaction. Losing a skill your child previously used needs timely medical review. Bring a brief list of examples and when you first noticed them. The next step may include examination, formal screening, monitoring or referral, depending on the child's history and needs."]}
+    ],
+    "faqs": [
+      {"q": "Can an online checklist diagnose autism or delay?", "a": "No. It helps organise observations. Diagnosis and developmental assessment require appropriately trained clinicians."},
+      {"q": "Should I wait if my child has lost a skill?", "a": "No. Contact the child's clinician and describe the change rather than waiting for the next milestone."},
+      {"q": "What should I bring?", "a": "Bring health records and concrete examples of the skills or behaviours you want to discuss."}
+    ],
+    "related": ["growth-charts", "screen-and-play", "school-wellbeing"],
+    "sources": [
+      {"title": "CDC Developmental Milestones", "url": "https://www.cdc.gov/act-early/milestones/index.html"},
+      {"title": "IAP Early Childhood Development", "url": "https://iapindia.org/pdf/Ch-008ECD-Early-Childhood-Development.pdf"}
+    ],
+    "updated": "2026-10-23"
+  },
+  {
+    "slug": "fever",
+    "title": "When your child has a fever",
+    "summary": "Check the temperature, watch how your child is behaving and recognise when care cannot wait.",
+    "hindi": {"title": "बच्चे को बुखार होने पर", "summary": "तापमान के साथ बच्चे की सक्रियता, दूध या पानी पीने और अन्य लक्षणों पर ध्यान दें। छोटे शिशु में बुखार पर तुरंत चिकित्सा सलाह लें।"},
+    "age": "Babies, children and adolescents",
+    "tags": ["Common concerns", "Fever", "Urgent care"],
+    "sections": [
+      {"heading": "Age changes the next step", "paragraphs": ["A baby younger than three months with a temperature of 38°C or higher needs urgent medical assessment, even if they otherwise appear well. Do not wait for a routine appointment or for a fever medicine to work. If a young baby feels unusually hot or seems unwell and you cannot obtain a reliable reading, seek advice promptly."]},
+      {"heading": "Check more than the number", "paragraphs": ["Use a digital thermometer according to its instructions and tell the clinician how you measured the temperature. Feeling the forehead alone is unreliable. For an older child, note whether they are alert, drinking, passing urine and breathing comfortably. A temperature reading cannot identify the cause. The child's age, symptoms and medical history help decide what assessment is needed."]},
+      {"heading": "Keep care simple while you seek advice", "paragraphs": ["Offer fluids regularly and continue breastfeeding. Allow rest, comfortable clothing and food if wanted; do not force meals. Check the child regularly. Avoid alcohol rubs, ice packs or sponging to bring the temperature down. Ask a clinician or pharmacist about any medicine that is appropriate for the child's age and health; this guide does not provide doses or recommend alternating medicines."]},
+      {"heading": "Seek help when the child looks ill", "paragraphs": ["Get urgent help for breathing difficulty, a seizure, unusual drowsiness or difficulty waking. Prompt assessment is also needed for significant dehydration, repeated vomiting, a concerning rash, severe pain or a child who is getting worse. Children with an immune system condition or a specific medical care plan need individual instructions. Write down temperatures, timings, fluids and any medicines already given so the team can assess the situation accurately."]}
+    ],
+    "faqs": [
+      {"q": "Can I judge fever by touch?", "a": "Touch can raise concern, but a thermometer gives more useful information. Explain the measurement method to the clinician."},
+      {"q": "Does a lower temperature mean every illness is safe?", "a": "No. Watch the child's responsiveness, breathing, hydration and other symptoms as well."},
+      {"q": "Should a baby under three months wait for a booked visit?", "a": "No. A temperature of 38°C or above in this age group needs urgent medical assessment."}
+    ],
+    "related": ["newborn-care", "seizure-first-aid", "feeding"],
+    "sources": [
+      {"title": "AAP Fever and Your Baby", "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"},
+      {"title": "AAP Fever Without Fear", "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-Without-Fear.aspx"},
+      {"title": "NHS High temperature in children", "url": "https://www.nhs.uk/symptoms/fever-in-children/"}
+    ],
+    "updated": "2026-10-23"
+  },
+  {
+    "slug": "seizure-first-aid",
+    "title": "Seizure first aid for parents and caregivers",
+    "summary": "Protect your child, time the episode and know when emergency help is needed.",
+    "hindi": {"title": "दौरा आने पर प्राथमिक सहायता", "summary": "बच्चे को चोट से बचाएँ, दौरे का समय देखें और आपातकालीन सहायता लेने में देर न करें। मुँह में कुछ न डालें।"},
+    "age": "Children and adolescents",
+    "tags": ["First aid", "Neurology", "Urgent care"],
+    "sections": [
+      {"heading": "When to get emergency help", "paragraphs": ["Get emergency medical help for a first seizure, an episode reaching five minutes, repeated seizures without recovery, serious injury or difficulty breathing. For a child with known epilepsy, also follow the emergency instructions in their individual care plan, including an earlier threshold if one is specified. Do not delay help to complete a website form or record a video."]},
+      {"heading": "Keep the surroundings safe", "paragraphs": ["Stay with your child and note the time the episode starts. Move nearby objects that could cause injury and cushion the head if the child is on the ground. Move the child only when the location is dangerous. Do not hold their limbs down or try to stop the movements. Keep other people back so the child has space and someone can arrange help."]},
+      {"heading": "Protect the airway", "paragraphs": ["Do not put fingers, a spoon or any other object into the mouth. Do not give food, drink or oral medicine during the episode or before full recovery. After the jerking stops, place the child on their side when safe and keep watching their breathing. Stay close and speak calmly as they recover. Emergency medicine should be used only according to a prescribed plan by a caregiver who has been trained."]},
+      {"heading": "Share what happened", "paragraphs": ["Tell the medical team how long the episode lasted, how the child moved, whether they responded and how they recovered. Mention fever, illness, injury and prescribed medicines. One seizure does not by itself establish the cause or confirm epilepsy. After assessment, ask for a written plan that explains who to contact, what school or other caregivers should do and when follow up is needed."]}
+    ],
+    "faqs": [
+      {"q": "Should I put something in my child's mouth?", "a": "No. This can injure the child or obstruct breathing. Keep objects and fingers out."},
+      {"q": "Should I restrain the movements?", "a": "No. Clear hazards, protect the head and stay with the child instead."},
+      {"q": "Can this page tell me the cause?", "a": "No. A clinical assessment is needed. Use this page for basic first aid and emergency decisions."}
+    ],
+    "related": ["fever", "milestones", "school-wellbeing"],
+    "sources": [
+      {"title": "NHS What to do if someone has a seizure", "url": "https://www.nhs.uk/symptoms/what-to-do-if-someone-has-a-seizure-fit/"},
+      {"title": "IAP Acute Episodes of Seizures", "url": "https://iapindia.org/pdf/Ch-078-Seizure-management-IAP-Parental-Guidelines.pdf"}
+    ],
+    "updated": "2026-10-23"
+  },
+  {
+    "slug": "growth-charts",
+    "title": "Making sense of your child's growth chart",
+    "summary": "Dated measurements and a pattern over time are more useful than comparing children or chasing one number.",
+    "hindi": {"title": "बच्चे के ग्रोथ चार्ट को समझें", "summary": "वज़न और लंबाई या ऊँचाई का समय के साथ रिकॉर्ड बच्चे की वृद्धि समझने में मदद करता है।"},
+    "age": "Birth through adolescence",
+    "tags": ["Growth", "Nutrition", "Well-child care"],
+    "sections": [
+      {"heading": "A record of a journey", "paragraphs": ["A growth chart plots measurements against a child's age using an appropriate reference. It helps the clinician see the pattern across visits. Weight, length or height and, for younger children when appropriate, head circumference each give different information. A percentile describes a position within a reference population; it is not a mark out of one hundred or a target that every child should reach."]},
+      {"heading": "Use the right chart", "paragraphs": ["IAP makes WHO charts for younger children and IAP height, weight and BMI charts for Indian children aged five to eighteen available. The clinician selects the chart suited to the child's age and situation. A child BMI needs age and sex specific interpretation; adult BMI cut-offs should not be applied as an online shortcut. Prematurity and other clinical circumstances can also affect how a record is interpreted."]},
+      {"heading": "Bring reliable measurements", "paragraphs": ["Keep the date and units with every measurement and bring earlier records, including the birth and discharge summary. Consistent measurement technique matters. A single home reading can be affected by equipment, clothing or how the child was positioned. If a result surprises you, arrange a proper measurement and discussion rather than changing the child's diet solely because of an app result."]},
+      {"heading": "When to discuss the pattern", "paragraphs": ["Ask for review if growth seems to slow, the pattern changes noticeably or you are worried about weight, feeding or development. The clinician can assess the trend together with illness history, diet and examination. Discuss practical goals for the next visit and when to measure again. Avoid labelling or teasing children about their body; growth monitoring should help the family understand care, not create competition between children."]}
+    ],
+    "faqs": [
+      {"q": "Is the fiftieth percentile the goal?", "a": "No. Children have different patterns. The clinician assesses the trend and the child's overall health."},
+      {"q": "Can one weight reading diagnose a problem?", "a": "It may raise a question, but a proper assessment uses accurate measurements, history and examination."},
+      {"q": "Should I use an adult BMI calculator?", "a": "No. Children's BMI requires age and sex specific interpretation."}
+    ],
+    "related": ["feeding", "toddler-nutrition", "milestones"],
+    "sources": [
+      {"title": "IAP How My Child Grows", "url": "https://iapindia.org/pdf/Ch-22-IAP-Parental-Guide-for-How-My-Child-Grows.pdf"},
+      {"title": "IAP Growth Charts", "url": "https://iapindia.org/iap-growth-charts/"},
+      {"title": "WHO Child Growth Standards", "url": "https://www.who.int/tools/child-growth-standards"}
+    ],
+    "updated": "2026-10-23"
+  },
+  {
+    "slug": "toddler-nutrition",
+    "title": "Calmer meals for toddlers and preschoolers",
+    "summary": "Build variety with familiar family foods, predictable mealtimes and less pressure to finish the plate.",
+    "hindi": {"title": "छोटे बच्चों के लिए सहज भोजन की आदतें", "summary": "नियमित समय पर विविध घरेलू भोजन दें, बिना दबाव के नए स्वाद चखने का अवसर दें और वृद्धि की चिंता पर सलाह लें।"},
+    "age": "1 to 5 years",
+    "tags": ["Toddlers", "Nutrition", "Family routines"],
+    "sections": [
+      {"heading": "Expect preferences to change", "paragraphs": ["A toddler who enjoyed a food yesterday may refuse it today. Some selectivity is common while children discover new tastes and independence. Keep offering a range of foods without turning every refusal into a struggle. Regular meals and planned snacks give the day a predictable shape. Eating together when possible lets a child see other family members enjoy different foods."]},
+      {"heading": "Make the offered meal useful", "paragraphs": ["Use variety across familiar staples, pulses or other protein foods, vegetables, fruit and suitable milk or dairy foods. Adapt preparation and texture to the child's skills and family diet. Offer small portions, including something familiar alongside a new food. Let the child practise self-feeding with supervision. Keep screens away from the meal so that eating and family interaction can hold their attention."]},
+      {"heading": "Encourage without a battle", "paragraphs": ["The caregiver chooses the foods, setting and meal timing; the child can decide how much to eat from the offered meal. Avoid forcing mouthfuls, punishment or bargaining over each bite. A child may need repeated opportunities to become comfortable with an unfamiliar food. Helping wash a vegetable, stir safely or choose a fruit can make food more familiar without demanding that it be eaten immediately."]},
+      {"heading": "Know when to seek help", "paragraphs": ["Bring concerns about poor growth, pain, choking, swallowing difficulty or a very restricted diet to the paediatrician. Do not assume that every persistent feeding problem is a phase. A short record of usual meals, drinks and difficulties can make the discussion more useful. Ask before giving appetite stimulants or supplements; an individual assessment is more helpful than a product recommended for another child."]}
+    ],
+    "faqs": [
+      {"q": "Should every plate be finished?", "a": "No. Offer suitable food and allow the child to respond to hunger and fullness rather than forcing a fixed amount."},
+      {"q": "What if a new food is refused?", "a": "Keep the experience calm and offer it again on another occasion, alongside a familiar food."},
+      {"q": "When is a review useful?", "a": "Seek advice for growth concerns, pain, swallowing problems or an increasingly restricted range of foods."}
+    ],
+    "related": ["feeding", "growth-charts", "screen-and-play"],
+    "sources": [
+      {"title": "AAP Helping a Picky Eater Try More Foods", "url": "https://www.healthychildren.org/English/tips-tools/ask-the-pediatrician/Pages/How-Do-I-Help-My-Picky-Eater-Try-More-Foods.aspx"},
+      {"title": "IAP Nutrition Between 1 and 2 Years", "url": "https://iapindia.org/pdf/Ch-042-Nutrition-1-2-years-IAP-Parental-Guideline-31102021.pdf"},
+      {"title": "IAP Nutrition for Preschoolers", "url": "https://iapindia.org/pdf/Ch-043-Nutrition-for-Preschoolers-2%E2%80%935-Years.pdf"}
+    ],
+    "updated": "2026-10-23"
+  },
+  {
+    "slug": "school-wellbeing",
+    "title": "Supporting your child's school wellbeing",
+    "summary": "Listen to worries, notice changes and work with your child, school and clinical team when support is needed.",
+    "hindi": {"title": "स्कूल जाने वाले बच्चे का भावनात्मक स्वास्थ्य", "summary": "बच्चे की बात सुनें, नींद या व्यवहार में बदलाव पहचानें और ज़रूरत पर स्कूल तथा चिकित्सक के साथ मिलकर सहायता लें।"},
+    "age": "School age and adolescence",
+    "tags": ["School", "Wellbeing", "Adolescents"],
+    "sections": [
+      {"heading": "Begin with a conversation", "paragraphs": ["Starting school, changing class or facing an unfamiliar situation can bring worries. Choose a calm moment to ask what the school day feels like. Listen without rushing to tell the child that there is nothing to worry about. A younger child may explain feelings through play or a picture; an older child may prefer a conversation with some privacy."]},
+      {"heading": "Notice what is changing", "paragraphs": ["Ongoing worry may show up as difficulty concentrating, changes in sleep or appetite, irritability, clinginess or repeated physical complaints. These signs have many possible causes and do not establish an anxiety disorder. Notice the pattern: when it happens, how long it lasts and whether friendships, attendance or family life are being affected. Physical symptoms should be discussed rather than dismissed as imaginary."]},
+      {"heading": "Build support around the child", "paragraphs": ["Ask the school what they have noticed and agree on a practical way to stay in touch. Include the child in age appropriate decisions. Maintain ordinary opportunities for meals, rest, movement and enjoyable time together. Adolescents benefit from adults who listen respectfully while keeping clear, consistent boundaries. Make it easy to ask for help about bullying, online experiences or a difficult friendship without fear of immediate blame."]},
+      {"heading": "When professional help is useful", "paragraphs": ["Arrange a clinical discussion when worry persists, is worsening or interferes with daily life. Bring the child's account, relevant school observations and the timeline of changes. Assessment may consider health, learning and emotional needs and whether referral would help. If there is an immediate concern about safety, seek urgent assistance. The goal is to understand the difficulty and agree on useful support, rather than attaching a label from a checklist."]}
+    ],
+    "faqs": [
+      {"q": "Does school worry always mean a disorder?", "a": "No. Some worries are temporary. Persistence and the effect on everyday life help guide whether assessment is needed."},
+      {"q": "Should I speak with the school?", "a": "Relevant teacher observations can help. Agree with your child on an age appropriate way to involve school staff."},
+      {"q": "What should I note before a visit?", "a": "Record the main changes, when they began and how sleep, eating, attendance and friendships are affected."}
+    ],
+    "related": ["screen-and-play", "milestones", "growth-charts"],
+    "sources": [
+      {"title": "NHS Anxiety Disorders in Children", "url": "https://www.nhs.uk/mental-health/children-and-young-adults/advice-for-parents/anxiety-disorders-in-children/"},
+      {"title": "IAP Normal Psychosocial Development in Adolescents", "url": "https://iapindia.org/pdf/Ch-026-Normal-Psychosocial-Development-in-Adolescents.pdf"},
+      {"title": "IAP School and Parental Concerns", "url": "https://iapindia.org/pdf/Ch-006-Selecting-the-School-IAP-Parental-Guideline-02122021.pdf"}
+    ],
+    "updated": "2026-10-23"
+  },
+  {
+    "slug": "screen-and-play",
+    "title": "Making space for play in a digital day",
+    "summary": "Balance devices with sleep, movement, conversation and everyday family time.",
+    "hindi": {"title": "स्क्रीन के साथ खेल और परिवार का संतुलन", "summary": "बच्चे की उम्र के अनुसार डिजिटल आदतें बनाएँ और नींद, शारीरिक गतिविधि तथा बातचीत के लिए पर्याप्त समय रखें।"},
+    "age": "Infancy through adolescence",
+    "tags": ["Play", "Digital wellbeing", "Family routines"],
+    "sections": [
+      {"heading": "Start with the whole day", "paragraphs": ["Look at what a device is replacing. Does your child still have time for sleep, movement, meals, conversation and play? WHO's guidance for under-fives considers activity, sitting and sleep together. Infants need supervised opportunities for movement and interaction; a video is not the same experience as a person responding to their sounds, gestures and interests."]},
+      {"heading": "Choose a few workable family habits", "paragraphs": ["Keep devices away from meals and create regular opportunities to read, talk or play together. Adults can model the habits they want children to learn. When older children use media, discuss the content, purpose and timing. Co-viewing can help an adult understand what the child is seeing and answer questions. Age appropriate boundaries work better when every caregiver understands them."]},
+      {"heading": "Offer something to do", "paragraphs": ["A practical change needs an alternative. A younger child might enjoy pictures, songs, blocks or safe floor play with an adult. Older children can help choose a game, hobby or outdoor activity suited to the available space. Keep expectations realistic for the family. Begin with one part of the day, then review what is manageable rather than relying on an abrupt rule that nobody can maintain."]},
+      {"heading": "Keep the conversation safe", "paragraphs": ["Teach older children to protect private information and ask for help about upsetting content or contact. Avoid sharing passwords, home details or a child's personal health information online. Bring concerns about sleep, behaviour, conflict or difficulty stopping device use to a clinical visit. Ask which current age specific recommendations fit the child, particularly when development, disability or school needs make the situation more complex."]}
+    ],
+    "faqs": [
+      {"q": "Is educational screen content a substitute for play?", "a": "No. Children also need movement, rest and responsive interaction with other people."},
+      {"q": "Where can our family begin?", "a": "Choose one manageable change, such as putting devices away during meals, and plan an enjoyable alternative."},
+      {"q": "Should all ages have the same rules?", "a": "No. Age, purpose and individual needs matter. Ask about current age specific guidance."}
+    ],
+    "related": ["safe-sleep", "milestones", "school-wellbeing"],
+    "sources": [
+      {"title": "IAP Screentime Guidelines for Parents", "url": "https://iapindia.org/pdf/Screentime-Guidelines-for-Parents-Ch-005.pdf"},
+      {"title": "WHO Children Need to Sit Less and Play More", "url": "https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more"},
+      {"title": "WHO Under Five Activity Sedentary Behaviour and Sleep Guidelines", "url": "https://www.who.int/publications/i/item/9789241550536"}
+    ],
+    "updated": "2026-10-23"
+  },
+  {
+    "slug": "newborn-care",
+    "title": "Your newborn's first weeks at home",
+    "summary": "Keep the discharge plan close, ask for feeding support and recognise the signs that need urgent care.",
+    "hindi": {"title": "नवजात की घर पर शुरुआती देखभाल", "summary": "डिस्चार्ज की सलाह और टीकाकरण रिकॉर्ड सँभालें। दूध न पीना, सुस्ती या साँस की परेशानी होने पर तुरंत चिकित्सा सहायता लें।"},
+    "age": "Birth to 28 days",
+    "tags": ["Newborn", "Parent support", "Safety"],
+    "sections": [
+      {"heading": "Keep the next steps clear", "paragraphs": ["Before leaving hospital, keep the discharge summary, birth measurements, vaccination entries and follow up instructions together. Ask whom to contact if feeding or jaundice worries you and when the next check is due. A baby born early or with a specific medical need may have an individual plan. Follow that plan rather than substituting a general online timetable."]},
+      {"heading": "Learn your baby's everyday pattern", "paragraphs": ["Feeding, urine, stools, alertness and colour are useful observations. Ask for help with feeding difficulties early. You do not need to manage persistent pain or uncertainty alone. Keep the sleep space simple and use the safer sleep guidance linked below. Ask the clinical team to show you any practical care that feels unfamiliar, including how to look after the umbilical area."]},
+      {"heading": "Know when care cannot wait", "paragraphs": ["A newborn who is not feeding, appears unusually dull or is difficult to wake needs urgent assessment. Seek emergency help for breathing difficulty, blue colouring or a seizure. Green vomit, a swollen abdomen, markedly reduced urine or worsening yellow colour also needs prompt medical review. Do not assume that a symptom is normal because another baby had something similar. If you feel the baby is seriously unwell, seek care immediately."]},
+      {"heading": "Make the first visit useful", "paragraphs": ["Bring the birth record and any previous reports. Tell the clinician about feeding, changes in colour, wet nappies and any questions about the discharge instructions. Ask for the next growth check and a review of the actual vaccine record. Note the plan in one place so everyone caring for the baby understands it. If a reminder service is offered, confirm enrolment and preferences with the care team; a webpage visit alone does not enrol the family."]}
+    ],
+    "faqs": [
+      {"q": "Can online guidance replace a discharge plan?", "a": "No. Follow the plan provided for your baby and contact the care team if instructions are unclear."},
+      {"q": "What if my baby is too sleepy to feed?", "a": "A newborn who is difficult to wake or not feeding needs urgent medical assessment."},
+      {"q": "Which records should I bring?", "a": "Bring the discharge summary, birth measurements, vaccination card and any reports or prescriptions."}
+    ],
+    "related": ["feeding", "safe-sleep", "fever"],
+    "sources": [
+      {"title": "IAP Preparing for Your Newborn", "url": "https://iapindia.org/pdf/1409-Ch-049-How-Do-I-Prepare-for-Arrival-of-My-Newborn-Baby.pdf"},
+      {"title": "IAP Identifying a Sick Newborn", "url": "https://iapindia.org/pdf/1409-Ch-052-Identifying-sick-newborn-IAP-parental-Guideline.pdf"},
+      {"title": "IAP Breastfeeding Guidance", "url": "https://iapindia.org/pdf/Ch-039-Breastfeeding.pdf"}
+    ],
+    "updated": "2026-10-23"
+  }
+]

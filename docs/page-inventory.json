@@ -1,0 +1,320 @@
+[
+  {
+    "path": "/",
+    "title": "Paediatric care for every stage of childhood",
+    "kind": "home",
+    "public": true
+  },
+  {
+    "path": "/about/",
+    "title": "Meet Dr Kanak Ramnani",
+    "kind": "about",
+    "public": true
+  },
+  {
+    "path": "/care/",
+    "title": "Care for children and families",
+    "kind": "careHub",
+    "public": true
+  },
+  {
+    "path": "/care-by-age/",
+    "title": "Every stage brings something new",
+    "kind": "ageHub",
+    "public": true
+  },
+  {
+    "path": "/vaccination/",
+    "title": "A little planning for lasting protection",
+    "kind": "vaccination",
+    "public": true
+  },
+  {
+    "path": "/vaccination/schedule/",
+    "title": "Understanding your child’s vaccination schedule",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/vaccination/catch-up/",
+    "title": "Missed a vaccination visit? Bring the record.",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/vaccination/after-care/",
+    "title": "After the vaccination visit",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/vaccination/teen-hpv/",
+    "title": "Vaccination in the teenage years",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/vaccination/faq/",
+    "title": "Vaccination questions parents ask",
+    "kind": "faq",
+    "public": true
+  },
+  {
+    "path": "/parent-resources/",
+    "title": "A little clarity for everyday parenting",
+    "kind": "resourceHub",
+    "public": true
+  },
+  {
+    "path": "/resources/",
+    "title": "Trusted child-health resources",
+    "kind": "trusted",
+    "public": true
+  },
+  {
+    "path": "/media/",
+    "title": "Watch, listen and learn",
+    "kind": "videos",
+    "public": true
+  },
+  {
+    "path": "/care-at-mamta/",
+    "title": "A hospital team beside your family",
+    "kind": "hospital",
+    "public": true
+  },
+  {
+    "path": "/research/",
+    "title": "Research and academic work",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/terms/",
+    "title": "Using this website",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/videos/",
+    "title": "Watch, listen and learn",
+    "kind": "videos",
+    "public": true
+  },
+  {
+    "path": "/visit/",
+    "title": "Plan a visit to Mamta",
+    "kind": "visit",
+    "public": true
+  },
+  {
+    "path": "/emergency/",
+    "title": "When care cannot wait",
+    "kind": "emergency",
+    "public": true
+  },
+  {
+    "path": "/privacy/",
+    "title": "Your family’s information",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/consent/",
+    "title": "Choose how the care team contacts you",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/accessibility/",
+    "title": "A website that is easier to use",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/search/",
+    "title": "Find guidance for your family",
+    "kind": "search",
+    "public": false
+  },
+  {
+    "path": "/my-child/",
+    "title": "Your child’s care",
+    "kind": "portal",
+    "public": false
+  },
+  {
+    "path": "/my-child/vaccination-card/",
+    "title": "Your child’s vaccination record",
+    "kind": "portal",
+    "public": false
+  },
+  {
+    "path": "/my-child/reminders/",
+    "title": "Care reminders",
+    "kind": "portal",
+    "public": false
+  },
+  {
+    "path": "/my-child/records/",
+    "title": "Your child’s records",
+    "kind": "portal",
+    "public": false
+  },
+  {
+    "path": "/my-child/preferences/",
+    "title": "Contact and reminder preferences",
+    "kind": "portal",
+    "public": false
+  },
+  {
+    "path": "/hi/",
+    "title": "बचपन के हर पड़ाव पर देखभाल",
+    "kind": "hindi",
+    "public": true
+  },
+  {
+    "path": "/care-by-age/newborn/",
+    "title": "Newborn: growing with care",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care-by-age/young-infant/",
+    "title": "Little baby: growing with care",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care-by-age/older-infant/",
+    "title": "Growing baby: growing with care",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care-by-age/toddler/",
+    "title": "Toddler: growing with care",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care-by-age/preschool/",
+    "title": "Preschool: growing with care",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care-by-age/school-age/",
+    "title": "School years: growing with care",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care-by-age/adolescent/",
+    "title": "Teen years: growing with care",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care/newborn/",
+    "title": "Newborn & infant care",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care/well-child/",
+    "title": "Well-child visits",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care/nutrition/",
+    "title": "Feeding & nutrition",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care/growth-development/",
+    "title": "Growth & development",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care/common-illnesses/",
+    "title": "Common childhood concerns",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care/paediatric-neurology/",
+    "title": "Neurological concerns",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/care/adolescent-health/",
+    "title": "Older children & teens",
+    "kind": "article",
+    "public": true
+  },
+  {
+    "path": "/parent-resources/feeding/",
+    "title": "Feeding your baby with confidence",
+    "kind": "guide",
+    "public": true
+  },
+  {
+    "path": "/parent-resources/safe-sleep/",
+    "title": "A safer sleep space for your baby",
+    "kind": "guide",
+    "public": true
+  },
+  {
+    "path": "/parent-resources/milestones/",
+    "title": "Understanding your child's developmental milestones",
+    "kind": "guide",
+    "public": true
+  },
+  {
+    "path": "/parent-resources/fever/",
+    "title": "When your child has a fever",
+    "kind": "guide",
+    "public": true
+  },
+  {
+    "path": "/parent-resources/seizure-first-aid/",
+    "title": "Seizure first aid for parents and caregivers",
+    "kind": "guide",
+    "public": true
+  },
+  {
+    "path": "/parent-resources/growth-charts/",
+    "title": "Making sense of your child's growth chart",
+    "kind": "guide",
+    "public": true
+  },
+  {
+    "path": "/parent-resources/toddler-nutrition/",
+    "title": "Calmer meals for toddlers and preschoolers",
+    "kind": "guide",
+    "public": true
+  },
+  {
+    "path": "/parent-resources/school-wellbeing/",
+    "title": "Supporting your child's school wellbeing",
+    "kind": "guide",
+    "public": true
+  },
+  {
+    "path": "/parent-resources/screen-and-play/",
+    "title": "Making space for play in a digital day",
+    "kind": "guide",
+    "public": true
+  },
+  {
+    "path": "/parent-resources/newborn-care/",
+    "title": "Your newborn's first weeks at home",
+    "kind": "guide",
+    "public": true
+  }
+]
