@@ -90,3 +90,19 @@ body{background:#fffdf9}
 @media(max-width:1020px){.hero-inner{min-height:525px}.hero-portrait{height:525px}.hero-portrait>img{height:510px;width:330px}.portrait-sun{width:305px;height:410px}.hero-care-chips a{font-size:11px}.quick-links>a{font-size:10px}}
 @media(max-width:760px){.hero-inner{min-height:0}.hero-copy{padding:38px 0 0}.hero-care-chips{justify-content:center;margin-bottom:20px}.hero-care-chips a{padding:5px 12px;font-size:10px}.hero-portrait{height:450px;margin-top:10px}.hero-portrait>img{height:445px;width:320px}.portrait-sun{width:315px;height:355px}.quick-links{grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.quick-links>a{min-height:98px;font-size:10px;border-radius:15px}.quick-links .icon{width:28px;height:28px}.hero h1{font-size:clamp(36px,10vw,46px)}.hero-specialities{font-size:17px}.hero:after{font-size:32px;right:10px;top:20px}.vaccine-feature{border-radius:22px}.guide-art{height:180px}}
 @media(max-width:370px){.hero-portrait{height:415px}.hero-portrait>img{height:405px;width:286px}.portrait-sun{width:280px;height:330px}.quick-links>a{font-size:9px}.hero-care-chips{gap:5px}}
+/* Dr Kanak identity refinement: compact header logo and concise hero. */
+.brand-mark{display:block;flex:none;width:52px;height:52px;border-radius:16px;object-fit:contain}
+.brand{gap:12px}
+.brand strong{letter-spacing:-.035em}
+.hero-inner{min-height:565px}
+.hero-copy{padding-block:38px 48px}
+.hero-specialities{font-size:clamp(15px,1.6vw,19px);line-height:1.5;font-weight:700;color:#146a85;margin-top:14px}
+.hero-summary{font-size:clamp(18px,1.7vw,21px);font-weight:500;color:#36566a;max-width:480px;margin:19px 0 22px auto;line-height:1.55}
+.hero-care-chips{margin-bottom:25px}
+.hero-portrait{height:565px}
+.hero-portrait>img{height:545px;width:385px;filter:none!important;mix-blend-mode:normal!important;box-shadow:none!important}
+.portrait-sun{height:455px}
+@media(max-width:1200px){.brand-mark{height:46px;width:46px}.hero-inner{min-height:530px}.hero-portrait{height:530px}.hero-portrait>img{height:510px;width:365px}.portrait-sun{height:430px}}
+@media(max-width:1020px){.brand-mark{height:45px;width:45px}.hero-inner{min-height:500px}.hero-portrait{height:500px}.hero-portrait>img{height:485px;width:340px}.hero-summary{font-size:17px}.hero-specialities{font-size:16px}}
+@media(max-width:760px){.brand-mark{height:43px;width:43px}.hero-copy{padding:30px 0 2px}.hero-specialities{font-size:15px;margin-top:11px}.hero-summary{font-size:17px;margin:15px auto 20px}.hero-care-chips{margin-bottom:20px}.hero-portrait{height:435px}.hero-portrait>img{height:430px;width:308px}.portrait-sun{height:335px}}
+@media(max-width:370px){.brand-mark{height:39px;width:39px}.hero-portrait{height:398px}.hero-portrait>img{height:391px;width:282px}}
