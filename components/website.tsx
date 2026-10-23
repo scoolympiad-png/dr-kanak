@@ -1,7 +1,7 @@
 import type {ReactNode} from 'react';
 import {ages,careAreas,site,sources,type PageData} from '@/lib/site-config';
 import {getPage,guides,searchIndex,sectionId} from '@/lib/pages';
-import {AgeExplorer,CareAccess,SearchView,VaccinationPhotoCarousel,VaccinationScheduleNavigator} from './site-client';
+import {AgeExplorer,CareAccess,SearchView,VaccinationPhotoCarousel,VaccinationScheduleNavigator,VaccinationReminderStart} from './site-client';
 import {Icon} from './icon';
 import {mamtaPrintedCardEarlyMilestones,vaccinationEditorialReferences} from '@/lib/vaccination-reference';
 
@@ -85,6 +85,7 @@ function VaccinationScheduleWelcome(){return <>
    <span className="vax-download-privacy"><Icon name="shield"/> No login needed. Fill the card privately and bring it to your visit.</span>
   </div>
  </section>
+ <VaccinationReminderStart/>
  <section className="vax-practical-steps" aria-label="What families can do next">
   <div><span className="eyebrow">For your next visit</span><h2>Three simple things to remember.</h2></div>
   <div className="vax-practical-grid">
@@ -189,7 +190,7 @@ export function ContentPage({p}:{p:PageData}){let body:ReactNode;
  case 'visit':body=<Visit/>;break;
  case 'trusted':body=<TrustedResources/>;break;
  case 'search':body=<div className="container section"><SearchView index={searchIndex}/></div>;break;
- case 'portal':body=<div className="container section"><CareAccess/></div>;break;
+ case 'portal':body=<div className="container section">{p.path==='/my-child/reminders/'?<><VaccinationReminderStart/><div className="vax-reminder-portal-links"><a href="/vaccination/schedule/">View vaccination guide <Icon name="arrow"/></a><a href="/consent/">How your choices are protected <Icon name="arrow"/></a></div></>:<CareAccess/>}</div>;break;
  case 'hindi':body=<Hindi/>;break;
  case 'hospital':body=<div className="container section"><div className="hospital-story"><div><span className="eyebrow">Care at Mamta</span><h2>A team for your family.</h2><p>Dr Kanak consults at Mamta Super Speciality Hospital in Mowa, Raipur. Contact the hospital for the services, facilities and coordination appropriate to your child’s needs.</p><a className="button" href="/visit/">Appointments & directions <Icon name="arrow"/></a></div><img src="/images/mamta-nursing-team.webp" alt="Mamta Hospital nursing team" width="1600" height="1067"/></div><div className="facility-gallery">{[{src:'mamta-exterior',alt:'Exterior of Mamta Hospital in Mowa, Raipur',label:'Mamta Hospital, Mowa'},{src:'mamta-patient-room',alt:'An empty patient room at Mamta Hospital',label:'Inside Mamta Hospital'},{src:'mamta-ct',alt:'CT imaging equipment at Mamta Hospital',label:'Hospital imaging facility'}].map(x=><figure key={x.src}><img src={'/images/'+x.src+'.webp'} alt={x.alt} width="1000" height="750" loading="lazy"/><figcaption>{x.label}</figcaption></figure>)}</div><Related paths={['/visit/','/about/','/care/']}/></div>;break;
  case 'videos':body=<div className="container section"><div className="video-feature"><img src="/images/dr-kanak-conversation-2026.webp" width="640" height="800" alt="Dr Kanak Ramnani discussing child health in a recorded conversation"/><div><span className="eyebrow">Dr Kanak · Parent education</span><h2>A conversation about children’s health.</h2><p>Find Dr Kanak’s health talk linked from her official Mamta Hospital profile. The video opens on Instagram.</p><a className="button" href={site.instagram} target="_blank" rel="noopener noreferrer"><Icon name="play"/>Watch the health talk <Icon name="external"/></a><p className="small-copy">External video. Instagram’s privacy and access settings apply.</p></div></div><Related paths={['/parent-resources/','/resources/','/about/']}/></div>;break;
