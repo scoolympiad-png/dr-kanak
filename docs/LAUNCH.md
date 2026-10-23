@@ -31,11 +31,12 @@ Do not run a new framework migration or let a different preset replace the exist
 
 1. In the existing `drkanak.com` zone, export or record current DNS. Preserve mail, verification and other active service records.
 2. Complete Cloudflare's DNS review to reveal the **two exact nameservers assigned to this zone**. They are not available in the supplied screenshots. Never reuse another domain's nameservers.
-3. At GoDaddy, replace `ns63.domaincontrol.com` and `ns64.domaincontrol.com` with that assigned pair. Do this in the domain's nameserver settings, not by adding two ordinary NS rows to the old zone.
+3. At GoDaddy, open Domain Portfolio → `drkanak.com` → DNS → Nameservers → **I'll use my own nameservers**. Replace `ns63.domaincontrol.com` and `ns64.domaincontrol.com` with that assigned pair, then Save and Continue. Do this in the registrar's nameserver settings, not by adding two ordinary NS rows to the old zone. Complete any GoDaddy identity check in your own account.
 4. Confirm the zone becomes Active. If DNSSEC is enabled, follow Cloudflare's documented migration process and verify the final DS state. Do not change DNSSEC blindly or leave a stale registrar DS record.
-5. Add `drkanak.com` and `www.drkanak.com` to the Worker's Settings → Domains & Routes as Custom Domains. Cloudflare should create the correct website records and certificate. Resolve only conflicting parked website records after confirming they serve no active site.
-6. The application redirects `www.drkanak.com` to `drkanak.com` with HTTP 308. Preserve DMARC and any newly discovered MX, SPF, DKIM, verification or other service records.
-7. Verify HTTPS, certificate status, apex homepage, www redirect and internal pages on the real domain. No redirect should return visitors to GoDaddy parking.
+5. Once the Worker works at its actual `workers.dev` address and the zone is Active, compare the current DNS with the screenshots. If the apex `A` records still point to GoDaddy parking (`15.197.148.33` and `3.33.130.190`), replace those website records with the Worker's custom domain; do not copy either parking IP into a new record. If `www` still has `CNAME drkanak.com` solely for parking, remove that CNAME just before attaching `www` to the Worker: Cloudflare will reject a Custom Domain on a hostname with an existing CNAME. Do not remove a record that now serves an active service without reconciling it first.
+6. In Workers & Pages → `dr-kanak` → Settings → Domains & Routes → Add → Custom Domain, add `drkanak.com`, then `www.drkanak.com`. Cloudflare creates the Worker DNS records and certificates. Both hostnames must be attached because Custom Domains match exact hostnames.
+7. The application redirects `www.drkanak.com` to `drkanak.com` with HTTP 308. Preserve DMARC and any newly discovered MX, SPF, DKIM, verification or other service records.
+8. Verify HTTPS, certificate status, apex homepage, www redirect and internal pages on the real domain. No redirect should return visitors to GoDaddy parking.
 
 Cloudflare's primary-zone documentation: https://developers.cloudflare.com/dns/zone-setups/full-setup/setup/
 Workers custom domains: https://developers.cloudflare.com/workers/configuration/routing/custom-domains/
