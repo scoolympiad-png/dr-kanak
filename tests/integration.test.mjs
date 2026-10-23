@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {publicConfig,handleEnquiry,httpsUrl} from '../lib/integration.mjs';
+import {publicConfig,handleEnquiry,httpsUrl,legacyWebsiteIngressConfig,mapWebsiteV1Enquiry,validWebsiteV1Receipt} from '../lib/integration.mjs';
 const env={PUBLIC_SITE_URL:'https://drkanak.example',CRM_ENQUIRY_URL:'https://crm.example/enquiries',CRM_ENQUIRY_SECRET:'unit-test-secret',MAMTA_TENANT_ID:'mamta-test',TURNSTILE_SITE_KEY:'public-test-key',TURNSTILE_SECRET:'captcha-test-secret',PATIENT_OS_CHAT_URL:'https://care.example/mamta'};
 const payload={name:'Test Guardian',phone:'+91 99999 00000',intent:'vaccination',language:'en',consent:true,website:'',captchaToken:'test-token'};
 function request(body=payload,origin='https://drkanak.example'){return new Request('https://drkanak.example/api/enquiry/',{method:'POST',headers:{'Content-Type':'application/json',Origin:origin,'Idempotency-Key':'12345678-1234-1234-1234-123456789abc'},body:JSON.stringify(body)})}
@@ -49,4 +49,61 @@ test('CRM reply id must match the request id',async()=>{
   return Response.json({accepted:true,requestId:'other-id'});
  });
  assert.equal(r.status,502);
+});
+
+const mamtaTenant='11111111-2222-4333-8444-555555555555';
+const legacyWebhook='https://crm.nuvyqo.com/api/crm/integrations/website/'+mamtaTenant+'/'+'a'.repeat(48);
+const legacyEnv={...env,CRM_INTEGRATION_MODE:'legacy-website-v1',MAMTA_TENANT_ID:mamtaTenant,CRM_WEBSITE_INGRESS_URL:legacyWebhook,CRM_ENQUIRY_SECRET:undefined,CRM_ENQUIRY_URL:undefined};
+test('CRM website v1 adapter remains opt-in and tenant/host bound',()=>{
+ assert.equal(legacyWebsiteIngressConfig(env),null);
+ assert.equal(legacyWebsiteIngressConfig(legacyEnv)?.tenantId,mamtaTenant);
+ assert.equal(publicConfig(legacyEnv).callbackEnabled,true);
+ assert.ok(!JSON.stringify(publicConfig(legacyEnv)).includes('a'.repeat(48)));
+ for(const overrides of [
+  {MAMTA_TENANT_ID:'55555555-2222-4333-8444-555555555555'},
+  {CRM_WEBSITE_INGRESS_URL:legacyWebhook+'?key=leak'},
+  {CRM_WEBSITE_INGRESS_URL:legacyWebhook.replace('crm.nuvyqo.com','untrusted.example')},
+  {CRM_WEBSITE_INGRESS_URL:legacyWebhook.replace('https://','http://')},
+  {CRM_WEBSITE_INGRESS_URL:legacyWebhook.slice(0,-1)},
+  {CRM_WEBSITE_INGRESS_URL:legacyWebhook.replace('crm.nuvyqo.com','crm.nuvyqo.com.evil.example')}
+ ])assert.equal(publicConfig({...legacyEnv,...overrides}).callbackEnabled,false);
+});
+test('website v1 adapter maps only adult contact and verifies durable tenant receipt',async()=>{
+ let calls=0;
+ const intent='reminder-enrolment',body={...payload,intent};
+ const r=await handleEnquiry(request(body),legacyEnv,async(url,options)=>{
+  calls++;
+  if(calls===1)return verified();
+  assert.equal(url,legacyWebhook);
+  assert.equal(options.redirect,'error');
+  assert.ok(!JSON.stringify(options).includes('childName'));
+  assert.ok(!('Authorization' in options.headers));
+  const mapped=JSON.parse(options.body);
+  assert.equal(mapped.event_type,'website_lead');
+  assert.equal(mapped.form_type,'callback_request');
+  assert.equal(mapped.event_id,'12345678-1234-1234-1234-123456789abc');
+  assert.equal(mapped.metadata.service_requested,'Vaccination reminder callback enquiry');
+  assert.deepEqual(Object.keys(mapped.patient_data).sort(),['name','phone']);
+  assert.equal(mapped.patient_data.name,'Test Guardian');
+  assert.equal(mapped.patient_data.phone,'+919999900000');
+  assert.ok(!JSON.stringify(mapped).includes('careReminders'));
+  return Response.json({status:'created',eventType:'callback_request',externalId:mapped.event_id,inquiryNumber:'INQ-001',personNumber:'P-001',historical:false,duplicate:false});
+ });
+ assert.equal(r.status,202);assert.equal(calls,2);
+});
+test('website v1 adapter never treats a mismatched receipt as a success',async()=>{
+ for(const result of [
+  {status:'created',eventType:'callback_request',externalId:'other',inquiryNumber:'INQ-1',historical:false},
+  {status:'created',eventType:'callback_request',externalId:'12345678-1234-1234-1234-123456789abc',historical:false},
+  {status:'historical-imported',eventType:'callback_request',externalId:'12345678-1234-1234-1234-123456789abc',inquiryNumber:'INQ-1',historical:true},
+  {status:'created',eventType:'chat',externalId:'12345678-1234-1234-1234-123456789abc',inquiryNumber:'INQ-1',historical:false}
+ ]){
+  let n=0;
+  const response=await handleEnquiry(request({...payload,intent:'reminder-enrolment'}),legacyEnv,async()=>{
+   n++;
+   return n===1?verified():Response.json(result);
+  });
+  assert.equal(response.status,502);
+ }
+ assert.equal(validWebsiteV1Receipt({status:'already-imported',eventType:'callback_request',externalId:'12345678-1234-1234-1234-123456789abc',inquiryNumber:'INQ-1',historical:false},'12345678-1234-1234-1234-123456789abc'),true);
 });
