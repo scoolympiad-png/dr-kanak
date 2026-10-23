@@ -22,3 +22,71 @@
 @media(max-width:370px){.brand strong{font-size:20px}.hero h1{font-size:35px}.hero-specialities{font-size:15px}.hero .button-row{gap:12px}.hero .button{font-size:10px;padding-inline:12px}.hero-portrait{height:390px}.hero-portrait>img{height:385px;width:280px}.portrait-sun{width:270px;height:315px}.affiliation-ribbon>a:first-child{font-size:18px}.affiliation-ribbon>a{font-size:18px}.quick-links>a{font-size:8px}}
 /* Sufficient contrast for the small white navigation labels. */
 .site-header{background:#087c9b}.utility-care{background:#087c9b}
+/* Vibrant paediatric edition — October 2026: accessible, playful, responsive. */
+:root{--cream:#fffdf9;--ink:#233e55;--muted:#4d6472;--blue:#087c9b;--deep:#14516b;--peach:#ffe4dc;--sage:#e4f4e4;--lavender:#ede6ff;--pale-blue:#ddf5fc;--yellow:#fff0c3;--line:#d9e5e9}
+body{background:#fffdf9}
+.button{border-radius:999px;font-weight:700;box-shadow:0 4px 0 #143b5619}
+.button:hover{transform:translateY(-3px)}
+.button.outline{background:#fff;color:#125b75}
+.site-header,.utility-care{background:#087c9b}
+.hero{position:relative;isolation:isolate;background:radial-gradient(ellipse at 10% 12%,#fff0bd 0,transparent 32%),radial-gradient(ellipse at 90% 12%,#f9ddec 0,transparent 36%),radial-gradient(ellipse at 70% 100%,#ddf4e7 0,transparent 35%),linear-gradient(120deg,#fff9ed,#f2faff 50%,#fff2f8)}
+.hero:after{content:"✦";pointer-events:none;position:absolute;right:3%;top:28px;color:#e48a80;font-size:48px;opacity:.6}
+.hero-inner{min-height:610px;gap:36px}
+.hero-copy{padding-block:55px;z-index:3}
+.hero h1{color:#174666;font-weight:800}
+.hero-specialities{color:#176983;font-size:clamp(18px,2vw,23px);line-height:1.5}
+.hero-summary{color:#456273;line-height:1.7}
+.hero-care-chips{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:9px;margin:0 0 22px}
+.hero-care-chips a{background:#ffe7b7;color:#744319;border:1px solid #f5c676;border-radius:999px;padding:7px 14px;font-size:12px;font-weight:700}
+.hero-care-chips a:nth-child(2){background:#dbf1e5;color:#185e4b;border-color:#a3d7c3}
+.hero-care-chips a:nth-child(3){background:#ecdefb;color:#583878;border-color:#c9b1e9}
+.hero-care-chips a:hover{text-decoration:underline;text-underline-offset:3px}
+.hero-trust{color:#385d70}
+.hero-portrait{height:610px}
+.hero-portrait>img{height:590px;width:405px;filter:drop-shadow(0 10px 20px #1b527b1a)}
+.portrait-sun{background:linear-gradient(155deg,#bcecf7,#d2f3e7 50%,#fce8bb);width:400px;height:485px;border-radius:49% 49% 8% 8%}
+.portrait-note{background:#fff;border:2px solid #f5d1a7;box-shadow:0 11px 29px #154e6b1a}
+.portrait-note strong{color:#a34c76}
+.quick-links{gap:14px;padding-block:27px}
+.quick-links>a{min-height:112px;padding:17px 9px;background:#d8f5fa;border:1px solid #a9e2ec;border-radius:18px;color:#134d66;box-shadow:0 5px 0 #7dc3d133;font-size:12px;letter-spacing:.035em;text-transform:none;transition:transform .18s,box-shadow .18s}
+.quick-links>a:nth-child(2){background:#ffdfcd;border-color:#ffc39d;color:#83451d}
+.quick-links>a:nth-child(3){background:#def2ca;border-color:#b4db91;color:#326336}
+.quick-links>a:nth-child(4){background:#eee2ff;border-color:#d4bafb;color:#573680}
+.quick-links>a:nth-child(5){background:#fff0bd;border-color:#f0d578;color:#70541a}
+.quick-links>a:nth-child(6){background:#fbdce9;border-color:#f3b0cb;color:#793451}
+.quick-links>a:hover{background:inherit;transform:translateY(-5px);box-shadow:0 9px 0 #234f6b1f}
+.quick-links .icon{width:31px;height:31px}
+.affiliation-ribbon{background:#fff;border-radius:14px;padding-inline:15px;border:1px solid #e8edf2}
+.soft-section{background:linear-gradient(125deg,#fff6e9,#ebf9fc,#f5ecff)}
+.age-explorer{border:2px solid #d6e5ed;border-radius:24px;box-shadow:0 12px 35px #1c607116}
+.age-tabs button{background:#f0faff;border-color:#e0edf0}
+.age-tabs button:nth-child(2){background:#fdf0f3}.age-tabs button:nth-child(3){background:#fff5db}.age-tabs button:nth-child(4){background:#ebf8e7}
+.age-tabs button:nth-child(5){background:#f2eaff}.age-tabs button:nth-child(6){background:#e8f6fc}.age-tabs button:nth-child(7){background:#fff0e4}
+.age-tabs button[aria-selected=true]{background:#fff6e6;border-bottom:4px solid #e88445}
+.age-tabs .icon{color:#147894}
+.care-card{border-radius:20px;border-width:2px;box-shadow:0 8px 22px #1c5e8010}
+.care-card:nth-child(4n+1):not(.care-card-feature){background:#f2fbfe;border-color:#cfebf4}
+.care-card:nth-child(4n+2):not(.care-card-feature){background:#fff6e9;border-color:#f5e0bd}
+.care-card:nth-child(4n+3):not(.care-card-feature){background:#f2fff0;border-color:#d7edd2}
+.care-card:nth-child(4n+4):not(.care-card-feature){background:#faf1ff;border-color:#e9d8ef}
+.care-card:hover{transform:translateY(-6px);border-color:#8fc4d4}
+.care-card-feature{background:linear-gradient(135deg,#16688b,#124c66)}
+.icon-disc.peach{background:#ffd4bd;color:#834c20}.icon-disc.sage{background:#cbeacb;color:#2a6551}
+.icon-disc.lavender{background:#ded0fa;color:#664398}.icon-disc.blue{background:#c5ebfa;color:#175e88}.icon-disc.yellow{background:#ffe6a5;color:#835c16}
+.doctor-story .story-image{border:8px solid #f7e2f1;border-radius:160px 160px 35px 35px}
+.story-copy h2 em{color:#a14f8c}
+.vaccine-feature{background:linear-gradient(120deg,#14648a,#126d86 55%,#267c86);border-radius:28px;box-shadow:0 14px 45px #075c7733}
+.vaccine-feature-card{background:#fffef8;border:2px solid #ffe4a9;border-radius:20px}
+.guide-card{border-radius:22px;border:2px solid #e0ecf0;box-shadow:0 8px 24px #3d6f9a0a}
+.guide-art{height:210px}
+.guide-card:nth-child(5n+1) .guide-art{background:#d8effb}.guide-card:nth-child(5n+2) .guide-art{background:#ffe6d1}
+.guide-card:nth-child(5n+3) .guide-art{background:#e0f3d6}.guide-card:nth-child(5n+4) .guide-art{background:#eadfff}.guide-card:nth-child(5n) .guide-art{background:#fff0c4}
+.guide-card:hover{transform:translateY(-6px);box-shadow:0 17px 30px #1c60711d}
+.hospital-section{background:#f2f8ec}
+.hospital-story>img{border-radius:23px;border:7px solid white;box-shadow:0 8px 30px #174e671c}
+.visit-band{background:linear-gradient(105deg,#126a8d,#356b98,#7754a0)}
+.assistant-launch{background:#165f89;border-color:#165f89}
+@media(max-width:1200px){.hero-inner{min-height:570px}.hero-portrait{height:570px}.hero-portrait>img{height:545px;width:372px}.portrait-sun{width:355px;height:440px}.quick-links>a{min-height:105px;font-size:11px}}
+@media(max-width:1020px){.hero-inner{min-height:525px}.hero-portrait{height:525px}.hero-portrait>img{height:510px;width:330px}.portrait-sun{width:305px;height:410px}.hero-care-chips a{font-size:11px}.quick-links>a{font-size:10px}}
+@media(max-width:760px){.hero-inner{min-height:0}.hero-copy{padding:38px 0 0}.hero-care-chips{justify-content:center;margin-bottom:20px}.hero-care-chips a{padding:5px 12px;font-size:10px}.hero-portrait{height:450px;margin-top:10px}.hero-portrait>img{height:445px;width:320px}.portrait-sun{width:315px;height:355px}.quick-links{grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.quick-links>a{min-height:98px;font-size:10px;border-radius:15px}.quick-links .icon{width:28px;height:28px}.hero h1{font-size:clamp(36px,10vw,46px)}.hero-specialities{font-size:17px}.hero:after{font-size:32px;right:10px;top:20px}.vaccine-feature{border-radius:22px}.guide-art{height:180px}}
+@media(max-width:370px){.hero-portrait{height:415px}.hero-portrait>img{height:405px;width:286px}.portrait-sun{width:280px;height:330px}.quick-links>a{font-size:9px}.hero-care-chips{gap:5px}}
