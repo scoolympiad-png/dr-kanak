@@ -316,5 +316,29 @@
     "title": "Your newborn's first weeks at home",
     "kind": "guide",
     "public": true
+  },
+  {
+    "path": "/learning-and-adhd/",
+    "title": "Understanding ADHD, attention and learning",
+    "kind": "learningHub",
+    "public": true
+  },
+  {
+    "path": "/learning-and-adhd/bright-minds/",
+    "title": "Bright minds, different ways to learn",
+    "kind": "adhdBright",
+    "public": true
+  },
+  {
+    "path": "/learning-and-adhd/writing-at-school/",
+    "title": "Helping children start and finish writing",
+    "kind": "adhdWriting",
+    "public": true
+  },
+  {
+    "path": "/vaccination/understanding-vaccines/",
+    "title": "Vaccination questions made clearer",
+    "kind": "vaccineLearning",
+    "public": true
   }
 ]
