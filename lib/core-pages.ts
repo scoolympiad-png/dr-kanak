@@ -91,3 +91,30 @@ for (const c of careAreas) corePages.push(make('/care/'+c.slug+'/',c.title,c.sum
   {heading:'Questions worth bringing',paragraphs:['What might explain the concern? What needs checking now? What should we watch for at home? When should we return, and whom should we contact if things change?','Ask the hospital to confirm current availability and fees before travelling. An online request does not confirm a consultation time.']},
   {heading:'Connected care at Mamta',paragraphs:['The personal website helps you prepare and find the next step. The hospital team handles appointment availability and coordination with other services when required. A care plan should come from a consultation with the treating clinician.']},
 ],{eyebrow:'Children’s care',icon:c.icon,related:['/care-by-age/','/vaccination/',c.slug==='paediatric-neurology'?'/parent-resources/seizure-first-aid/':'/parent-resources/',visit]}));
+
+/* Original parent-facing learning guides, based on user-supplied infographics
+   and independently verified ADHD clinical/public health guidance. */
+corePages.push(
+ {path:'/learning-and-adhd/',title:'Understanding ADHD, attention and learning',eyebrow:'For parents & teachers',summary:'Helpful strategies for bright minds, focus, classroom routines and writing confidence.',kind:'learningHub',related:['/learning-and-adhd/bright-minds/','/learning-and-adhd/writing-at-school/','/care/paediatric-neurology/','/visit/']},
+ {path:'/learning-and-adhd/bright-minds/',title:'Bright minds, different ways to learn',eyebrow:'ADHD & learning support',summary:'Strength-based parenting and classroom activities for children who need help with attention, planning or impulse control.',kind:'adhdBright',sources:[
+  {title:'CDC: ADHD in the classroom',url:'https://www.cdc.gov/adhd/treatment/classroom.html'},
+  {title:'IAP ADHD clinical consensus',url:'https://pubmed.ncbi.nlm.nih.gov/28368271/'},
+  {title:'ADHD and high intellectual ability systematic review',url:'https://pubmed.ncbi.nlm.nih.gov/37929569/'}
+ ],related:['/learning-and-adhd/writing-at-school/','/learning-and-adhd/','/care/paediatric-neurology/','/visit/']},
+ {path:'/learning-and-adhd/writing-at-school/',title:'Helping children start and finish writing',eyebrow:'Positive classroom support',summary:'A clear five-step writing activity using small goals, visual checklists, constructive praise and gradual independence.',kind:'adhdWriting',sources:[
+  {title:'CDC: ADHD classroom support',url:'https://www.cdc.gov/adhd/treatment/classroom.html'},
+  {title:'AAP: ADHD clinical practice guideline',url:'https://publications.aap.org/pediatrics/article/144/4/e20192528/81572/Clinical-Practice-Guideline-for-the-Diagnosis'},
+  {title:'IAP ADHD clinical consensus',url:'https://pubmed.ncbi.nlm.nih.gov/28368271/'}
+ ],related:['/learning-and-adhd/bright-minds/','/learning-and-adhd/','/care/growth-development/','/visit/']},
+ {path:'/vaccination/understanding-vaccines/',title:'Vaccination questions made clearer',eyebrow:'A helpful guide for families',summary:'Understand vaccination records, preterm baby discussions, polio, precautions, childhood and adolescent vaccines.',kind:'vaccineLearning',sources:[
+  {title:'Indian Ministry of Health immunisation manual (2024)',url:'https://www.mohfw.gov.in/sites/default/files/Routine%20Immunization%20Manual%20For%20Health%20Workers.pdf'},
+  {title:'CDC: vaccine precautions and contraindications',url:'https://www.cdc.gov/vaccines/hcp/imz-best-practices/contraindications-precautions.html'},
+  {title:'IAP immunisation guidance',url:'https://acvip.org/professional/'}
+ ],related:['/vaccination/schedule/','/vaccination/catch-up/','/vaccination/teen-hpv/','/visit/']}
+);
+for(const target of ['/care/paediatric-neurology/','/care/growth-development/','/parent-resources/','/vaccination/','/vaccination/schedule/','/vaccination/faq/']){
+ const page=corePages.find(item=>item.path===target);
+ if(!page)continue;
+ const additional=target.startsWith('/vaccination/')?'/vaccination/understanding-vaccines/':'/learning-and-adhd/';
+ if(!page.related?.includes(additional))page.related=[...(page.related||[]),additional];
+}
