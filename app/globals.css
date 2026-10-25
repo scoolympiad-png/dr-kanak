@@ -879,3 +879,196 @@ body{background:#fffdf9}
 .vax-reminder-portal-links a .icon{width:18px;height:18px}
 @media(max-width:920px){.vax-reminder-main{grid-template-columns:1fr}.vax-reminder-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.vax-reminder-steps li{align-items:flex-start}.vax-reminder-steps li+li{border-top:0;padding-top:7px}}
 @media(max-width:760px){.vax-reminder-entry{padding:19px 16px 21px;margin:24px 0;border-radius:22px}.vax-reminder-main{gap:17px}.vax-reminder-copy h2{font-size:28px}.vax-reminder-copy>p:not(.vax-reminder-helper){font-size:15px}.vax-reminder-actions .button{font-size:14px}.vax-reminder-steps{grid-template-columns:1fr;padding:14px 17px}.vax-reminder-steps li+li{border-top:1px dashed #d2e7e7;padding-top:12px}.vax-reminder-steps li strong{font-size:15px}.vax-reminder-steps li small{font-size:13px}}
+
+/* Progressive learning and child-health parent education, October 2026 */
+.adhd-landing,.adhd-detail{padding-top:48px;padding-bottom:76px}
+.adhd-landing h1,.adhd-detail h1,.adhd-detail h2{font-family:var(--sans);letter-spacing:-.048em;font-weight:800}
+.adhd-landing h1,.adhd-detail h1{font-size:clamp(36px,4vw,59px);line-height:1.12;color:#123f6a}
+.adhd-landing h1 em,.adhd-detail h1 em{font-style:normal;color:#b45188}
+.adhd-landing h2,.adhd-detail h2{font-size:clamp(28px,2.65vw,39px);line-height:1.19;color:#1b5270}
+.adhd-landing h3,.adhd-detail h3{font-weight:800;color:#214965}
+.adhd-landing p,.adhd-detail p{color:#446473}
+.adhd-pill{display:inline-flex;align-items:center;gap:8px;border-radius:40px;background:#fff;border:1px solid #bee3e8;padding:9px 13px;font-size:13px;font-weight:800;color:#1b6680;margin-bottom:20px}
+.adhd-pill .icon{width:19px;height:19px;color:#d76590}
+.adhd-feature-hero,.adhd-detail-top,.adhd-writing-hero,.vax-learning-intro{display:grid;grid-template-columns:1.08fr .92fr;gap:38px;align-items:center;overflow:hidden;border-radius:31px;padding:35px 43px;min-height:360px;border:1px solid #d5e7eb;background:linear-gradient(115deg,#e8f8fc 0%,#fff8e6 56%,#fcecf4 100%);box-shadow:0 15px 45px #144a7815}
+.adhd-feature-hero>div:first-child,.adhd-detail-top>div:first-child,.adhd-writing-hero>div:first-child,.vax-learning-intro>div:first-child{min-width:0}
+.adhd-feature-hero p,.adhd-detail-top p,.adhd-writing-hero p,.vax-learning-intro p{font-size:17px;line-height:1.7;margin-top:18px;max-width:565px}
+.adhd-feature-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:25px}
+.adhd-feature-actions .button{border-radius:100px;min-height:49px;font-size:14px;padding:12px 17px}
+.adhd-hero-art{height:360px;position:relative;display:flex;align-items:flex-start;justify-content:center;padding-top:7px;background:radial-gradient(ellipse at center,#c4eef0 0%,transparent 73%)}
+.adhd-hero-art img{height:342px;width:auto;max-width:88%;object-fit:contain;object-position:top center;border-radius:14px;box-shadow:0 17px 28px #17466b24;transform:rotate(3deg)}
+.adhd-hero-sticker{position:absolute;right:6px;bottom:9px;max-width:225px;text-align:center;background:#fff3c6;padding:10px 14px;border-radius:16px;font-weight:800;color:#945772;transform:rotate(-5deg);box-shadow:0 5px 13px #20556722;font-size:14px}
+.adhd-route-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:32px}
+.adhd-route-card{display:block;padding:20px 23px 27px;border:2px solid transparent;border-radius:26px;background:#e8f5fe;box-shadow:0 10px 28px #1d617215;transition:transform .18s ease,border-color .18s}
+.adhd-route-card:hover{transform:translateY(-4px);border-color:#77bfd0}
+.adhd-route-card.tone-peach{background:#fff0e7}
+.adhd-card-kicker{display:inline-flex;align-items:center;gap:8px;background:#fff9;border-radius:50px;padding:9px 12px;font-size:13px;color:#206279;font-weight:800}
+.adhd-card-kicker .icon{height:18px;width:18px;color:#c55b8f}
+.adhd-card-photo{margin:16px auto 18px;border-radius:19px;background:#fffc;overflow:hidden;max-height:262px;display:grid;place-items:center}
+.adhd-card-photo img{height:262px;width:auto;max-width:100%;object-fit:contain;object-position:center top}
+.adhd-route-card h3{font-size:25px;letter-spacing:-.035em;margin:10px 0}
+.adhd-route-card p{font-size:15px;line-height:1.65;max-width:450px}
+.adhd-route-card>span:last-child{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-size:14px;font-weight:800;color:#136c89}
+.adhd-route-card>span:last-child .icon{width:18px;height:18px}
+.adhd-focus-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:27px 0 37px}
+.adhd-focus-row>div{background:#fff;border:1px solid #dfe8e7;border-radius:20px;padding:22px 18px}
+.adhd-focus-row .icon{display:block;color:#bd6094;width:30px;height:30px;margin-bottom:10px}
+.adhd-focus-row strong{font-size:16px;display:block;line-height:1.4;color:#214f6b}
+.adhd-focus-row span{font-size:14px;color:#5c7783;line-height:1.6}
+.adhd-detail-top{grid-template-columns:1.1fr .9fr;background:linear-gradient(125deg,#fff0df 0%,#e8f8fc 60%,#f7e7ff)}
+.adhd-detail-top>img,.adhd-writing-hero>img{width:auto;height:330px;max-width:100%;object-fit:contain;object-position:center top;justify-self:center;border-radius:16px;box-shadow:0 13px 27px #10436724}
+.adhd-writing-hero{background:linear-gradient(120deg,#e7f4ff,#f4ebff 46%,#fff6e2)}
+.adhd-clear-message{margin:26px 0 36px;display:flex;gap:13px;align-items:flex-start;padding:20px 22px;border:1px solid #cae5e6;border-left:5px solid #178a9e;border-radius:18px;background:#e5f7f5}
+.adhd-clear-message.light{background:#f2f8fa}
+.adhd-clear-message .icon{color:#bd658d;flex:none;width:27px;height:27px;margin-top:1px}
+.adhd-clear-message p{margin:0;font-size:15px;line-height:1.75;color:#285a6e}
+.adhd-resource-section{margin:45px 0}
+.adhd-resource-section .eyebrow{font-size:12px;letter-spacing:.08em;color:#147c9d}
+.adhd-resource-section h2{margin:9px 0 20px}
+.adhd-strategy-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:11px}
+.adhd-strategy{background:#e7f5ff;border:1px solid #d4e9f4;border-radius:22px;padding:18px 14px;min-width:0}
+.adhd-strategy.tone-mint{background:#e4f7ed}.adhd-strategy.tone-peach{background:#ffebdf}.adhd-strategy.tone-lilac{background:#f0eaff}.adhd-strategy.tone-yellow{background:#fff3d8}
+.adhd-strategy>span{display:inline-flex;align-items:center;justify-content:center;width:41px;height:41px;border-radius:14px;background:#fff9;color:#125c84;font-weight:900;font-size:15px;margin-bottom:14px}
+.adhd-strategy h3{font-size:17px;line-height:1.3;margin-bottom:10px}
+.adhd-strategy p{font-size:13px;line-height:1.6}
+.adhd-comparison-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.adhd-comparison-grid>div{border:1px solid #d8e7ed;border-radius:20px;padding:23px;background:#e9f5ff}
+.adhd-comparison-grid>div:nth-child(2){background:#fff1e5;border-color:#f1e1ce}
+.adhd-comparison-grid>div:nth-child(3){background:#ecf7eb;border-color:#d5eace}
+.adhd-comparison-grid h3{font-size:20px;margin-bottom:11px}
+.adhd-comparison-grid p{font-size:15px;line-height:1.7}
+.adhd-section-bar{display:flex;align-items:center;gap:18px;justify-content:space-between;flex-wrap:wrap;margin-bottom:21px}
+.adhd-section-bar h2{margin-bottom:8px}
+.adhd-section-bar p{font-size:15px}
+.adhd-section-bar .button{border-radius:100px;font-size:14px}
+.adhd-poster-section{padding:26px 28px;background:#fff;border:1px solid #dbe8ec;border-radius:28px;box-shadow:0 12px 30px #184d6610}
+.adhd-art-card{max-width:900px;margin-inline:auto}
+.adhd-art-card>a{display:block;border:1px solid #e5e6e9;background:#f7fafc;border-radius:19px;padding:12px}
+.adhd-art-card>a img{width:100%;height:auto;object-fit:contain;border-radius:12px}
+.adhd-art-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:13px;padding-top:17px}
+.adhd-art-actions>span{display:flex;gap:7px;align-items:center;color:#255971;font-weight:800;font-size:14px}
+.adhd-art-actions .icon{width:17px;height:17px}
+.adhd-art-actions>div{display:flex;flex-wrap:wrap;gap:12px}
+.adhd-art-actions a{display:flex;gap:6px;align-items:center;font-weight:800;color:#117296;font-size:13px;text-decoration:underline;text-underline-offset:3px}
+.adhd-writing-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.adhd-writing-step{padding:18px 14px;background:#e7f6ff;border:1px solid #c9e9fa;border-radius:20px;min-width:0}
+.adhd-writing-step.tone-mint{background:#e4faf1}.adhd-writing-step.tone-lilac{background:#f0e9ff}.adhd-writing-step.tone-peach{background:#fff1e3}.adhd-writing-step.tone-yellow{background:#fff4dc}
+.adhd-step-n{display:inline-grid;place-items:center;font-size:20px;font-weight:900;height:46px;width:46px;background:#fff8;color:#147297;border-radius:14px;margin-bottom:15px}
+.adhd-writing-step>.icon{height:31px;width:31px;color:#ac5288;margin-left:5px}
+.adhd-writing-step h3{font-size:18px;margin:0 0 9px}
+.adhd-writing-step p{font-size:14px;line-height:1.63}
+.adhd-practice{scroll-margin-top:130px;background:linear-gradient(120deg,#ecf8fc,#f3f0ff);padding:27px 29px;border-radius:26px;border:2px solid #cbe4ed;margin:46px 0}
+.adhd-practice-heading{display:flex;justify-content:space-between;gap:15px;align-items:center}
+.adhd-practice-heading h2{font-size:clamp(25px,2.5vw,34px);margin:8px 0}
+.adhd-practice-heading p{font-size:15px;line-height:1.6;max-width:700px}
+.adhd-practice-score{flex:none;display:flex;flex-direction:column;align-items:center;background:#fff;border-radius:16px;border:1px solid #d0dfee;padding:13px 18px;line-height:1.1}
+.adhd-practice-score strong{font-size:26px;color:#176c8b}
+.adhd-practice-score small{font-size:11px;color:#567483;margin-top:5px}
+.adhd-practice-progress{height:11px;margin:22px 0;border-radius:99px;background:#d9e8ec;overflow:hidden}
+.adhd-practice-progress span{display:block;height:100%;background:#1ca998;border-radius:99px;transition:width .2s ease}
+.adhd-practice-steps{display:grid;gap:11px}
+.adhd-practice-steps label{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid #d5e6e9;padding:16px;border-radius:16px;cursor:pointer}
+.adhd-practice-steps label.is-done{background:#edfaf1}
+.adhd-practice-steps input{position:absolute;width:1px;height:1px;opacity:.01}
+.adhd-practice-steps label:focus-within{outline:3px solid #197eac;outline-offset:2px}
+.adhd-practice-check{display:grid;place-items:center;flex:none;width:43px;height:43px;border:2px solid #8bbccf;border-radius:14px;color:#20789b;background:#e9f5fb}
+.adhd-practice-steps .is-done .adhd-practice-check{background:#c5efdb;border-color:#5cae91;color:#176a50}
+.adhd-practice-steps strong{display:block;font-size:16px;color:#20536c}
+.adhd-practice-steps small{display:block;font-size:13px;line-height:1.55;margin-top:3px;color:#4c6b7a}
+.adhd-practice-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;padding-top:17px;font-size:14px;font-weight:700;color:#215f6d}
+.adhd-practice-bottom button{background:#fff;border:1px solid #b1d9e1;border-radius:30px;padding:9px 15px;font-size:13px;font-weight:800;color:#1d718b}
+.adhd-practice-privacy{display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.5;margin-top:20px}
+.adhd-practice-privacy .icon{flex:none;width:17px;height:17px;color:#297d81}
+.adhd-family-cta{display:flex;justify-content:space-between;gap:20px;align-items:center;padding:30px 32px;background:linear-gradient(115deg,#dff5f4,#ffe7e9);border:1px solid #c7e4e4;border-radius:25px;margin:39px 0}
+.adhd-family-cta h2{font-size:clamp(25px,2.6vw,35px);margin:8px 0}
+.adhd-family-cta p{font-size:15px;line-height:1.6}
+.adhd-family-cta .button{flex:none;max-width:320px;border-radius:100px}
+.adhd-evidence{margin:37px 0;padding:24px;border-radius:23px;background:#f2f7f8;border:1px solid #dae7e9}
+.adhd-evidence h2{font-size:clamp(24px,2.1vw,30px);margin:7px 0 17px}
+.adhd-evidence-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.adhd-evidence-links a{position:relative;display:flex;flex-direction:column;gap:3px;min-width:0;padding:14px 36px 14px 14px;border:1px solid #dce8ea;border-radius:13px;background:#fff;color:#1d607b}
+.adhd-evidence-links a:hover{background:#e8f6f8}
+.adhd-evidence-links a strong{font-size:13px;line-height:1.45}
+.adhd-evidence-links a small{color:#617684;font-size:12px}
+.adhd-evidence-links .icon{position:absolute;right:11px;top:14px;width:16px;height:16px}
+.adhd-evidence>p{font-size:12px;margin-top:15px}
+.adhd-home-link{margin-top:25px;margin-bottom:0;background:#e9f6ff;border:1px solid #cfebf6;display:flex;align-items:center;flex-wrap:wrap;gap:16px;padding:15px 22px;border-radius:19px}
+.adhd-home-label{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #c5e6ef;border-radius:60px;color:#21718a;padding:9px 13px;font-size:13px;font-weight:800}
+.adhd-home-label .icon{height:18px;width:18px}
+.adhd-home-link>div{flex:1 1 300px}
+.adhd-home-link strong{display:block;font-size:15px;color:#1c5670}
+.adhd-home-link p{font-size:13px;margin:0}
+.adhd-home-link>a{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:800;color:#166c89;text-decoration:underline;text-underline-offset:4px}
+.adhd-home-link>a .icon{height:17px;width:17px}
+.adhd-home-feature{margin:40px 0;display:grid;grid-template-columns:1fr 140px;gap:26px;align-items:center;max-width:100%;padding:26px 30px;border-radius:26px;background:#e8f7fe;border:1px solid #d2eaf4}
+.adhd-home-feature h2{font-size:clamp(27px,2.5vw,37px);margin:8px 0 13px}
+.adhd-home-feature p{font-size:15px;margin-bottom:18px;max-width:650px}
+.adhd-home-feature img{width:140px;height:170px;object-fit:contain;object-position:top center;border-radius:12px}
+.adhd-home-feature .button{min-height:46px;border-radius:40px}
+.vax-learning-intro{background:linear-gradient(125deg,#ecf8fb 0%,#fff5e9 56%,#f5e9ff 100%)}
+.vax-learning-art{position:relative;min-height:266px;border-radius:29px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:13px;background:radial-gradient(circle,#bdece5 0%,#e6f4ff 55%,transparent 67%);font-size:15px;color:#1e7188;font-weight:800}
+.vax-learning-art>.icon{height:150px;width:150px;color:#21a18f;stroke-width:1.2}
+.vax-learning-star{position:absolute;top:20px;right:22px;font-size:53px;color:#f2be4d}
+.vax-learning-topics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.vax-learn-faq{border-radius:19px;overflow:hidden;border:1px solid #cde5ee;background:#e8f6fc}
+.vax-learn-faq.tone-mint{background:#e5f7ea;border-color:#d0e7d6}.vax-learn-faq.tone-peach{background:#fff1e7;border-color:#f4decc}.vax-learn-faq.tone-lilac{background:#f0ecff;border-color:#e3dbf7}.vax-learn-faq.tone-yellow{background:#fff4d9;border-color:#e9dfc6}
+.vax-learn-faq summary{display:flex;align-items:center;gap:13px;padding:17px;list-style:none;cursor:pointer}
+.vax-learn-faq summary::-webkit-details-marker{display:none}
+.vax-learn-icon{flex:none;display:grid;place-items:center;height:48px;width:48px;border-radius:14px;background:#fff9;color:#157d9a}
+.vax-learn-icon .icon{height:25px;width:25px}
+.vax-learn-faq summary>span:nth-child(2){flex:1}
+.vax-learn-faq summary small{display:block;color:#387187;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+.vax-learn-faq summary strong{display:block;color:#215269;line-height:1.35;font-size:16px;margin-top:3px}
+.vax-learn-plus{font-size:26px;color:#176887;transition:transform .18s}
+.vax-learn-faq[open] .vax-learn-plus{transform:rotate(45deg)}
+.vax-learn-answer{background:#fffc;padding:0 19px 19px}
+.vax-learn-answer p{font-size:15px;line-height:1.7}
+@media(max-width:1090px){.adhd-strategy-grid,.adhd-writing-steps{grid-template-columns:repeat(3,minmax(0,1fr))}.adhd-feature-hero,.adhd-detail-top,.adhd-writing-hero,.vax-learning-intro{padding:28px;gap:23px}}
+@media(max-width:760px){
+ .adhd-landing,.adhd-detail{padding-top:25px;padding-bottom:45px}
+ .adhd-feature-hero,.adhd-detail-top,.adhd-writing-hero,.vax-learning-intro{grid-template-columns:1fr;gap:19px;padding:22px 18px;border-radius:24px;min-height:0}
+ .adhd-landing h1,.adhd-detail h1{font-size:clamp(32px,9vw,43px)}
+ .adhd-landing h2,.adhd-detail h2{font-size:clamp(25px,7vw,32px)}
+ .adhd-feature-hero p,.adhd-detail-top p,.adhd-writing-hero p,.vax-learning-intro p{font-size:15px;line-height:1.65}
+ .adhd-feature-actions .button{font-size:13px;width:100%;min-height:47px}
+ .adhd-hero-art{height:230px}
+ .adhd-hero-art img{height:215px}
+ .adhd-hero-sticker{bottom:0;right:0;font-size:12px}
+ .adhd-detail-top>img,.adhd-writing-hero>img{height:235px}
+ .adhd-route-grid{grid-template-columns:1fr;gap:15px;margin-top:21px}
+ .adhd-route-card{padding:17px 18px 21px;border-radius:22px}
+ .adhd-route-card h3{font-size:22px}
+ .adhd-focus-row,.adhd-comparison-grid{grid-template-columns:1fr;gap:10px}
+ .adhd-focus-row>div,.adhd-comparison-grid>div{padding:17px}
+ .adhd-resource-section{margin:31px 0}
+ .adhd-strategy-grid,.adhd-writing-steps{grid-template-columns:1fr 1fr;gap:9px}
+ .adhd-strategy,.adhd-writing-step{padding:15px 12px}
+ .adhd-strategy h3,.adhd-writing-step h3{font-size:16px}
+ .adhd-strategy p,.adhd-writing-step p{font-size:13px}
+ .adhd-poster-section{padding:16px 12px;border-radius:21px}
+ .adhd-art-card>a{padding:5px;border-radius:12px}
+ .adhd-art-actions{padding:13px 4px 4px}
+ .adhd-art-actions>span{font-size:12px}
+ .adhd-clear-message{padding:16px 14px;margin:21px 0;gap:9px}
+ .adhd-clear-message p{font-size:14px}
+ .adhd-practice{padding:18px 14px;border-radius:20px;margin:29px 0}
+ .adhd-practice-heading h2{font-size:25px}
+ .adhd-practice-heading p{font-size:14px}
+ .adhd-practice-score{padding:10px}
+ .adhd-practice-score strong{font-size:20px}
+ .adhd-family-cta{flex-direction:column;align-items:stretch;padding:20px 17px;margin:29px 0}
+ .adhd-family-cta .button{max-width:none}
+ .adhd-evidence{padding:18px 14px;margin:28px 0}
+ .adhd-evidence-links{grid-template-columns:1fr}
+ .adhd-home-link{margin-top:17px;padding:15px}
+ .adhd-home-feature{grid-template-columns:1fr 80px;padding:20px 15px;gap:10px}
+ .adhd-home-feature img{height:100px;width:80px}
+ .adhd-home-feature p{font-size:13px}
+ .adhd-home-feature .button{padding:10px 13px;font-size:12px}
+ .vax-learning-art{min-height:178px}
+ .vax-learning-art>.icon{width:100px;height:100px}
+ .vax-learning-topics{grid-template-columns:1fr}
+ .vax-learn-faq summary{padding:14px}
+ .vax-learn-faq summary strong{font-size:15px}
+}
+@media(prefers-reduced-motion:reduce){.adhd-practice-progress span,.adhd-route-card,.vax-learn-plus{transition:none}}
