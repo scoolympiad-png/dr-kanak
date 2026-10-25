@@ -95,7 +95,7 @@ function VaccinationScheduleWelcome(){return <>
    <div><span className="vax-practical-icon"><Icon name="chat"/></span><h3>Ask what’s next</h3><p>Your doctor checks the child’s age, past doses and vaccine products.</p></div>
    <div><span className="vax-practical-icon"><Icon name="calendar"/></span><h3>Keep the date</h3><p>Write down the next confirmed visit before heading home.</p></div>
   </div>
-  <div className="vax-help-links"><a href="/vaccination/catch-up/">Missed a vaccination visit? <Icon name="arrow"/></a><a href="/vaccination/after-care/">Care after vaccination <Icon name="arrow"/></a></div>
+  <div className="vax-help-links"><a href="/vaccination/catch-up/">Missed a vaccination visit? <Icon name="arrow"/></a><a href="/vaccination/after-care/">Care after vaccination <Icon name="arrow"/></a><a href="/vaccination/understanding-vaccines/">More vaccine questions <Icon name="arrow"/></a></div>
  </section>
  <div className="vax-evidence-byline"><Icon name="shield"/><span>Guidance informed by India’s National Immunisation Schedule, Indian Academy of Pediatrics immunisation resources and World Health Organization vaccination research. Your child's schedule is confirmed during clinical care.</span></div>
  </>}
@@ -155,7 +155,7 @@ function Vaccination(){return <>
  </section>
  <section className="soft-section section"><div className="container">
   <SectionHeading eyebrow="Helpful next steps" title="Find the question on your mind.">Understand the schedule, prepare for a visit or learn what to discuss after vaccination.</SectionHeading>
-  <div className="vaccine-links">{['schedule','catch-up','after-care','teen-hpv','faq'].map((s,i)=>{const p=getPage(`/vaccination/${s}/`)!;return <a key={s} className="care-card" href={p.path}><span className={`icon-disc ${['blue','peach','sage','lavender','yellow'][i]}`}><Icon name={['calendar','clock','heart','leaf','chat'][i]}/></span><h3>{p.title}</h3><p>{p.summary}</p><span className="text-link">Read more <Icon name="arrow"/></span></a>})}</div>
+  <div className="vaccine-links">{['schedule','catch-up','after-care','teen-hpv','faq','understanding-vaccines'].map((s,i)=>{const p=getPage(`/vaccination/${s}/`)!;return <a key={s} className="care-card" href={p.path}><span className={`icon-disc ${['blue','peach','sage','lavender','yellow','blue'][i]}`}><Icon name={['calendar','clock','heart','leaf','chat','book'][i]}/></span><h3>{p.title}</h3><p>{p.summary}</p><span className="text-link">Read more <Icon name="arrow"/></span></a>})}</div>
  </div></section>
  <section className="section container reminder-story">
   <div><span className="eyebrow">Making future visits easier</span><h2>Never lose track<br/>of the next visit.</h2>
