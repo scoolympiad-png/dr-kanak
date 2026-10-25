@@ -29,7 +29,7 @@ export function SiteNavigation(){
     <details><summary>Growing up <Icon name="down"/></summary><div className="nav-dropdown"><a href="/care-by-age/">Explore every age <Icon name="arrow"/></a>{ages.map(a=><a key={a.slug} href={`/care-by-age/${a.slug}/`}><span>{a.name}</span><small>{a.age}</small></a>)}</div></details>
     <details><summary>Care <Icon name="down"/></summary><div className="nav-dropdown"><a href="/care/">All children’s care <Icon name="arrow"/></a>{careAreas.map(a=><a key={a.slug} href={`/care/${a.slug}/`}>{a.title}</a>)}</div></details>
     <a href="/vaccination/">Vaccination</a>
-    <details><summary>For parents <Icon name="down"/></summary><div className="nav-dropdown"><a href="/parent-resources/">Parent library</a><a href="/resources/">Trusted resources</a><a href="/videos/">Watch & learn</a><a href="/my-child/">Your child’s care</a><a href="/hi/" lang="hi">हिन्दी सहायता</a></div></details>
+    <details><summary>For parents <Icon name="down"/></summary><div className="nav-dropdown"><a href="/parent-resources/">Parent library</a><a href="/learning-and-adhd/">ADHD & learning support</a><a href="/learning-and-adhd/bright-minds/">Bright minds & ADHD</a><a href="/learning-and-adhd/writing-at-school/">Help with writing tasks</a><a href="/vaccination/understanding-vaccines/">Vaccination questions</a><a href="/resources/">Trusted resources</a><a href="/videos/">Watch & learn</a><a href="/my-child/">Your child’s care</a><a href="/hi/" lang="hi">हिन्दी सहायता</a></div></details>
     <a className="nav-search" href="/search/" aria-label="Search the website"><Icon name="search"/></a>
     <a className="button small" href="/visit/">Plan a visit <Icon name="arrow"/></a>
    </nav>
