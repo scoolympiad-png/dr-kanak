@@ -1529,3 +1529,7 @@ body{background:#fffdf9}
  .topic-hub .topic-hub-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(max-width:450px){.sensory-senses-grid,.sensory-sources>div,.topic-hub .topic-hub-cards{grid-template-columns:1fr}.sensory-sense-card>p{min-height:0}.sensory-faq summary{padding:14px}.sensory-faq details p{padding:0 15px 16px 18px}}
+
+/* Approved Dr Kanak K monogram: maintain clear contrast on the teal header. */
+.site-header .brand-mark{display:block;background:#fff;border:1px solid #e5f5f7;border-radius:15px;padding:3px;box-shadow:0 3px 11px #043d5a24;object-fit:contain}
+.footer-brand img{display:block;background:#fff;padding:3px;border-radius:14px;object-fit:contain}
