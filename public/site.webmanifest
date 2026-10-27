@@ -1,0 +1,25 @@
+{
+  "name": "Dr Kanak Ramnani — Paediatrician",
+  "short_name": "Dr Kanak",
+  "description": "Child health, development and parent resources from Dr Kanak Ramnani at Mamta Hospital, Raipur",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#FFFFFF",
+  "theme_color": "#087A98",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
