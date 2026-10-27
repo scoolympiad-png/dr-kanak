@@ -42,7 +42,7 @@ export function FamilyStressGuide(){
     <p>Stress visits every family. Discover everyday ways to help children feel heard, protect family routines and make space for small moments of calm.</p>
     <div className="wellbeing-hero-actions"><a className="button" href="#calm-steps">Try a calm-down plan <Icon name="arrow"/></a><a href="#family-gallery" className="button outline">See the picture guides <Icon name="down"/></a></div>
    </div>
-   <div className="wellbeing-hero-visual"><img src={stressArt[0].src} alt="Family stress illustrated guide with parent and child" width="1200" height="900" fetchPriority="high"/></div>
+   <div className="wellbeing-hero-visual"><img src={stressArt[2].src} alt="Colourful daily stress-wellbeing plan for families" width="1200" height="900" fetchPriority="high"/></div>
   </div>
   <section className="wellbeing-section">
     <span className="eyebrow">Start with understanding</span><h2>Notice stress. Make room for support.</h2>
@@ -68,7 +68,7 @@ export function FamilyStressGuide(){
     </div>
     <div className="wellbeing-split wellbeing-second-visual"><Poster data={stressArt[2]} caption="A flexible visual reminder; minutes shown are examples, not a prescription."/><div className="wellbeing-sleep"><span className="eyebrow">Sleep matters at every age</span><h3>Children need more sleep than adults.</h3><p>The American Heart Association’s 7–9-hour guidance applies to adults. Children’s needs vary by age:</p><ul><li><strong>3–5 years:</strong> 10–13 hours each day (including naps)</li><li><strong>6–12 years:</strong> 9–12 hours</li><li><strong>13–17 years:</strong> 8–10 hours</li></ul><p>Build a regular bedtime routine and discuss persistent sleep difficulties with your child’s doctor.</p></div></div>
   </section>
-  <section className="wellbeing-section" id="family-gallery"><span className="eyebrow">Keep it handy</span><h2>Family stress: the big picture</h2><p className="wellbeing-lead">Use this illustrated summary to start a conversation. The sleep recommendation shown inside this particular graphic is for adults, not children; use the age-specific guidance above.</p><Poster data={stressArt[0]} caption="Save or share with family. Illustrations are educational, not personalised medical advice."/></section>
+  <section className="wellbeing-section" id="family-gallery"><span className="eyebrow">Keep it handy</span><h2>Family stress: the big picture</h2><p className="wellbeing-lead">Use this illustrated summary to start a conversation. The 7–9-hour sleep recommendation printed inside this particular graphic is for adults, not children. For your child, follow the age-specific sleep guidance above.</p><Poster data={stressArt[0]} caption="Save or share with family. Illustrations are educational, not personalised medical advice."/></section>
   <div className="wellbeing-note"><Icon name="shield"/><p><strong>When to ask for help:</strong> If stress is persistent, affects school or relationships, disrupts sleep, or feels overwhelming, contact a qualified healthcare professional. Adults should not change prescribed medicines without medical advice. These tools support wellbeing but do not replace treatment.</p></div>
   <ParentCTA text="Speak with Dr Kanak’s team if stress, sleep or emotional wellbeing is troubling your child or family."/>
   <SourceLinks items={[
