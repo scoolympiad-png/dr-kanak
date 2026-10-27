@@ -19,7 +19,7 @@ function SourceLinks({items}:{items:{name:string,origin:string,url:string}[]}){
  </section>;
 }
 function Poster({data,caption,id}:{data:{src:string,title:string,alt:string},caption?:string,id?:string}){
- return <details className="wellbeing-visual-reference" id={id}><summary><Icon name="book"/><span><strong>{data.title}</strong><small>Open or save the illustrated learning sheet</small></span><Icon name="chevron-down"/></summary><figure className="wellbeing-poster">
+ return <details className="wellbeing-visual-reference" id={id}><summary><Icon name="book"/><span><strong>{data.title}</strong><small>Open or save the illustrated learning sheet</small></span><Icon name="down"/></summary><figure className="wellbeing-poster">
   <a href={data.src} target="_blank" rel="noopener noreferrer" aria-label={'View full-size '+data.title}><img src={data.src} alt={data.alt} loading="lazy" width="1200" height="900"/></a>
   <figcaption><div><strong>{data.title}</strong>{caption&&<span>{caption}</span>}</div><a download href={data.src}>Save infographic <Icon name="down"/></a></figcaption>
  </figure></details>;
