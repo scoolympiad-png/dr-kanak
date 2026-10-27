@@ -119,7 +119,7 @@ function Vaccination(){return <>
    
   </div>
   <figure className="vaccine-hero-photo">
-   <img src="/images/dr-kanak-hospital-care-2026.webp" alt="Dr Kanak Ramnani at Mamta Hospital" width="640" height="800" loading="eager"/>
+   <img src="/images/illustrative-vaccination-consultation.webp" alt="Illustrative child vaccination consultation with a pediatrician and family" width="1280" height="960" loading="eager"/>
    <figcaption><Icon name="heart"/> Caring for every growing milestone.</figcaption>
   </figure>
  </section>
