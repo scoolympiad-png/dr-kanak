@@ -9,9 +9,16 @@ export const metadata: Metadata = {
   description: 'Paediatric care, vaccination and practical parent guidance with Dr Kanak Ramnani at Mamta Super Speciality Hospital, Raipur.',
   robots: {index:false,follow:false},
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: [
+      {url: "/favicon.ico", sizes: "any"},
+      {url: "/favicon-32.png", type: "image/png", sizes: "32x32"},
+      {url: "/favicon-48.png", type: "image/png", sizes: "48x48"},
+      {url: "/favicon.svg", type: "image/svg+xml"}
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png"}]
   },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
