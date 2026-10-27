@@ -7,7 +7,7 @@ This is **private internal planning**, not a public website article. Never publi
 
 ## Architecture
 The site retains its authoritative existing URLs while adding clear topical pillars:
-- `/autism/` — built; reader-friendly hub connecting existing `/family-wellbeing/autism/`, new `/autism/early-signs/` and child development care. Do not redirect or delete the original page.
+- `/autism/` — built; reader-friendly hub connecting existing `/family-wellbeing/autism/`, `/autism/early-signs/`, `/autism/sensory-needs/` and child development care. Do not redirect or delete the original page.
 - `/vaccination/` — existing hub, upgraded with a connected resource directory. Keep schedule, after-care, catch-up, FAQs, vaccine questions and future reminder explanations as individual destinations.
 - `/learning-and-adhd/` — existing hub for strengths, writing and classroom support.
 - `/family-wellbeing/stress/` — existing guide. `/family-wellbeing/` is a proposed **future** hub only; do not link to an unbuilt path.
@@ -29,8 +29,8 @@ The site retains its authoritative existing URLs while adding clear topical pill
 ## Priority release queue
 1. Source-backed Autism Hub `/autism/` and early developmental signs `/autism/early-signs/`: implemented in source, verify live deployment.
 2. Vaccination Hub: resource directory implemented in source, verify live deployment.
-3. **Next recommended content page**: `/autism/sensory-needs/` — accessible sensory differences/comfort guide with no diagnostic scoring; clinical signoff required.
-4. `/autism/communication-support/` — parent communication strategies and support discussion.
+3. **Built 27 Oct 2026:** `/autism/sensory-needs/` — responsive and evidence-informed parent guide on sensory differences, comfort, and everyday adaptations, linked from Autism Hub and navigation. GitHub CI passed; live URL and doctor approval still to verify.
+4. **Next recommended page:** `/autism/communication-support/` — parent communication strategies, AAC awareness and support conversations after clinical review.
 5. `/vaccination/record-keeping/` — blank sample card and privacy-first recordkeeping, without collecting any child data in public forms.
 6. `/family-wellbeing/healthy-sleep/` — pediatric age ranges, not adult AHA targets.
 
@@ -47,3 +47,12 @@ The Drive register contains the rest of the roadmap and should remain the source
 - Patient OS remains unverified for Mamta: do not claim activated vaccination reminders, verified guardian access, EHR integration or hospital CRM routing until live tenant tests and authorisation.
 - Store staff/clinical review names and dates only after confirmation; never claim independent agency endorsement.
 - Follow Google Search Central's people-first, trustworthy medical content standards: https://developers.google.com/search/docs/fundamentals/creating-helpful-content
+
+## Latest page release: Autism sensory needs (27 October 2026)
+- Canonical URL: https://drkanak.com/autism/sensory-needs/
+- Primary parent search intent: sensory differences in autistic children; adjustments for noise, light, touch, eating, movement and body awareness.
+- Existing assets reused: `/images/illustrative-play-consultation.webp` and `/images/illustrative-family-consultation.webp` (AI-generated illustrative consultations, not real clinical encounter photos).
+- Sources: NHS autism support, National Autistic Society sensory guidance, CDC signs and symptoms, NHS Autism Central sensory differences.
+- Page component: `components/autism-sensory-support.tsx`; route registry: `lib/core-pages.ts`; styling: `app/globals.css`; backlinks: Autism hub and parent menu.
+- No survey, child identifying data, diagnostic assessment, sensory score or promise of treatment. Clinical signoff and public deployment confirmation have not been recorded.
+- Follow-up: investigate valid canonical page on the production domain, view it at mobile size, then update GSC and mark published only after verification.
