@@ -1339,3 +1339,76 @@ body{background:#fffdf9}
 }
 @media(max-width:400px){.topic-hub-cards,.topic-hub-symptoms{grid-template-columns:1fr}.topic-hub-picture{height:190px}.topic-hub-card h3{font-size:19px}.topic-hub-card p{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.topic-hub-card{transition:none}}
+/* Premium clinical resource photography — real-looking illustrative scenes; no comic-card treatment. */
+.homepage-hub-showcase .topic-hub-section-heading h2{font-weight:750;letter-spacing:-.035em}
+.homepage-hub-showcase .topic-hub-section-heading p{max-width:650px}
+.homepage-hub-showcase .topic-hub-card,
+.topic-hub .topic-hub-card,
+.vaccine-topic-directory .topic-hub-card{background:#fff;border:1px solid #e2e8e9;border-radius:20px;box-shadow:0 12px 28px #193f5210;overflow:hidden}
+.homepage-hub-showcase .topic-hub-card:hover,
+.topic-hub .topic-hub-card:hover,
+.vaccine-topic-directory .topic-hub-card:hover{border-color:#a8c6c9;box-shadow:0 14px 29px #193f521c;transform:translateY(-2px)}
+.homepage-hub-showcase .topic-hub-picture,
+.topic-hub .topic-hub-picture,
+.vaccine-topic-directory .topic-hub-picture{height:auto;aspect-ratio:4/3;background:#f2f5f5;border-radius:13px;margin:11px 11px 0}
+.homepage-hub-showcase .topic-hub-picture img,
+.topic-hub .topic-hub-picture img,
+.vaccine-topic-directory .topic-hub-picture img{width:100%;height:100%;object-fit:cover;object-position:center}
+.homepage-hub-showcase .topic-hub-card-content,
+.topic-hub .topic-hub-card-content,
+.vaccine-topic-directory .topic-hub-card-content{padding:18px 17px 23px}
+.homepage-hub-showcase .topic-hub-label,
+.topic-hub .topic-hub-label,
+.vaccine-topic-directory .topic-hub-label{color:#5b858e;font-size:11px;letter-spacing:.09em}
+.homepage-hub-showcase .topic-hub-card h3,
+.topic-hub .topic-hub-card h3,
+.vaccine-topic-directory .topic-hub-card h3{font-size:20px;color:#1d4855;font-weight:760;letter-spacing:-.028em}
+.homepage-hub-showcase .topic-hub-card p,
+.topic-hub .topic-hub-card p,
+.vaccine-topic-directory .topic-hub-card p{font-size:14px;color:#62767b}
+.homepage-hub-showcase .topic-hub-link,
+.topic-hub .topic-hub-link,
+.vaccine-topic-directory .topic-hub-link{color:#136c7d}
+.topic-hub-hero{background:linear-gradient(110deg,#f0f7f7,#fffaf4 65%,#edf3f5);border-color:#dce9e9;box-shadow:0 14px 32px #1a505d10}
+.topic-hub-hero.early-theme{background:linear-gradient(110deg,#f1f7f5,#f9f7f3)}
+.topic-hub-hero figure{padding:0;background:none}
+.topic-hub-hero figure img{width:100%;max-width:540px;height:auto;max-height:none;aspect-ratio:4/3;object-fit:cover;box-shadow:0 13px 26px #1a475b1d;border-radius:21px}
+.topic-hub h1 em{color:#267786}
+.topic-hub-action-row>div{background:#f2f8f8;border-color:#e0eaea}
+.topic-hub-action-row>div:nth-child(2){background:#f9f8f5;border-color:#ede8e2}
+.topic-hub-action-row>div:nth-child(3){background:#f3f6f5;border-color:#e0e7e5}
+.adhd-feature-hero,.adhd-detail-top,.adhd-writing-hero{background:linear-gradient(110deg,#f1f7f6,#fffcf7 63%,#f1f6f7);border-color:#dbe9e9;box-shadow:0 14px 32px #123b5012}
+.adhd-hero-art{height:335px;background:none;display:block;padding:0}
+.adhd-hero-art img{display:block;height:100%;width:100%;max-width:100%;object-fit:cover;object-position:center;border-radius:22px;box-shadow:0 12px 26px #22434b1c;transform:none}
+.adhd-hero-sticker{display:none}
+.adhd-card-photo{height:auto;aspect-ratio:4/3;background:#f5f7f6;border-radius:16px}
+.adhd-card-photo img{width:100%;max-width:100%;height:100%;object-fit:cover}
+.adhd-route-card{background:#fff;border:1px solid #dce8e8;box-shadow:0 9px 24px #23505c12}
+.adhd-route-card.tone-peach{background:#fff}
+.adhd-route-card:hover{border-color:#9ebfc5;transform:translateY(-2px)}
+.adhd-detail-top>img,.adhd-writing-hero>img{height:auto;max-height:370px;width:100%;aspect-ratio:4/3;max-width:530px;object-fit:cover;border-radius:20px;box-shadow:0 13px 27px #193f4e1c}
+.wellbeing-hero,.wellbeing-hero.autism-theme{background:linear-gradient(110deg,#f0f7f6,#fffaf4 64%,#f1f6f7);border-color:#dce9e6;box-shadow:0 15px 31px #163d5112}
+.wellbeing-hero h1 em{color:#247889}
+.wellbeing-hero-visual{padding:0;border-radius:21px;transform:none;box-shadow:0 14px 28px #2149571a;background:#f6f8f7}
+.wellbeing-hero-visual img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:21px}
+.wellbeing-visual-reference,.adhd-visual-reference{border:1px solid #dce7e7;background:#f8fbfa;border-radius:17px;overflow:hidden;margin:18px 0}
+.wellbeing-visual-reference summary,.adhd-visual-reference summary{list-style:none;cursor:pointer;display:flex;gap:11px;align-items:center;padding:17px 19px;color:#25576b}
+.wellbeing-visual-reference summary::-webkit-details-marker,.adhd-visual-reference summary::-webkit-details-marker{display:none}
+.wellbeing-visual-reference summary>.icon,.adhd-visual-reference summary>.icon{width:20px;height:20px;color:#36768a;flex:none}
+.wellbeing-visual-reference summary>span,.adhd-visual-reference summary>span{flex:1;line-height:1.5;font-size:14px;font-weight:700}
+.wellbeing-visual-reference summary strong,.wellbeing-visual-reference summary small{display:block}
+.wellbeing-visual-reference summary small{font-size:12px;color:#698089;font-weight:400}
+.wellbeing-visual-reference[open] summary>.icon:last-child,.adhd-visual-reference[open] summary>.icon:last-child{transform:rotate(180deg)}
+.wellbeing-visual-reference .wellbeing-poster{margin:0 14px 14px}
+.adhd-visual-reference .adhd-art-card{margin:0 14px 14px}
+.vaccine-hub .vaccine-hero-photo{background:#f5f8f7}
+.vaccine-hub .vaccine-hero-photo>img{width:100%;height:100%;object-fit:cover;object-position:center}
+@media(max-width:760px){
+ .homepage-hub-showcase .topic-hub-card-content,.topic-hub .topic-hub-card-content,.vaccine-topic-directory .topic-hub-card-content{padding:13px 12px 17px}
+ .homepage-hub-showcase .topic-hub-card h3,.topic-hub .topic-hub-card h3,.vaccine-topic-directory .topic-hub-card h3{font-size:16px}
+ .homepage-hub-showcase .topic-hub-picture,.topic-hub .topic-hub-picture,.vaccine-topic-directory .topic-hub-picture{height:auto;aspect-ratio:4/3;margin:8px 8px 0}
+ .adhd-hero-art{height:auto;aspect-ratio:4/3}
+ .adhd-feature-hero,.adhd-detail-top,.adhd-writing-hero,.wellbeing-hero{padding:21px 18px}
+ .wellbeing-visual-reference summary,.adhd-visual-reference summary{padding:14px}
+}
+@media(prefers-reduced-motion:reduce){.homepage-hub-showcase .topic-hub-card,.topic-hub .topic-hub-card,.vaccine-topic-directory .topic-hub-card{transition:none}}
