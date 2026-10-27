@@ -7,7 +7,7 @@ const graphics={
 } as const;
 
 function ArtCard({src,alt,label}:{src:string;alt:string;label:string}){
- return <details className="adhd-visual-reference"><summary><Icon name="book"/><span>Open optional illustrated worksheet: {label}</span><Icon name="chevron-down"/></summary><div className="adhd-art-card"><a href={src} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size ${label} infographic`}><img src={src} alt={alt} loading="lazy" width="1024" height="1285"/></a><div className="adhd-art-actions"><span><Icon name="book"/> {label}</span><div><a href={src} target="_blank" rel="noopener noreferrer">View full size <Icon name="external"/></a><a href={src} download>Save image <Icon name="down"/></a></div></div></div></details>;
+ return <details className="adhd-visual-reference"><summary><Icon name="book"/><span>Open optional illustrated worksheet: {label}</span><Icon name="down"/></summary><div className="adhd-art-card"><a href={src} target="_blank" rel="noopener noreferrer" aria-label={`Open full-size ${label} infographic`}><img src={src} alt={alt} loading="lazy" width="1024" height="1285"/></a><div className="adhd-art-actions"><span><Icon name="book"/> {label}</span><div><a href={src} target="_blank" rel="noopener noreferrer">View full size <Icon name="external"/></a><a href={src} download>Save image <Icon name="down"/></a></div></div></div></details>;
 }
 const evidence=[
  {title:'School & classroom strategies',source:'CDC',url:'https://www.cdc.gov/adhd/treatment/classroom.html'},
