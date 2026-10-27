@@ -222,6 +222,66 @@
       "site_bytes": 49158,
       "source_context": "User-provided clinical photograph, October 2026; child's facial identity obscured",
       "privacy_note": "Public gallery copy should not identify the child, imply vaccination administration, or show private medical details."
+    },
+    {
+      "local_file": "warm_pediatric_play_consultation.png",
+      "source_name": "User-requested AI-generated pediatric consultation visual",
+      "source_context": "User-approved realistic illustration generated for Dr Kanak website, 27 October 2026",
+      "mime_type": "image/png",
+      "site_path": "/images/illustrative-play-consultation.webp",
+      "site_bytes": 97078,
+      "width": 1280,
+      "height": 960,
+      "alt": "Illustrative pediatrician guiding play activities with child and guardian",
+      "purpose": "Autism and developmental support hub",
+      "selection_status": "selected",
+      "visual_review": "Inspected four visuals; synthetic, illustrative clinical scenes; no real patient identity, no clinical outcome claims.",
+      "privacy_note": "AI-generated illustrative image, not a photograph of a genuine patient encounter. Preserve distinction in alt text and do not use for patient testimonials."
+    },
+    {
+      "local_file": "pediatric_learning_support_session.png",
+      "source_name": "User-requested AI-generated pediatric consultation visual",
+      "source_context": "User-approved realistic illustration generated for Dr Kanak website, 27 October 2026",
+      "mime_type": "image/png",
+      "site_path": "/images/illustrative-learning-support.webp",
+      "site_bytes": 106976,
+      "width": 1280,
+      "height": 960,
+      "alt": "Illustrative pediatrician supporting learning with child and parent",
+      "purpose": "ADHD and learning hub",
+      "selection_status": "selected",
+      "visual_review": "Inspected four visuals; synthetic, illustrative clinical scenes; no real patient identity, no clinical outcome claims.",
+      "privacy_note": "AI-generated illustrative image, not a photograph of a genuine patient encounter. Preserve distinction in alt text and do not use for patient testimonials."
+    },
+    {
+      "local_file": "warm_pediatric_vaccination_consultation.png",
+      "source_name": "User-requested AI-generated pediatric consultation visual",
+      "source_context": "User-approved realistic illustration generated for Dr Kanak website, 27 October 2026",
+      "mime_type": "image/png",
+      "site_path": "/images/illustrative-vaccination-consultation.webp",
+      "site_bytes": 106698,
+      "width": 1280,
+      "height": 960,
+      "alt": "Illustrative pediatric vaccine discussion with parent and child",
+      "purpose": "Vaccination guide and landing",
+      "selection_status": "selected",
+      "visual_review": "Inspected four visuals; synthetic, illustrative clinical scenes; no real patient identity, no clinical outcome claims.",
+      "privacy_note": "AI-generated illustrative image, not a photograph of a genuine patient encounter. Preserve distinction in alt text and do not use for patient testimonials."
+    },
+    {
+      "local_file": "warm_pediatric_consultation_with_mother_and_child.png",
+      "source_name": "User-requested AI-generated pediatric consultation visual",
+      "source_context": "User-approved realistic illustration generated for Dr Kanak website, 27 October 2026",
+      "mime_type": "image/png",
+      "site_path": "/images/illustrative-family-consultation.webp",
+      "site_bytes": 109382,
+      "width": 1280,
+      "height": 960,
+      "alt": "Illustrative pediatrician talking with parent and child",
+      "purpose": "Family wellbeing and communication",
+      "selection_status": "selected",
+      "visual_review": "Inspected four visuals; synthetic, illustrative clinical scenes; no real patient identity, no clinical outcome claims.",
+      "privacy_note": "AI-generated illustrative image, not a photograph of a genuine patient encounter. Preserve distinction in alt text and do not use for patient testimonials."
     }
   ],
   "excluded_files": [
@@ -242,6 +302,7 @@
     "Photographs were supplied through the hospital Drive workspace. This manifest records visual selection and provenance, not a claim of an additional licence.",
     "Use only selected files in the public website. Other files in review-only are not for publication.",
     "Do not claim CT scanning or hospital admission is required for routine child visits; images show hospital context only.",
-    "Do not publish signed transfer URLs or patient names."
+    "Do not publish signed transfer URLs or patient names.",
+    "October 27, 2026: four synthetic pediatric consultation images created with user approval; added only as illustrative contextual art. Medical advice remains text-based and doctor-approved photographs remain separate."
   ]
 }
