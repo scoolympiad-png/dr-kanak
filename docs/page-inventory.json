@@ -364,5 +364,11 @@
     "title": "Early Signs of Autism in Children | What Parents Can Notice",
     "kind": "autismSigns",
     "public": true
+  },
+  {
+    "path": "/autism/sensory-needs/",
+    "title": "Sensory Differences in Children | A Gentle Parent Guide",
+    "kind": "autismSensory",
+    "public": true
   }
 ]
