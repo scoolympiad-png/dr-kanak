@@ -119,6 +119,25 @@ for(const target of ['/care/paediatric-neurology/','/care/growth-development/','
  if(!page.related?.includes(additional))page.related=[...(page.related||[]),additional];
 }
 
+/* Topic hub architecture: stable guide URLs stay live; hub pages link to them. */
+corePages.push(
+ {path:'/autism/',title:'Autism support for families | Understanding, strengths and development',eyebrow:'Autism & child development',summary:'Explore autism, developmental differences, early signs, family strategies and clinical assessment guidance with Dr Kanak Ramnani in Raipur.',kind:'autismHub',sources:[
+  {title:'WHO autism fact sheet',url:'https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders'},
+  {title:'CDC clinical screening for autism',url:'https://www.cdc.gov/autism/hcp/diagnosis/screening.html'}
+ ],related:['/family-wellbeing/autism/','/autism/early-signs/','/care/growth-development/','/visit/']},
+ {path:'/autism/early-signs/',title:'Early Signs of Autism in Children | What Parents Can Notice',eyebrow:'Developmental milestones',summary:'Learn about possible signs of autism, communication and sensory differences, screening recommendations and when to ask for developmental assessment.',kind:'autismSigns',sources:[
+  {title:'CDC signs and symptoms of autism',url:'https://www.cdc.gov/autism/signs-symptoms/'},
+  {title:'CDC autism screening',url:'https://www.cdc.gov/autism/hcp/diagnosis/screening.html'},
+  {title:'WHO autism fact sheet',url:'https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders'}
+ ],related:['/autism/','/family-wellbeing/autism/','/care/growth-development/','/visit/']}
+);
+for(const path of ['/care/growth-development/','/parent-resources/','/learning-and-adhd/','/family-wellbeing/autism/','/care/paediatric-neurology/']){
+ const p=corePages.find(x=>x.path===path);
+ if(p&&!p.related?.includes('/autism/'))p.related=[...(p.related||[]),'/autism/'];
+}
+const vaccinationHub=corePages.find(p=>p.path==='/vaccination/');
+if(vaccinationHub&&!vaccinationHub.related?.includes('/vaccination/understanding-vaccines/'))vaccinationHub.related=[...(vaccinationHub.related||[]),'/vaccination/understanding-vaccines/'];
+
 /* Parent-facing learning pages: user-approved illustrated resources,
    supported by AHA, CDC and WHO references. */
 corePages.push(
