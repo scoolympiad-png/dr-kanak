@@ -4,6 +4,7 @@ import {getPage,guides,searchIndex,sectionId} from '@/lib/pages';
 import {AgeExplorer,CareAccess,SearchView,VaccinationPhotoCarousel,VaccinationScheduleNavigator,VaccinationReminderStart} from './site-client';
 import {Icon} from './icon';
 import {LearningHub,BrightMinds,WritingSupport,VaccinationLearning} from './learning-resources';
+import {AutismTopicHub,AutismEarlySigns,VaccineHubDirectory,HomepageHubShowcase} from './topic-hubs';
 import {FamilyStressGuide,AutismFamilyGuide} from './family-wellbeing-guides';
 import {mamtaPrintedCardEarlyMilestones,vaccinationEditorialReferences} from '@/lib/vaccination-reference';
 
@@ -17,7 +18,7 @@ export function SiteFooter(){return <footer className="site-footer">
  <div className="container footer-main">
   <div className="footer-about"><a href="/" className="footer-brand"><img src="/images/dr-kanak-logo.svg" width="52" height="52" alt="" loading="lazy"/><span><strong>Dr Kanak Ramnani</strong><small>Paediatrician · Raipur</small></span></a><p>For little milestones, big questions and every growing smile.</p><div className="hospital-affiliation"><img src="/images/mamta-logo.webp" width="50" height="50" alt="Mamta Hospital logo" loading="lazy"/><span>Consulting at<br/><a href={site.hospitalUrl} target="_blank" rel="noopener noreferrer">Mamta Super Speciality Hospital</a></span></div></div>
   <div><h2>Children’s care</h2><a href="/about/">Meet Dr Kanak</a><a href="/care/">Child health services</a><a href="/care-by-age/">Care by age</a><a href="/vaccination/">Vaccination guide</a><a href="/visit/">Plan a visit</a></div>
-  <div><h2>Helpful for parents</h2><a href="/parent-resources/">Parent library</a><a href="/learning-and-adhd/">ADHD & learning support</a><a href="/family-wellbeing/autism/">Understanding autism</a><a href="/family-wellbeing/stress/">Family stress & wellbeing</a><a href="/learning-and-adhd/writing-at-school/">Writing support at school</a><a href="/parent-resources/fever/">Fever questions</a><a href="/parent-resources/feeding/">Feeding & nutrition</a><a href="/parent-resources/milestones/">Milestones</a><a href="/resources/">Trusted sources</a><a href="/hi/" lang="hi">हिन्दी सहायता</a></div>
+  <div><h2>Helpful for parents</h2><a href="/parent-resources/">Parent library</a><a href="/learning-and-adhd/">ADHD & learning support</a><a href="/autism/">Autism & child development</a><a href="/family-wellbeing/stress/">Family stress & wellbeing</a><a href="/learning-and-adhd/writing-at-school/">Writing support at school</a><a href="/parent-resources/fever/">Fever questions</a><a href="/parent-resources/feeding/">Feeding & nutrition</a><a href="/parent-resources/milestones/">Milestones</a><a href="/resources/">Trusted sources</a><a href="/hi/" lang="hi">हिन्दी सहायता</a></div>
   <div className="footer-contact"><h2>Connect with Mamta</h2><a href={`tel:${site.phone}`}><Icon name="phone"/>{site.phoneLabel}</a><p>{site.address}</p><a href={site.maps} target="_blank" rel="noopener noreferrer">Get directions <Icon name="external"/></a><a href="/emergency/">Emergency information <Icon name="arrow"/></a></div>
  </div>
  <div className="container footer-location" aria-label="Hospital location and map">
@@ -35,11 +36,7 @@ export function VisitBand(){return <section className="visit-band"><div classNam
 
 export function HomePage(){return <>
  <section className="hero"><div className="container hero-inner"><div className="hero-copy"><span className="eyebrow hero-eyebrow"><span className="little-line"/>Paediatric care, with heart</span><h1>Dr Kanak Ramnani</h1><p className="hero-specialities">Paediatrician · Mamta Hospital, Raipur</p><p className="hero-summary">Gentle care for every growing smile.</p><div className="hero-care-chips" aria-label="Explore child health topics"><a href="/care/newborn/">Newborn care</a><a href="/vaccination/">Vaccination</a><a className="parent-library-widget" href="/parent-resources/" aria-label="Open parent library"><Icon name="book"/> Parent library <Icon name="arrow"/></a></div><div className="button-row"><a className="button" href="/visit/">Plan a visit <Icon name="arrow"/></a><a className="button plain" href="/about/">Meet Dr Kanak <Icon name="arrow"/></a></div></div><div className="hero-portrait"><span className="portrait-sun"/><span className="portrait-orbit"/><span className="portrait-spark spark-one">✳</span><span className="portrait-spark spark-two">✧</span><img src="/images/dr-kanak-portrait.webp" alt="Dr Kanak Ramnani smiling in her white coat" width="1023" height="1538" fetchPriority="high"/><div className="portrait-note"><span className="icon-disc sage"><Icon name="heart"/></span><div>A little reassurance.<br/><strong>A lot of care.</strong></div></div></div></div></section>
- <section className="wellbeing-home-strip container" aria-label="Family wellbeing and developmental support">
-  <div><span className="eyebrow">For families</span><h2>Little moments. Meaningful support.</h2><p>New illustrated parent guides for family stress and understanding autism.</p></div>
-  <div className="wellbeing-home-shortcuts"><a href="/family-wellbeing/stress/"><Icon name="heart"/> Managing stress <Icon name="arrow"/></a><a href="/family-wellbeing/autism/"><Icon name="puzzle"/> Understanding autism <Icon name="arrow"/></a></div>
- </section>
- <section className="adhd-home-link container"><span className="adhd-home-label"><Icon name="brain"/> For growing minds</span><div><strong>Helping with focus, attention and learning?</strong><p>Explore child-friendly strategies for home and school.</p></div><a href="/learning-and-adhd/">Read the ADHD & learning guides <Icon name="arrow"/></a></section>
+ <HomepageHubShowcase/>
  <section className="quick-links container" aria-label="Explore the website">{[{href:'/parent-resources/',icon:'book',label:'Parent library'},{href:'/care-by-age/',icon:'sprout',label:'Growing up'},{href:'/vaccination/',icon:'shield',label:'Vaccination'},{href:'/media/',icon:'play',label:'Watch & learn'},{href:'/research/',icon:'brain',label:'Research'},{href:'/my-child/',icon:'heart',label:'Your child’s care'}].map(x=><a key={x.href} href={x.href}><Icon name={x.icon}/><span>{x.label}</span></a>)}</section><div className="affiliation-ribbon container"><a href="/about/">Dr Kanak Ramnani<span>Paediatrics & child development</span></a><a href={site.hospitalUrl} target="_blank" rel="noopener noreferrer"><img src="/images/mamta-logo.webp" width="48" height="48" alt="Mamta Hospital logo" loading="lazy"/><span>Mamta Hospital<small>Super speciality care · Raipur</small></span></a><a href="/vaccination/"><Icon name="shield"/><span>Every little milestone<small>Prevention. Growth. Wellbeing.</small></span></a></div>
  <section className="section container"><SectionHeading eyebrow="For all the ‘is this normal?’ moments" title="From the parent library." link="/parent-resources/" linkText="Visit the parent library">Helpful reading for everyday parenting.</SectionHeading><div className="guide-grid">{['newborn-care','feeding','milestones','safe-sleep','school-wellbeing','growth-charts'].map((s,i)=><GuideCard key={s} slug={s} index={i}/>)}</div><div className="topic-strip"><span>Looking for something else?</span><a href="/parent-resources/safe-sleep/">Safer sleep</a><a href="/parent-resources/fever/">Fever</a><a href="/parent-resources/growth-charts/">Growth charts</a><a href="/parent-resources/school-wellbeing/">School wellbeing</a></div></section> <section className="section container home-questions" aria-label="Common questions from parents"><SectionHeading eyebrow="Everyday questions, helpful first steps" title="What’s on your mind today?" link="/parent-resources/" linkText="All parent guides">Start with a useful guide. Bring personal concerns to your child's appointment.</SectionHeading><div className="home-question-grid">{[
  {icon:'sun',topic:'Fever',title:'When your child has a fever',text:'What to notice and when to seek medical advice.',href:'/parent-resources/fever/'},
@@ -158,10 +155,8 @@ function Vaccination(){return <>
    <div><span className="eyebrow">Why immunisation matters</span><h2>Protection made possible by generations of progress.</h2><p>A WHO-led analysis estimated that global vaccination efforts saved approximately <strong>154 million lives between 1974 and 2024</strong>. Keeping accurate records and reviewing missed appointments supports that shared goal.</p><span className="vaccine-evidence-source">Research context: WHO / UNICEF global immunisation impact study, 2024.</span></div>
   </div>
  </section>
- <section className="soft-section section"><div className="container">
-  <SectionHeading eyebrow="Helpful next steps" title="Find the question on your mind.">Understand the schedule, prepare for a visit or learn what to discuss after vaccination.</SectionHeading>
-  <div className="vaccine-links">{['schedule','catch-up','after-care','teen-hpv','faq','understanding-vaccines'].map((s,i)=>{const p=getPage(`/vaccination/${s}/`)!;return <a key={s} className="care-card" href={p.path}><span className={`icon-disc ${['blue','peach','sage','lavender','yellow','blue'][i]}`}><Icon name={['calendar','clock','heart','leaf','chat','book'][i]}/></span><h3>{p.title}</h3><p>{p.summary}</p><span className="text-link">Read more <Icon name="arrow"/></span></a>})}</div>
- </div></section>
+ <VaccineHubDirectory/>
+ <div className="container vaccine-more-links"><a href="/vaccination/faq/">Frequently asked questions <Icon name="arrow"/></a><a href="/vaccination/teen-hpv/">Teen and HPV vaccination <Icon name="arrow"/></a><a href="/my-child/reminders/">Reminders & follow-up <Icon name="arrow"/></a></div>
  <section className="section container reminder-story">
   <div><span className="eyebrow">Making future visits easier</span><h2>Never lose track<br/>of the next visit.</h2>
    <p>Keep your child's vaccination card handy. Ask our team about reminder options; personalised online reminders are coming soon.</p>
@@ -192,6 +187,8 @@ export function ContentPage({p}:{p:PageData}){let body:ReactNode;
  switch(p.kind){
  case 'stressGuide':body=<FamilyStressGuide/>;break;
  case 'autismGuide':body=<AutismFamilyGuide/>;break;
+ case 'autismHub':body=<AutismTopicHub/>;break;
+ case 'autismSigns':body=<AutismEarlySigns/>;break;
  case 'learningHub':body=<LearningHub/>;break;
  case 'adhdBright':body=<BrightMinds/>;break;
  case 'adhdWriting':body=<WritingSupport/>;break;
@@ -210,5 +207,5 @@ export function ContentPage({p}:{p:PageData}){let body:ReactNode;
  case 'faq':body=<div className="container section narrow"><FAQs items={p.faqs||[]}/><Sources p={p}/><Related paths={p.related||[]}/></div>;break;
  default:body=<Article p={p}/>;
  }
- return <>{!['learningHub','adhdBright','adhdWriting','vaccineLearning','stressGuide','autismGuide'].includes(p.kind||'')&&<PageIntro p={p}/>} {body}{!['vaccination','visit','portal','emergency','hindi'].includes(p.kind||'')&&<VisitBand/>}</>;
+ return <>{!['learningHub','adhdBright','adhdWriting','vaccineLearning','stressGuide','autismGuide','autismHub','autismSigns'].includes(p.kind||'')&&<PageIntro p={p}/>} {body}{!['vaccination','visit','portal','emergency','hindi'].includes(p.kind||'')&&<VisitBand/>}</>;
 }
