@@ -1072,3 +1072,145 @@ body{background:#fffdf9}
  .vax-learn-faq summary strong{font-size:15px}
 }
 @media(prefers-reduced-motion:reduce){.adhd-practice-progress span,.adhd-route-card,.vax-learn-plus{transition:none}}
+/* Family wellbeing: stress management + autism support (October 2026). */
+.wellbeing-page{padding-top:42px;padding-bottom:70px;min-width:0}
+.wellbeing-page h1,.wellbeing-page h2,.wellbeing-page h3{color:#194968;letter-spacing:-.035em}
+.wellbeing-page h1{font-size:clamp(35px,4vw,56px);line-height:1.11;font-weight:800}
+.wellbeing-page h1 em{font-style:normal;color:#b75a8b}
+.wellbeing-page h2{font-size:clamp(28px,3vw,40px);line-height:1.19;margin:9px 0 17px}
+.wellbeing-page p{font-size:15px;line-height:1.7;color:#456678}
+.wellbeing-page .eyebrow{font-size:12px;letter-spacing:.09em;color:#1883a0}
+.wellbeing-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:center;gap:30px;padding:38px 39px;border-radius:29px;min-height:352px;border:1px solid #d5e9ea;background:linear-gradient(116deg,#e9f8fd 0%,#fff2df 60%,#fce9f7);box-shadow:0 16px 37px #225d7420}
+.wellbeing-hero.autism-theme{background:linear-gradient(115deg,#e5f6fd,#f0e9ff 58%,#fff0e1)}
+.wellbeing-kicker{display:inline-flex;gap:9px;align-items:center;padding:9px 13px;border:1px solid #c4e6e8;border-radius:50px;background:#fff9;font-size:13px;font-weight:800;color:#206781;margin-bottom:18px}
+.wellbeing-kicker .icon{width:18px;height:18px;color:#cf7299}
+.wellbeing-hero>div:first-child{min-width:0}
+.wellbeing-hero p{max-width:600px;margin-top:18px;font-size:17px;line-height:1.68}
+.wellbeing-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:21px}
+.wellbeing-hero-actions .button{min-height:49px;padding:12px 17px;font-size:14px;border-radius:100px}
+.wellbeing-hero-visual{position:relative;border-radius:23px;padding:10px;background:#ffffff96;box-shadow:0 12px 27px #124b7521;transform:rotate(1deg);overflow:hidden}
+.wellbeing-hero-visual img{display:block;width:100%;height:auto;object-fit:contain;border-radius:14px}
+.wellbeing-section{margin-top:51px;scroll-margin-top:115px}
+.wellbeing-lead{max-width:970px;font-size:17px!important;margin:0 0 21px!important;line-height:1.76!important}
+.wellbeing-section-header{display:flex;align-items:end;justify-content:space-between;gap:20px}
+.wellbeing-section-header p{max-width:810px;font-size:16px}
+.wellbeing-insight-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:21px}
+.wellbeing-insight{min-width:0;border:1px solid #d6eaf2;border-radius:21px;padding:23px 17px;background:#eaf7fe;box-shadow:0 7px 17px #225a7c0e}
+.wellbeing-insight.tone-pink{background:#fff0f5;border-color:#f0dbe7}
+.wellbeing-insight.tone-blue{background:#e7f4fd;border-color:#d3e8f7}
+.wellbeing-insight.tone-mint{background:#e5f8ef;border-color:#d4e8dc}
+.wellbeing-insight.tone-lavender{background:#f1ebff;border-color:#e3dbf7}
+.wellbeing-insight.tone-yellow{background:#fff3d9;border-color:#f3e4bf}
+.wellbeing-insight.tone-peach{background:#ffecdf;border-color:#f1d7c3}
+.wellbeing-insight-icon{width:49px;height:49px;display:grid;place-items:center;border-radius:16px;background:#fff9;margin-bottom:15px;color:#1f849e}
+.wellbeing-insight-icon .icon{width:27px;height:27px}
+.wellbeing-insight h3{font-size:19px;margin-bottom:9px;line-height:1.32}
+.wellbeing-insight p{font-size:14px;line-height:1.68;margin:0}
+.wellbeing-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:23px;align-items:center;margin-top:23px}
+.wellbeing-second-visual{margin-top:29px}
+.wellbeing-steps{display:grid;gap:10px}
+.wellbeing-steps>div{display:flex;gap:16px;align-items:center;border:1px solid #d6e6ee;border-radius:18px;padding:15px;background:#eef9fd}
+.wellbeing-steps>div:nth-child(2n){background:#fff1ec}
+.wellbeing-steps>div:nth-child(3){background:#e7f7ed}
+.wellbeing-steps>div>span{display:grid;place-items:center;flex:none;width:46px;height:46px;background:white;border-radius:15px;color:#247895;font-size:16px;font-weight:900}
+.wellbeing-steps strong{display:block;font-size:16px;line-height:1.4;color:#1c506b}
+.wellbeing-steps p{margin:3px 0 0;font-size:14px;line-height:1.5}
+.wellbeing-poster{margin:0;border-radius:23px;overflow:hidden;background:#fff;border:1px solid #d3e6ee;box-shadow:0 12px 30px #124c6e14}
+.wellbeing-poster>a{display:block;background:#ecf7fa;padding:12px;line-height:0}
+.wellbeing-poster>a img{width:100%;height:auto;object-fit:contain;display:block;border-radius:11px}
+.wellbeing-poster figcaption{padding:16px 17px;display:flex;gap:12px;justify-content:space-between;align-items:center}
+.wellbeing-poster figcaption>div{display:grid;gap:4px;min-width:0}
+.wellbeing-poster figcaption strong{font-size:14px;color:#22556c}
+.wellbeing-poster figcaption span{font-size:12px;line-height:1.55;color:#5a7180}
+.wellbeing-poster figcaption>a{display:inline-flex;align-items:center;gap:5px;flex:none;font-size:12px;font-weight:800;color:#147595;text-decoration:underline;text-underline-offset:3px}
+.wellbeing-poster figcaption>a .icon{width:16px;height:16px}
+.wellbeing-sleep{border:1px solid #d7e8e9;border-radius:22px;padding:25px;background:#f0f9f8}
+.wellbeing-sleep h3{font-size:27px;line-height:1.23;margin:8px 0 13px}
+.wellbeing-sleep ul{padding-left:21px;margin:15px 0;color:#416273;font-size:15px;line-height:1.8}
+.wellbeing-sleep p{margin:10px 0 0}
+.wellbeing-note{display:flex;align-items:flex-start;gap:11px;margin:34px 0;padding:18px 20px;border-radius:18px;background:#e8f6f7;border-left:4px solid #1d849a}
+.wellbeing-note .icon{color:#307f8e;flex:none;width:24px;height:24px}
+.wellbeing-note p{margin:0;font-size:14px}
+.wellbeing-inline-tip{display:flex;align-items:center;gap:9px;padding:12px 15px;border:1px solid #dfecdc;background:#edf9ee;border-radius:15px;margin:23px 0!important}
+.wellbeing-inline-tip .icon{width:18px;height:18px;color:#bc6290;flex:none}
+.wellbeing-section>.wellbeing-poster{max-width:1070px;margin:24px auto 0}
+.wellbeing-poster-row>div:not(.wellbeing-poster){min-width:0}
+.wellbeing-poster-row h3{font-size:26px}
+.wellbeing-text-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:#147692;font-weight:800;text-decoration:underline;text-underline-offset:3px;margin-top:14px}
+.wellbeing-text-link .icon{width:18px;height:18px}
+.wellbeing-step-band{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:23px 0}
+.wellbeing-step-band>div{padding:20px 21px;border-radius:20px;background:#e9f7ff;border:1px solid #d5e9f4}
+.wellbeing-step-band>div:nth-child(2){background:#fff0e4;border-color:#f0dec9}
+.wellbeing-step-band>div:nth-child(3){background:#ebf7ed;border-color:#d6e9dc}
+.wellbeing-step-band strong{font-size:20px;color:#1f526c}
+.wellbeing-step-band p{font-size:14px;line-height:1.64;margin:9px 0 0}
+.wellbeing-end{display:flex;justify-content:space-between;align-items:center;gap:22px;padding:26px 30px;border:1px solid #d5e4e8;border-radius:24px;background:linear-gradient(110deg,#e5f5f9,#fff1e6 58%,#f4eafd);margin-top:35px}
+.wellbeing-end h2{font-size:clamp(25px,2.5vw,34px);margin:9px 0}
+.wellbeing-end p{font-size:14px;max-width:800px}
+.wellbeing-end .button{flex:none;border-radius:100px}
+.wellbeing-sources{margin-top:36px;padding:24px;background:#f3f9fa;border-radius:23px;border:1px solid #dbe8ec}
+.wellbeing-sources h2{font-size:clamp(23px,2.1vw,30px)}
+.wellbeing-source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.wellbeing-source-grid a{display:grid;position:relative;align-content:center;gap:6px;border:1px solid #dce6e8;border-radius:15px;padding:17px 33px 17px 16px;background:white;min-height:100px;color:#1d546a}
+.wellbeing-source-grid a:hover{background:#e6f4f8}
+.wellbeing-source-grid a>span{font-size:12px;color:#55788a}
+.wellbeing-source-grid a>strong{font-size:14px;line-height:1.4}
+.wellbeing-source-grid a>.icon{position:absolute;right:13px;top:16px;width:16px;height:16px}
+.wellbeing-home-strip{margin-top:26px;margin-bottom:21px;display:flex;justify-content:space-between;align-items:center;gap:25px;border:1px solid #d3e7ef;padding:20px 23px;border-radius:22px;background:linear-gradient(105deg,#f1f8fb,#fff0e7)}
+.wellbeing-home-strip>div:first-child{flex:1}
+.wellbeing-home-strip h2{font-size:24px;line-height:1.2;margin:6px 0;color:#1e536d}
+.wellbeing-home-strip p{font-size:14px;color:#536f7f;margin:0}
+.wellbeing-home-shortcuts{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end}
+.wellbeing-home-shortcuts>a{display:inline-flex;align-items:center;gap:9px;border-radius:30px;padding:12px 14px;border:1px solid #c6e5eb;background:white;color:#1a6886;font-size:14px;font-weight:800}
+.wellbeing-home-shortcuts .icon{width:18px;height:18px}
+.wellbeing-home-shortcuts>a:hover{background:#e5f5f9}
+.wellbeing-library-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:27px 0}
+.wellbeing-library-links>a{display:flex;gap:14px;align-items:center;border-radius:21px;padding:12px;background:#e9f5fb;border:1px solid #d2e6ef;color:#225a72;min-width:0}
+.wellbeing-library-links>a:nth-child(2){background:#f2edff;border-color:#e2d9f6}
+.wellbeing-library-links img{width:105px;height:85px;object-fit:cover;border-radius:12px;flex:none}
+.wellbeing-library-links>a>span{flex:1;min-width:0;display:grid;gap:4px}
+.wellbeing-library-links>a>span strong{font-size:16px;line-height:1.4}
+.wellbeing-library-links>a>span small{font-size:12px;line-height:1.5}
+.wellbeing-library-links>a>.icon{width:19px;height:19px;flex:none}
+@media(max-width:1020px){
+ .wellbeing-hero{padding:28px;gap:22px}
+ .wellbeing-insight-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .wellbeing-home-strip{flex-wrap:wrap}
+ .wellbeing-home-shortcuts{justify-content:flex-start}
+}
+@media(max-width:760px){
+ .wellbeing-page{padding-top:24px;padding-bottom:50px}
+ .wellbeing-hero{grid-template-columns:1fr;padding:23px 18px;border-radius:23px;gap:19px}
+ .wellbeing-page h1{font-size:clamp(34px,8.7vw,45px)}
+ .wellbeing-page h2{font-size:clamp(25px,7vw,33px)}
+ .wellbeing-hero p{font-size:15px;line-height:1.67}
+ .wellbeing-hero-actions .button{width:100%;font-size:14px}
+ .wellbeing-hero-visual{max-width:500px;width:100%;justify-self:center;transform:none}
+ .wellbeing-section{margin-top:32px}
+ .wellbeing-lead{font-size:15px!important}
+ .wellbeing-insight-grid{gap:10px}
+ .wellbeing-insight{padding:16px 13px;border-radius:16px}
+ .wellbeing-insight h3{font-size:16px}
+ .wellbeing-insight p{font-size:13px}
+ .wellbeing-insight-icon{width:43px;height:43px;margin-bottom:12px}
+ .wellbeing-split{grid-template-columns:1fr;gap:15px}
+ .wellbeing-steps>div{padding:12px;gap:11px}
+ .wellbeing-steps>div>span{width:39px;height:39px}
+ .wellbeing-steps strong{font-size:15px}
+ .wellbeing-sleep{padding:18px}
+ .wellbeing-sleep h3{font-size:23px}
+ .wellbeing-poster>a{padding:6px}
+ .wellbeing-poster figcaption{padding:12px;gap:9px}
+ .wellbeing-step-band{grid-template-columns:1fr;gap:10px}
+ .wellbeing-step-band>div{padding:16px}
+ .wellbeing-end{display:block;padding:21px 18px}
+ .wellbeing-end .button{width:100%;margin-top:15px}
+ .wellbeing-source-grid{grid-template-columns:1fr}
+ .wellbeing-sources{padding:18px 15px}
+ .wellbeing-home-strip{margin-top:18px;padding:18px;border-radius:19px;gap:17px}
+ .wellbeing-home-strip h2{font-size:21px}
+ .wellbeing-home-shortcuts>a{font-size:13px;padding:10px 12px}
+ .wellbeing-library-links{grid-template-columns:1fr;gap:10px}
+ .wellbeing-library-links img{width:88px;height:72px}
+}
+@media(prefers-reduced-motion:reduce){.wellbeing-hero-visual{transform:none}}
