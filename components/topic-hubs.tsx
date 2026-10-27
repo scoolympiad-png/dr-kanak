@@ -3,13 +3,13 @@ import {Icon} from './icon';
 const autismReading=[
  {href:'/family-wellbeing/autism/',image:'/resources/autism-complete-guide.webp',label:'Start here',title:'Understanding autism',text:'A kind introduction to communication, sensory differences, family support and individual strengths.',tone:'aqua'},
  {href:'/autism/early-signs/',image:'/resources/autism-understanding.webp',label:'Development',title:'Early signs & what to do',text:'Notice patterns, understand developmental screening and prepare for a discussion with your doctor.',tone:'peach'},
- {href:'/care/growth-development/',image:'/images/dr-kanak-consultation-child-private.webp',label:'Clinical guidance',title:'Growth & development visits',text:'Find a starting point for questions about play, communication, milestones and wellbeing.',tone:'lilac'},
+ {href:'/care/growth-development/',image:'/images/dr-kanak-official.webp',label:'Clinical guidance',title:'Growth & development visits',text:'Find a starting point for questions about play, communication, milestones and wellbeing.',tone:'lilac'},
  {href:'/family-wellbeing/stress/',image:'/resources/stress-calm-down-steps.webp',label:'Wellbeing',title:'Calmer days for families',text:'Everyday ideas for emotional regulation, routines and connection.',tone:'mint'},
 ];
 const vaccineReading=[
- {href:'/vaccination/schedule/',image:'/resources/autism-family-support.webp',label:'Age guide',title:'Explore the age-based vaccine guide',text:'Understand the information on the clinic card and prepare your questions.',tone:'aqua'},
- {href:'/vaccination/catch-up/',image:'/images/dr-kanak-hospital-care-2026.webp',label:'Missed visits',title:'What if a vaccination was missed?',text:'Bring your records to discuss an individual catch-up plan.',tone:'peach'},
- {href:'/vaccination/understanding-vaccines/',image:'/images/dr-kanak-portrait.webp',label:'Parent questions',title:'Understand the why and how',text:'Clear answers about records, precautions and childhood vaccines.',tone:'lilac'},
+ {href:'/vaccination/schedule/',image:'/images/dr-kanak-official.webp',label:'Age guide',title:'Explore the age-based vaccine guide',text:'Understand the information on the clinic card and prepare your questions.',tone:'aqua'},
+ {href:'/vaccination/catch-up/',image:'/images/mamta-nursing-team.webp',label:'Missed visits',title:'What if a vaccination was missed?',text:'Bring your records to discuss an individual catch-up plan.',tone:'peach'},
+ {href:'/vaccination/understanding-vaccines/',image:'/images/dr-kanak-clinic.webp',label:'Parent questions',title:'Understand the why and how',text:'Clear answers about records, precautions and childhood vaccines.',tone:'lilac'},
  {href:'/vaccination/after-care/',image:'/images/dr-kanak-clinic.webp',label:'After the visit',title:'Care after vaccination',text:'Everyday comfort and signs that deserve medical advice.',tone:'mint'}
 ];
 function TopicCard({item}:{item:{href:string,image:string,label:string,title:string,text:string,tone:string}}){
