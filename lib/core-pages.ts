@@ -138,6 +138,26 @@ for(const path of ['/care/growth-development/','/parent-resources/','/learning-a
 const vaccinationHub=corePages.find(p=>p.path==='/vaccination/');
 if(vaccinationHub&&!vaccinationHub.related?.includes('/vaccination/understanding-vaccines/'))vaccinationHub.related=[...(vaccinationHub.related||[]),'/vaccination/understanding-vaccines/'];
 
+/* Parent guide: sensory differences are experiences, not a diagnosis. */
+corePages.push({
+ path:'/autism/sensory-needs/',
+ title:'Sensory Differences in Children | A Gentle Parent Guide',
+ eyebrow:'Understanding sensory needs',
+ summary:'Understand your child’s responses to sounds, textures, movement, light and everyday environments, with practical parent support and guidance on when to ask for help.',
+ kind:'autismSensory',
+ sources:[
+  {title:'National Autistic Society: sensory processing',url:'https://www.autism.org.uk/advice-and-guidance/about-autism/sensory-processing'},
+  {title:'NHS: supporting an autistic child',url:'https://www.nhs.uk/conditions/autism/supporting-a-child/'},
+  {title:'CDC: autism signs and symptoms',url:'https://www.cdc.gov/autism/signs-symptoms/'},
+  {title:'NHS Autism Central: sensory differences',url:'https://www.autismcentral.nhs.uk/guidance/sensory-differences'}
+ ],
+ related:['/autism/','/autism/early-signs/','/family-wellbeing/autism/','/care/growth-development/','/visit/']
+});
+for(const path of ['/autism/','/autism/early-signs/','/family-wellbeing/autism/','/parent-resources/','/care/growth-development/']){
+ const page=corePages.find(p=>p.path===path);
+ if(page&&!page.related?.includes('/autism/sensory-needs/'))page.related=[...(page.related||[]),'/autism/sensory-needs/'];
+}
+
 /* Parent-facing learning pages: user-approved illustrated resources,
    supported by AHA, CDC and WHO references. */
 corePages.push(
