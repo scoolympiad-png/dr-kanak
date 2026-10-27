@@ -19,10 +19,10 @@ function SourceLinks({items}:{items:{name:string,origin:string,url:string}[]}){
  </section>;
 }
 function Poster({data,caption,id}:{data:{src:string,title:string,alt:string},caption?:string,id?:string}){
- return <figure className="wellbeing-poster" id={id}>
+ return <details className="wellbeing-visual-reference" id={id}><summary><Icon name="book"/><span><strong>{data.title}</strong><small>Open or save the illustrated learning sheet</small></span><Icon name="chevron-down"/></summary><figure className="wellbeing-poster">
   <a href={data.src} target="_blank" rel="noopener noreferrer" aria-label={'View full-size '+data.title}><img src={data.src} alt={data.alt} loading="lazy" width="1200" height="900"/></a>
   <figcaption><div><strong>{data.title}</strong>{caption&&<span>{caption}</span>}</div><a download href={data.src}>Save infographic <Icon name="down"/></a></figcaption>
- </figure>;
+ </figure></details>;
 }
 function ParentCTA({text}:{text:string}){return <section className="wellbeing-end"><div><span className="eyebrow">Here for your family</span><h2>Every question deserves a thoughtful conversation.</h2><p>{text}</p></div><a className="button" href="/visit/">Plan a visit <Icon name="arrow"/></a></section>}
 function Insight({icon,title,body,tone}:{icon:string,title:string,body:string,tone:string}){return <article className={'wellbeing-insight tone-'+tone}><span className="wellbeing-insight-icon"><Icon name={icon}/></span><h3>{title}</h3><p>{body}</p></article>}
@@ -42,7 +42,7 @@ export function FamilyStressGuide(){
     <p>Stress visits every family. Discover everyday ways to help children feel heard, protect family routines and make space for small moments of calm.</p>
     <div className="wellbeing-hero-actions"><a className="button" href="#calm-steps">Try a calm-down plan <Icon name="arrow"/></a><a href="#family-gallery" className="button outline">See the picture guides <Icon name="down"/></a></div>
    </div>
-   <div className="wellbeing-hero-visual"><img src={stressArt[2].src} alt="Colourful daily stress-wellbeing plan for families" width="1200" height="900" fetchPriority="high"/></div>
+   <div className="wellbeing-hero-visual"><img src="/images/illustrative-family-consultation.webp" alt="Illustrative pediatrician talking with a parent and child" width="1280" height="960" fetchPriority="high"/></div>
   </div>
   <section className="wellbeing-section">
     <span className="eyebrow">Start with understanding</span><h2>Notice stress. Make room for support.</h2>
@@ -93,7 +93,7 @@ export function AutismFamilyGuide(){
    <h1>Every child connects with the world <em>in their own way.</em></h1>
    <p>Explore autism with curiosity, respect and practical ideas for family life. Early understanding helps caregivers recognise needs and build on each child’s strengths.</p>
    <div className="wellbeing-hero-actions"><a className="button" href="#autism-support">Explore family support <Icon name="arrow"/></a><a href="#autism-assessment" className="button outline">When to seek assessment <Icon name="down"/></a></div>
-  </div><div className="wellbeing-hero-visual"><img src={autismArt[0].src} alt="Friendly illustrated guide about autism and individual differences" width="1200" height="900" fetchPriority="high"/></div></div>
+  </div><div className="wellbeing-hero-visual"><img src="/images/illustrative-play-consultation.webp" alt="Illustrative pediatrician using play-based activities with parent and child" width="1280" height="960" fetchPriority="high"/></div></div>
   <section className="wellbeing-section"><span className="eyebrow">Every child is unique</span><h2>What is autism?</h2>
    <p className="wellbeing-lead">Autism is a neurodevelopmental condition. Autistic children may communicate, interact, learn, move or experience sensory surroundings differently. They have varied strengths, preferences and support needs, which can change over time.</p>
    <div className="wellbeing-insight-grid">
