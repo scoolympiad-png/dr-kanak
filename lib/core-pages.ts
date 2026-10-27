@@ -118,3 +118,27 @@ for(const target of ['/care/paediatric-neurology/','/care/growth-development/','
  const additional=target.startsWith('/vaccination/')?'/vaccination/understanding-vaccines/':'/learning-and-adhd/';
  if(!page.related?.includes(additional))page.related=[...(page.related||[]),additional];
 }
+
+/* Parent-facing learning pages: user-approved illustrated resources,
+   supported by AHA, CDC and WHO references. */
+corePages.push(
+ {path:'/family-wellbeing/stress/',title:'Helping families manage stress',eyebrow:'Family wellbeing',summary:'Kind, practical ways to respond to stress and build calmer family routines, with downloadable illustrated guides.',kind:'stressGuide',sources:[
+  {title:'American Heart Association: stress management',url:'https://www.heart.org/en/healthy-living/healthy-lifestyle/stress-management'},
+  {title:'American Heart Association: three tips to manage stress',url:'https://www.heart.org/en/healthy-living/healthy-lifestyle/stress-management/3-tips-to-manage-stress'},
+  {title:'CDC: sleep needs by age',url:'https://www.cdc.gov/sleep/about/'}
+ ],related:['/parent-resources/school-wellbeing/','/care/growth-development/','/family-wellbeing/autism/','/visit/']},
+ {path:'/family-wellbeing/autism/',title:'Understanding autism and supporting every child',eyebrow:'Understanding development',summary:'Understand autism, explore strengths and sensory needs, learn practical family strategies and know when to seek a developmental assessment.',kind:'autismGuide',sources:[
+  {title:'WHO: autism facts and supportive care',url:'https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders'},
+  {title:'CDC: clinical screening for autism',url:'https://www.cdc.gov/autism/hcp/diagnosis/screening.html'},
+  {title:'CDC: autism screening and diagnosis',url:'https://www.cdc.gov/autism/diagnosis/'}
+ ],related:['/care/growth-development/','/learning-and-adhd/','/family-wellbeing/stress/','/visit/']}
+);
+for(const [path,next] of [
+ ['/parent-resources/','/family-wellbeing/stress/'],
+ ['/care/growth-development/','/family-wellbeing/autism/'],
+ ['/care/paediatric-neurology/','/family-wellbeing/autism/'],
+ ['/learning-and-adhd/','/family-wellbeing/autism/']
+] as const){
+ const page=corePages.find(x=>x.path===path);
+ if(page&&!page.related?.includes(next))page.related=[...(page.related||[]),next];
+}
