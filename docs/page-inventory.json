@@ -352,5 +352,17 @@
     "title": "Understanding autism and supporting every child",
     "kind": "autismGuide",
     "public": true
+  },
+  {
+    "path": "/autism/",
+    "title": "Autism support for families | Understanding, strengths and development",
+    "kind": "autismHub",
+    "public": true
+  },
+  {
+    "path": "/autism/early-signs/",
+    "title": "Early Signs of Autism in Children | What Parents Can Notice",
+    "kind": "autismSigns",
+    "public": true
   }
 ]
