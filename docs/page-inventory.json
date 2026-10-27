@@ -340,5 +340,17 @@
     "title": "Vaccination questions made clearer",
     "kind": "vaccineLearning",
     "public": true
+  },
+  {
+    "path": "/family-wellbeing/stress/",
+    "title": "Helping families manage stress",
+    "kind": "stressGuide",
+    "public": true
+  },
+  {
+    "path": "/family-wellbeing/autism/",
+    "title": "Understanding autism and supporting every child",
+    "kind": "autismGuide",
+    "public": true
   }
 ]
