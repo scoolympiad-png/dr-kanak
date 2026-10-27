@@ -1412,3 +1412,120 @@ body{background:#fffdf9}
  .wellbeing-visual-reference summary,.adhd-visual-reference summary{padding:14px}
 }
 @media(prefers-reduced-motion:reduce){.homepage-hub-showcase .topic-hub-card,.topic-hub .topic-hub-card,.vaccine-topic-directory .topic-hub-card{transition:none}}
+/* Sensory support parent guide: warm, premium clinical design; October 2026. */
+.sensory-guide{padding-top:25px;padding-bottom:66px;min-width:0}
+.sensory-guide h1,.sensory-guide h2,.sensory-guide h3{color:#1e4b56;letter-spacing:-.035em}
+.sensory-guide h1{font-size:clamp(35px,4.35vw,57px);line-height:1.1;font-weight:790}
+.sensory-guide h1 em{font-style:normal;color:#257b88}
+.sensory-guide h2{font-size:clamp(26px,3vw,38px);line-height:1.2;margin:8px 0 16px;font-weight:760}
+.sensory-guide h3{font-size:19px;line-height:1.3;font-weight:740}
+.sensory-guide p{color:#506c74;line-height:1.73;font-size:15px}
+.sensory-guide .eyebrow{color:#367e88;letter-spacing:.09em}
+.sensory-breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:10px;color:#627f88;font-size:13px;margin:3px 0 25px}
+.sensory-breadcrumb a{color:#267184}
+.sensory-breadcrumb .icon{width:14px;height:14px}
+.sensory-breadcrumb span{font-weight:750}
+.sensory-guide-hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:31px;padding:35px;border:1px solid #dbe9e8;border-radius:27px;background:linear-gradient(110deg,#edf7f5,#fffaf3 67%,#f2f7f8);box-shadow:0 13px 30px #1b515d12}
+.sensory-hero-copy{min-width:0}
+.sensory-label{display:inline-flex;gap:8px;align-items:center;padding:9px 14px;border-radius:30px;background:#fff;border:1px solid #d6e7e5;font-size:13px;font-weight:750;color:#257486;margin-bottom:17px}
+.sensory-label .icon{width:18px;height:18px;color:#bc6589}
+.sensory-hero-copy>p{font-size:17px;line-height:1.68;max-width:560px;margin:17px 0 0}
+.sensory-hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:17px;margin-top:24px}
+.sensory-hero-actions .button{min-height:49px;border-radius:35px;display:inline-flex;gap:8px;align-items:center;font-size:14px;padding:11px 17px}
+.sensory-hero-actions .icon{height:18px;width:18px}
+.sensory-soft-link{font-size:14px;font-weight:750;display:inline-flex;align-items:center;gap:7px;color:#257789}
+.sensory-guide-hero figure,.sensory-overload figure{margin:0;min-width:0}
+.sensory-guide-hero figure img,.sensory-overload figure img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:20px;box-shadow:0 14px 30px #2052661c}
+.sensory-guide-hero figcaption,.sensory-overload figcaption{font-size:12px;line-height:1.4;color:#577884;padding-top:9px;text-align:center}
+.sensory-intro{max-width:1000px;margin:47px 0 43px}
+.sensory-intro p{font-size:17px;line-height:1.72;margin:10px 0}
+.sensory-intro strong{color:#285f6c}
+.sensory-content-section{margin:47px 0;scroll-margin-top:125px}
+.sensory-section-head p,.sensory-section-lead{max-width:850px;font-size:16px!important}
+.sensory-senses-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:24px}
+.sensory-sense-card{background:#f0f8f8;border:1px solid #dfecec;border-radius:20px;padding:21px 20px;min-width:0}
+.sensory-tone-1,.sensory-tone-4{background:#f9f7f3;border-color:#ebe8df}
+.sensory-tone-2,.sensory-tone-5{background:#f4f7f8;border-color:#e3e9eb}
+.sensory-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}
+.sensory-card-icon{display:grid;place-items:center;border:1px solid #e1ecea;border-radius:14px;background:#fff;width:48px;height:48px;color:#368294}
+.sensory-card-icon .icon{width:25px;height:25px}
+.sensory-card-top small{color:#56818a;font-size:11px;font-weight:750}
+.sensory-sense-card h3{margin:0 0 8px}
+.sensory-sense-card>p{margin:0 0 15px;min-height:73px;font-size:14px}
+.sensory-support-idea{border-top:1px solid #d5e4e4;padding-top:13px}
+.sensory-support-idea strong{display:block;color:#2b6a77;font-size:13px;margin-bottom:3px}
+.sensory-support-idea p{font-size:13px;line-height:1.68;margin:0}
+.sensory-overload{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;background:#f5f9f8;border:1px solid #e0eae8;border-radius:26px;padding:29px}
+.sensory-overload>div>p{font-size:15px;margin:11px 0 19px}
+.sensory-step-list{display:grid;gap:9px}
+.sensory-step-list>div{display:flex;align-items:start;gap:12px;border-radius:14px;border:1px solid #dfebea;background:#fff;padding:13px}
+.sensory-step-list>div>span{flex:none;width:36px;height:36px;display:grid;place-items:center;border-radius:11px;background:#e7f5f4;color:#1e7984;font-weight:800;font-size:13px}
+.sensory-step-list h3{font-size:15px;line-height:1.35;margin:1px 0 4px}
+.sensory-step-list p{margin:0;font-size:13px;line-height:1.55}
+.sensory-setting-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:21px}
+.sensory-setting{padding:23px 21px;border:1px solid #dce8e8;border-radius:20px;background:#f2f9f8}
+.sensory-setting-1{background:#fcf8f2;border-color:#eee7df}
+.sensory-setting-2{background:#f4f7f9;border-color:#e3ebec}
+.sensory-setting-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:#fff;color:#297e8f;margin-bottom:14px}
+.sensory-setting-icon .icon{width:24px;height:24px}
+.sensory-setting ul{padding-left:20px;color:#506c74;font-size:14px;line-height:1.7}
+.sensory-setting li{margin-top:9px}
+.sensory-reflection{display:grid;grid-template-columns:.83fr 1.17fr;gap:30px;align-items:start;padding:28px;border-radius:24px;border:1px solid #e1e9e4;background:linear-gradient(105deg,#f7fbf8,#fffaf5)}
+.sensory-reflection ol{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.sensory-reflection li{display:grid;gap:5px;padding:14px 16px;border-radius:15px;background:#fff;border:1px solid #e1ebe9}
+.sensory-reflection li strong{color:#245968;font-size:15px}
+.sensory-reflection li span{color:#55747a;font-size:13px;line-height:1.6}
+.sensory-reflection-tip{grid-column:1/-1;border-top:1px solid #e0e8e6;padding-top:15px;margin:0;display:flex;align-items:center;gap:10px;font-size:13px!important}
+.sensory-reflection-tip .icon{width:21px;height:21px;color:#367e8d;flex:none}
+.sensory-faq{margin-top:20px;display:grid;gap:9px}
+.sensory-faq details{background:#fff;border:1px solid #dfebeb;border-radius:14px;overflow:hidden}
+.sensory-faq summary{display:flex;align-items:center;gap:12px;cursor:pointer;padding:17px 18px;color:#24566b;font-size:15px;font-weight:750;list-style:none}
+.sensory-faq summary::-webkit-details-marker{display:none}
+.sensory-faq summary span{color:#5d9da7;font-weight:700;font-size:12px;min-width:25px}
+.sensory-faq summary .icon{margin-left:auto;flex:none;width:17px;height:17px}
+.sensory-faq details[open] summary .icon{transform:rotate(180deg)}
+.sensory-faq details p{padding:0 19px 19px 55px;margin:0;font-size:14px}
+.sensory-clinical-note{display:flex;align-items:flex-start;gap:13px;padding:20px;border:1px solid #d6e6e8;border-left:4px solid #408b99;background:#edf7f8;border-radius:16px}
+.sensory-clinical-note .icon{width:23px;height:23px;flex:none;margin-top:3px;color:#347e8d}
+.sensory-clinical-note p{margin:0;font-size:14px}
+.sensory-clinical-note strong{color:#285b69}
+.sensory-visit{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-top:37px;padding:29px;border-radius:24px;background:linear-gradient(105deg,#e6f5f3,#fff6ea);border:1px solid #d3e5e2}
+.sensory-visit h2{max-width:780px}
+.sensory-visit p{max-width:680px;margin-bottom:0}
+.sensory-visit .button{border-radius:35px;flex:none;display:flex;align-items:center;gap:7px}
+.sensory-more,.sensory-sources{margin-top:46px}
+.sensory-more>div,.sensory-sources>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+.sensory-more a,.sensory-sources a{display:grid;grid-template-columns:24px 1fr 20px;gap:3px 10px;align-items:center;border:1px solid #dce9e9;border-radius:15px;background:#fff;padding:17px}
+.sensory-more a>.icon:first-child{grid-row:1/3;width:22px;height:22px;color:#367f8b}
+.sensory-more a strong{font-size:14px;color:#22566b}
+.sensory-more a span{font-size:12px;color:#69818a}
+.sensory-more a>.icon:last-child{grid-row:1/3;grid-column:3;width:17px;height:17px;color:#4d8995}
+.sensory-sources{padding:23px;border-radius:22px;background:#f6f9f9;border:1px solid #e1eaea}
+.sensory-sources>div{grid-template-columns:repeat(4,minmax(0,1fr))}
+.sensory-sources a{grid-template-columns:1fr 16px;gap:8px}
+.sensory-sources a strong{font-size:13px;color:#245f73;line-height:1.45}
+.sensory-sources a span{grid-column:1;font-size:12px;color:#6b8790}
+.sensory-sources a .icon{grid-column:2;grid-row:1/3;width:16px;height:16px}
+.sensory-sources>p{font-size:12px;margin:16px 0 0}
+.topic-hub .topic-hub-cards{grid-template-columns:repeat(auto-fit,minmax(228px,1fr))}
+@media(max-width:980px){.sensory-senses-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sensory-sources>div{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+ .sensory-guide{padding-top:16px;padding-bottom:42px}
+ .sensory-guide-hero{grid-template-columns:1fr;padding:22px 18px;gap:20px;border-radius:22px}
+ .sensory-guide h1{font-size:clamp(34px,9vw,44px)}
+ .sensory-guide h2{font-size:clamp(25px,7vw,32px)}
+ .sensory-hero-copy>p{font-size:15px}
+ .sensory-hero-actions .button{width:100%;justify-content:center}
+ .sensory-guide-hero figure img{max-height:340px}
+ .sensory-intro,.sensory-content-section{margin:32px 0}
+ .sensory-intro p{font-size:15px}
+ .sensory-overload{grid-template-columns:1fr;padding:19px 16px;gap:20px}
+ .sensory-setting-grid{grid-template-columns:1fr}
+ .sensory-reflection{grid-template-columns:1fr;padding:19px 16px;gap:15px}
+ .sensory-more>div{grid-template-columns:1fr}
+ .sensory-visit{flex-direction:column;align-items:stretch;padding:20px}
+ .sensory-visit .button{justify-content:center}
+ .sensory-sources{padding:18px 14px}
+ .topic-hub .topic-hub-cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:450px){.sensory-senses-grid,.sensory-sources>div,.topic-hub .topic-hub-cards{grid-template-columns:1fr}.sensory-sense-card>p{min-height:0}.sensory-faq summary{padding:14px}.sensory-faq details p{padding:0 15px 16px 18px}}
