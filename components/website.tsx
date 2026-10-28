@@ -6,6 +6,7 @@ import {Icon} from './icon';
 import {LearningHub,BrightMinds,WritingSupport,VaccinationLearning} from './learning-resources';
 import {AutismTopicHub,AutismEarlySigns,VaccineHubDirectory,HomepageHubShowcase} from './topic-hubs';
 import {AutismSensorySupport} from './autism-sensory-support';
+import {AutismCommunicationSupport} from './autism-communication-support';
 import {FamilyStressGuide,AutismFamilyGuide} from './family-wellbeing-guides';
 import {mamtaPrintedCardEarlyMilestones,vaccinationEditorialReferences} from '@/lib/vaccination-reference';
 
@@ -191,6 +192,7 @@ export function ContentPage({p}:{p:PageData}){let body:ReactNode;
  case 'autismHub':body=<AutismTopicHub/>;break;
  case 'autismSigns':body=<AutismEarlySigns/>;break;
  case 'autismSensory':body=<AutismSensorySupport/>;break;
+ case 'autismCommunication':body=<AutismCommunicationSupport/>;break;
  case 'learningHub':body=<LearningHub/>;break;
  case 'adhdBright':body=<BrightMinds/>;break;
  case 'adhdWriting':body=<WritingSupport/>;break;
@@ -209,5 +211,5 @@ export function ContentPage({p}:{p:PageData}){let body:ReactNode;
  case 'faq':body=<div className="container section narrow"><FAQs items={p.faqs||[]}/><Sources p={p}/><Related paths={p.related||[]}/></div>;break;
  default:body=<Article p={p}/>;
  }
- return <>{!['learningHub','adhdBright','adhdWriting','vaccineLearning','stressGuide','autismGuide','autismHub','autismSigns','autismSensory'].includes(p.kind||'')&&<PageIntro p={p}/>} {body}{!['vaccination','visit','portal','emergency','hindi'].includes(p.kind||'')&&<VisitBand/>}</>;
+ return <>{!['learningHub','adhdBright','adhdWriting','vaccineLearning','stressGuide','autismGuide','autismHub','autismSigns','autismSensory','autismCommunication'].includes(p.kind||'')&&<PageIntro p={p}/>} {body}{!['vaccination','visit','portal','emergency','hindi'].includes(p.kind||'')&&<VisitBand/>}</>;
 }

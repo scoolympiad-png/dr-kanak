@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./communication-support.css";
 import { SiteNavigation } from '@/components/site-client';
 import { SiteFooter } from '@/components/website';
 import { StructuredData } from '@/components/structured-data';

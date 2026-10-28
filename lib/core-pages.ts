@@ -181,3 +181,23 @@ for(const [path,next] of [
  const page=corePages.find(x=>x.path===path);
  if(page&&!page.related?.includes(next))page.related=[...(page.related||[]),next];
 }
+
+/* Parent communication strategies: educational support, not an assessment. */
+corePages.push({
+ path:'/autism/communication-support/',
+ title:'Autism Communication Support for Children | Parent Guide',
+ eyebrow:'Communication & connection',
+ summary:'Ways children communicate, practical family strategies, visual routines and AAC options, with guidance on seeking individual support.',
+ kind:'autismCommunication',
+ sources:[
+  {title:'CDC autism treatment and intervention',url:'https://www.cdc.gov/autism/treatment/index.html'},
+  {title:'ASHA AAC in early intervention',url:'https://www.asha.org/practice/early-intervention-provider-support/augmentative-and-alternative-communication-in-early-intervention/'},
+  {title:'ASHA AAC practice portal',url:'https://www.asha.org/practice-portal/professional-issues/augmentative-and-alternative-communication/'},
+  {title:'AAP HealthyChildren AAC for children',url:'https://www.healthychildren.org/English/health-issues/conditions/developmental-disabilities/Pages/augmentative-and-alternative-communication-for-children.aspx'}
+ ],
+ related:['/autism/','/autism/sensory-needs/','/autism/early-signs/','/care/growth-development/','/visit/']
+});
+for(const path of ['/autism/','/autism/sensory-needs/','/autism/early-signs/','/family-wellbeing/autism/','/parent-resources/','/care/growth-development/']){
+ const page=corePages.find(p=>p.path===path);
+ if(page&&!page.related?.includes('/autism/communication-support/'))page.related=[...(page.related||[]),'/autism/communication-support/'];
+}

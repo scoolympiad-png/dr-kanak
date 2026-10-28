@@ -370,5 +370,11 @@
     "title": "Sensory Differences in Children | A Gentle Parent Guide",
     "kind": "autismSensory",
     "public": true
+  },
+  {
+    "path": "/autism/communication-support/",
+    "title": "Autism Communication Support for Children | Parent Guide",
+    "kind": "autismCommunication",
+    "public": true
   }
 ]

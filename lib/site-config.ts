@@ -14,7 +14,7 @@ export const site = {
   address: 'Beside Mowa Police Station, Dubey Colony, Mowa, Raipur, Chhattisgarh 492007',
   maps: 'https://www.google.com/maps/search/?api=1&query=Mamta+Super+Speciality+Hospital+Mowa+Raipur',
   instagram: 'https://www.instagram.com/p/DRogrRQFoUz/',
-  updated: '23 October 2026',
+  updated: '28 October 2026',
 } as const;
 
 export const sources = {

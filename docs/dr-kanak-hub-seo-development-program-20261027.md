@@ -30,8 +30,8 @@ The site retains its authoritative existing URLs while adding clear topical pill
 1. Source-backed Autism Hub `/autism/` and early developmental signs `/autism/early-signs/`: implemented in source, verify live deployment.
 2. Vaccination Hub: resource directory implemented in source, verify live deployment.
 3. **Built 27 Oct 2026:** `/autism/sensory-needs/` — responsive and evidence-informed parent guide on sensory differences, comfort, and everyday adaptations, linked from Autism Hub and navigation. GitHub CI passed; live URL and doctor approval still to verify.
-4. **Next recommended page:** `/autism/communication-support/` — parent communication strategies, AAC awareness and support conversations after clinical review.
-5. `/vaccination/record-keeping/` — blank sample card and privacy-first recordkeeping, without collecting any child data in public forms.
+4. **Built in source 28 Oct 2026:** `/autism/communication-support/` — original parent communication strategies, visual routines and AAC awareness. Clinical approval and public deployment still need verification.
+5. **Next recommended page:** `/vaccination/record-keeping/` — blank sample card and privacy-first recordkeeping, without collecting any child data in public forms.
 6. `/family-wellbeing/healthy-sleep/` — pediatric age ranges, not adult AHA targets.
 
 The Drive register contains the rest of the roadmap and should remain the source of truth for ongoing prioritisation and release status.
