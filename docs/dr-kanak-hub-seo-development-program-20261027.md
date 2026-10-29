@@ -80,9 +80,3 @@ The Drive register contains the rest of the roadmap and should remain the source
 ## Search authority programme link
 - Full private 30/60/90 day plan: `docs/DR-KANAK-SEARCH-AUTHORITY-90DAY-20261029.md`.
 - Build Chhattisgarh appointment relevance around the actual Mamta Raipur location; grow India/global educational visibility with evidence-based content. No fake city clinics, fabricated rankings or keyword-doorway pages.
-
-## 29 October 2026 — Whole-site visual redesign
-- All 65 registered routes explicitly inventoried with full links in `docs/DR-KANAK-ALL-PAGES-VISUAL-LINKS.csv` and each assigned a distinct scene in `lib/page-visuals.ts`.
-- Shared article introductions and key autism, vaccination, child-development, ADHD and wellbeing heroes use original child-activity artwork instead of a repeated generic AI-doctor consultation scene.
-- The homepage retains an actual documented Dr Kanak photographic identity, plus activity illustration and a separate child-activity photo gallery. Stock photos are illustrative, never represented as children attending Mamta.
-- Live screenshot checks across desktop/mobile are separate from successful CI and Cloudflare compilation.

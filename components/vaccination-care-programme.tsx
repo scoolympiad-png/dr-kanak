@@ -3,7 +3,6 @@
 import {useEffect,useState} from 'react';
 import {site} from '@/lib/site-config';
 import {Icon} from './icon';
-import {ActivityVisual} from './activity-visual';
 
 /** Public parent guide. Internal service status and rules remain in private docs. */
 export function VaccinationCareProgramme(){
@@ -38,7 +37,7 @@ export function VaccinationCareProgramme(){
     </div>
     <p className="vcare-status"><strong>A little tip for your next visit:</strong> Keep your child’s vaccination card handy, along with any records from other clinics. Dr Kanak’s team can help you review what comes next and discuss ways to remember future visits.</p>
    </div>
-   <figure><ActivityVisual path="/vaccination/reminders/" variation={0}/><figcaption>Your child's care plan is individual.</figcaption></figure>
+   <figure><img src="/images/illustrative-vaccination-consultation.webp" width="1280" height="960" loading="eager" alt="Illustrative vaccination consultation with a parent, child and paediatrician"/><figcaption>Your child's care plan is individual.</figcaption></figure>
   </header>
   <section className="vcare-section" aria-labelledby="vcare-steps"><span className="eyebrow">Four easy steps</span><h2 id="vcare-steps">Make the next visit easier to remember.</h2><p>Small habits can help you keep track of your child’s vaccinations. Start with the card you already have and ask the doctor about the right next step.</p><div className="vcare-steps">{steps.map((s,i)=><article className="vcare-step" key={s.title}><span><Icon name={s.icon}/></span><small>Step {String(i+1).padStart(2,'0')}</small><h3>{s.title}</h3><p>{s.copy}</p></article>)}</div></section>
   <section className="vcare-section vcare-panel"><div><span className="eyebrow">For your next appointment</span><h2>Keep the important little details together.</h2><p>A few notes can make your next conversation with the doctor simpler. You can bring these along with the vaccination card.</p><ul className="vcare-list"><li><Icon name="check"/> Your child’s vaccination card and any previous records.</li><li><Icon name="check"/> The date of your next recommended visit.</li><li><Icon name="check"/> Details of vaccines received at other clinics.</li><li><Icon name="check"/> Questions you want to ask Dr Kanak.</li></ul></div><aside className="vcare-panel-art"><img src="/images/dr-kanak-logo-k.png" width="160" height="160" alt="" aria-hidden="true"/><h3>Every little milestone matters.</h3><p>One card, a few helpful notes and a caring conversation can make the next visit feel easier.</p></aside></section>
