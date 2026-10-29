@@ -10,7 +10,7 @@ export function VaccinationCareProgramme(){
  useEffect(()=>{
   let active=true;
   fetch('/api/site-config/',{cache:'no-store'})
-   .then(r=>r.ok?r.json():null)
+   .then(r=>r.ok?(r.json() as Promise<{portalUrl?:string|null}>):null)
    .then(c=>{if(active&&c?.portalUrl&&typeof c.portalUrl==='string')setPortal(c.portalUrl)})
    .catch(()=>{});
   return()=>{active=false};
