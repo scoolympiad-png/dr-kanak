@@ -69,3 +69,10 @@ The Drive register contains the rest of the roadmap and should remain the source
 - Be accurate without overpromising: a visitor may ask Mamta about currently available reminders; do not imply automatic messaging, completed appointment booking or access to records exists until verified. A callback alone is not reminder enrolment. Communicate this naturally only where the distinction matters to the person.
 - Keep clinical safety and privacy in short, helpful family language; all technical controls and operational checklists stay in private docs and code.
 - Before commit, read the rendered text of the whole page and related CTA, modal, FAQs, navigation and linked follow-up pages — not just the highlighted issue.
+
+## 29 October 2026 — clinical authority expansion: autism assessment
+- Built original parent guide at `/autism/assessment/` with differentiating content explaining screening vs diagnosis, four possible steps, helpful preparation, responsible referrals and sourced FAQs.
+- Connect autism hub, early signs, communication, sensory, growth and paediatric neurology pages. Use existing vetted illustrative media.
+- Local appointment information says Dr Kanak consults at Mamta Hospital, Mowa, Raipur; does not falsely advertise guaranteed formal autism diagnosis or an on-site autism therapy department.
+- Keep national/global search reach through authoritative parent education, not fake clinic locations or duplicate city funnels.
+- Clinical review still required before adding a reviewed-by badge. Source docs: `docs/AUTISM-ASSESSMENT-SOURCES-20261029.md`.

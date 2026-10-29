@@ -2,6 +2,7 @@ import {Icon} from './icon';
 
 const autismReading=[
  {href:'/family-wellbeing/autism/',image:'/images/illustrative-play-consultation.webp',label:'Start here',title:'Understanding autism',text:'A kind introduction to communication, sensory differences, family support and individual strengths.',tone:'aqua'},
+ {href:'/autism/assessment/',image:'/images/illustrative-family-consultation.webp',label:'Parent guide',title:'What happens during an autism assessment?',text:'Understand screening, specialist evaluation and helpful next steps for your child.',tone:'peach'},
  {href:'/autism/communication-support/',image:'/images/illustrative-play-consultation.webp',label:'Communication',title:'Every way of communicating matters',text:'Words, gestures, visual routines and AAC: practical ideas to support connection.',tone:'lilac'},
  {href:'/autism/sensory-needs/',image:'/images/illustrative-family-consultation.webp',label:'Sensory support',title:'Making sense of sensory needs',text:'Gentle ways to support comfort with sounds, textures, light and movement.',tone:'mint'},
  {href:'/autism/early-signs/',image:'/images/illustrative-family-consultation.webp',label:'Development',title:'Early signs & what to do',text:'Notice patterns, understand developmental screening and prepare for a discussion with your doctor.',tone:'peach'},

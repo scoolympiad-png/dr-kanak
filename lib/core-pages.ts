@@ -216,3 +216,23 @@ for(const path of ['/vaccination/','/vaccination/schedule/','/vaccination/catch-
  const p=corePages.find(x=>x.path===path);
  if(p&&!p.related?.includes('/vaccination/reminders/'))p.related=[...(p.related||[]),'/vaccination/reminders/'];
 }
+
+/* Autism assessment education, not a guarantee of on-site diagnosis. */
+corePages.push({
+ path:'/autism/assessment/',
+ title:'Autism Assessment for Children: Parent Guide in Raipur',
+ eyebrow:'Child development & autism',
+ summary:'Wondering about autism? Learn how screening differs from diagnosis, what happens during developmental evaluation, and what to bring to a paediatric visit in Raipur.',
+ kind:'autismAssessment',
+ sources:[
+  {title:'CDC: Screening for Autism Spectrum Disorder',url:'https://www.cdc.gov/autism/diagnosis/index.html'},
+  {title:'CDC: Clinical screening for autism',url:'https://www.cdc.gov/autism/hcp/diagnosis/screening.html'},
+  {title:'IAP: Action Plan 2026',url:'https://www.iapindia.org/iap-action-plan-2026/'},
+  {title:'WHO: Autism spectrum disorders',url:'https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders'}
+ ],
+ related:['/autism/','/autism/early-signs/','/autism/communication-support/','/autism/sensory-needs/','/care/growth-development/','/visit/']
+});
+for(const path of ['/autism/','/autism/early-signs/','/autism/communication-support/','/autism/sensory-needs/','/family-wellbeing/autism/','/care/growth-development/','/care/paediatric-neurology/','/parent-resources/']){
+ const p=corePages.find(x=>x.path===path);
+ if(p&&!p.related?.includes('/autism/assessment/'))p.related=[...(p.related||[]),'/autism/assessment/'];
+}

@@ -382,5 +382,11 @@
     "title": "Vaccination Reminders and Family Care | Dr Kanak Ramnani",
     "kind": "vaccineReminders",
     "public": true
+  },
+  {
+    "path": "/autism/assessment/",
+    "title": "Autism Assessment for Children: Parent Guide in Raipur",
+    "kind": "autismAssessment",
+    "public": true
   }
 ]

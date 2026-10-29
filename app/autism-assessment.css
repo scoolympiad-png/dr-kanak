@@ -1,0 +1,51 @@
+.autism-assessment{color:#204960;padding-top:1.5rem;padding-bottom:4.5rem}
+.autism-assessment :is(h1,h2,h3){letter-spacing:-.035em}
+.assessment-breadcrumb{display:flex;align-items:center;gap:.65rem;flex-wrap:wrap;font-size:.84rem;color:#657c8d;margin-bottom:1.3rem}
+.assessment-breadcrumb a{color:#185d7d}.assessment-breadcrumb .icon{width:.7rem}
+.assessment-hero{background:linear-gradient(122deg,#e5f5fb 0%,#f5f0ff 52%,#fff0ea 100%);border-radius:1.8rem;padding:clamp(1.4rem,4vw,3.5rem);display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.4rem,4vw,4rem);align-items:center}
+.assessment-kicker{color:#17648b;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.79rem;display:inline-flex;align-items:center;gap:.5rem}.assessment-kicker .icon{width:1.2rem}
+.assessment-hero h1{font-size:clamp(2.6rem,4.9vw,4.5rem);line-height:1.1;margin:1rem 0;color:#174566}.assessment-hero h1 em{color:#ce608a;font-style:normal}
+.assessment-hero-copy>p{font-size:1.05rem;line-height:1.86;color:#496b80}
+.assessment-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1.3rem;margin-top:1.6rem}
+.assessment-soft-link{display:inline-flex;align-items:center;gap:.4rem;color:#155e7f;text-decoration:underline;text-underline-offset:4px;font-weight:700}.assessment-soft-link .icon{width:1rem}
+.assessment-hero-note{margin-top:1.45rem;display:flex;align-items:flex-start;gap:.7rem;background:#ffffffa6;border-radius:1rem;padding:1rem;color:#42647b;line-height:1.55;font-size:.91rem}
+.assessment-hero-note .icon{width:1.2rem;flex-shrink:0;color:#c55c86}
+.assessment-hero figure{margin:0;position:relative;min-width:0}.assessment-hero figure img{width:100%;height:clamp(19rem,36vw,30rem);object-fit:cover;border-radius:1.35rem;box-shadow:0 20px 35px #1c385922;display:block}
+.assessment-hero figcaption{position:absolute;right:.7rem;bottom:.7rem;padding:.65rem .9rem;border-radius:.8rem;background:#fffffff1;color:#245877;font-size:.82rem;font-weight:700}
+.assessment-intro{max-width:69rem;margin:4rem auto;text-align:center}
+.assessment-intro h2,.assessment-section h2,.assessment-visit h2,.assessment-related h2,.assessment-sources h2{font-size:clamp(1.95rem,3.25vw,2.95rem);line-height:1.18;margin:.55rem 0 1rem;color:#174665}
+.assessment-intro p{font-size:1.07rem;line-height:1.85;color:#536e7c}.assessment-intro strong{color:#2a506b}
+.assessment-section{margin:4.7rem 0}.assessment-section-head{max-width:55rem;margin-bottom:1.6rem}.assessment-section-head p,.assessment-section>p{color:#536e81;line-height:1.8}
+.assessment-step-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.assessment-step{border:1px solid #d3e6ef;background:#e9f7ff;border-radius:1.25rem;padding:1.4rem}
+.assessment-step.assessment-tone-1{background:#fff1e9}.assessment-step.assessment-tone-2{background:#f3edff}.assessment-step.assessment-tone-3{background:#e9f7f0}
+.assessment-step-top{display:flex;align-items:center;justify-content:space-between}.assessment-step-icon{display:grid;place-items:center;width:3rem;height:3rem;border-radius:1rem;background:#fff;color:#1878a0}.assessment-step-icon .icon{width:1.5rem;height:1.5rem}
+.assessment-step-count{font-weight:850;font-size:.85rem;letter-spacing:.12em;color:#53809a}.assessment-step h3{color:#204e70;font-size:1.27rem;margin:1.1rem 0 .6rem}.assessment-step p{font-size:.93rem;line-height:1.75;color:#527084}
+.assessment-explainer{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,5vw,4.5rem);align-items:center;background:#f5f7fc;border-radius:1.7rem;padding:clamp(1.5rem,4vw,3rem)}
+.assessment-explainer>div>p{color:#506f81;line-height:1.85}.assessment-explainer .assessment-soft-link{margin-top:1.2rem}
+.assessment-explainer-art{background:linear-gradient(135deg,#e7f6fc,#f4ecff);border:1px solid #d9e8f3;border-radius:1.4rem;padding:clamp(1.5rem,4vw,2.7rem)}
+.assessment-explainer-art>.icon{width:2.9rem;height:2.9rem;color:#197699}.assessment-explainer-art h3{font-size:1.6rem;color:#205274;margin:1rem 0 .65rem}.assessment-explainer-art p,.assessment-explainer-art li{color:#557587;line-height:1.75}.assessment-explainer-art ul{padding-left:1.2rem;margin-top:1.2rem}
+.assessment-bring-grid,.assessment-myth-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.assessment-bring{background:#edf8ff;border:1px solid #d8eaf5;border-radius:1.25rem;padding:1.6rem}.assessment-bring-1{background:#fff4e6}.assessment-bring-2{background:#f1efff}
+.assessment-bring>span{display:grid;place-items:center;width:3.1rem;height:3.1rem;border-radius:.9rem;background:white;color:#257a9c}.assessment-bring>span .icon{width:1.5rem;height:1.5rem}
+.assessment-bring h3,.assessment-myth h3{font-size:1.27rem;color:#1a5273;margin:1rem 0 .6rem}.assessment-bring p,.assessment-myth p{color:#537181;line-height:1.75}
+.assessment-referral{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}.assessment-referral-copy p{color:#526f80;line-height:1.85}.assessment-referral-copy .assessment-soft-link{margin-top:1.2rem}
+.assessment-referral figure{margin:0}.assessment-referral figure img{width:100%;height:clamp(17rem,32vw,26rem);object-fit:cover;border-radius:1.3rem}.assessment-referral figcaption{font-size:.86rem;color:#637d8d;margin-top:.7rem;text-align:center}
+.assessment-myth{background:#f9fbff;border:1px solid #d6e6ed;border-radius:1.2rem;padding:1.4rem}.assessment-myth-1{background:#fdf5e9}.assessment-myth-2{background:#eef9f3}
+.assessment-myth>.icon{color:#2698a5;width:1.45rem;height:1.45rem}
+.assessment-faq>div{max-width:66rem}.assessment-faq details{border-bottom:1px solid #dce7ed;padding:1.1rem .2rem}.assessment-faq summary{cursor:pointer;display:flex;align-items:center;gap:.9rem;font-weight:760;color:#23516f;list-style:none}.assessment-faq summary::-webkit-details-marker{display:none}.assessment-faq summary span{font-size:.83rem;color:#c45e88}.assessment-faq summary .icon{margin-left:auto;flex-shrink:0;width:1rem}.assessment-faq details[open] summary .icon{transform:rotate(180deg)}.assessment-faq details p{color:#567382;max-width:58rem;margin:1rem 0 0 2rem;line-height:1.85}
+.assessment-visit{background:linear-gradient(120deg,#e1f4fb,#eeecff,#fff0ea);border-radius:1.6rem;padding:clamp(1.4rem,4vw,3rem);display:grid;grid-template-columns:1fr .68fr;gap:clamp(1.4rem,4vw,3rem);align-items:center;margin:4rem 0}
+.assessment-visit>div>p{color:#4f6d7e;line-height:1.8}.assessment-visit-actions{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-top:1.4rem}
+.assessment-visit-place{display:flex;flex-direction:column;gap:.8rem;background:#fffefa;border-radius:1.2rem;padding:1.55rem;color:#1c506e;border:1px solid #e5e9e9}
+.assessment-visit-place>.icon{width:1.7rem;height:1.7rem;color:#d36f84}.assessment-visit-place span{font-size:.92rem;color:#537284}.assessment-visit-place a{color:#147294;text-decoration:underline;text-underline-offset:4px;font-weight:700}.assessment-visit-place a .icon{width:.95rem}
+.assessment-related>div,.assessment-sources>div{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.4rem}
+.assessment-related a{display:grid;grid-template-columns:2rem 1fr auto;gap:.35rem .7rem;align-items:center;border:1px solid #dfebef;border-radius:1rem;padding:1.25rem;text-decoration:none;color:#1e5978}
+.assessment-related a>.icon:first-child{grid-row:1/3;color:#2785a3}.assessment-related a>.icon:last-child{grid-column:3;grid-row:1/3;width:.95rem}.assessment-related a>strong{grid-column:2}.assessment-related a>span{grid-column:2;font-size:.83rem;color:#698091}
+.assessment-sources{margin-top:4rem}.assessment-sources>div{grid-template-columns:repeat(2,minmax(0,1fr))}
+.assessment-sources a{display:grid;grid-template-columns:1fr auto;gap:.35rem;padding:1.2rem;border:1px solid #e0e9ee;border-radius:1rem;background:#f9fcff;color:#1b5777;text-decoration:none}
+.assessment-sources a small{grid-row:2;color:#6a8291}.assessment-sources a .icon{grid-column:2;grid-row:1/3;width:.95rem}
+.assessment-sources>p{font-size:.86rem;line-height:1.7;color:#697f8e;margin-top:1.2rem}
+.autism-assessment a:focus-visible,.autism-assessment summary:focus-visible{outline:3px solid #197d9c;outline-offset:4px}.autism-assessment a:hover{color:#bb4f76}
+@media(max-width:1100px){.assessment-step-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.assessment-hero{grid-template-columns:1fr}.assessment-hero figure img{height:24rem}}
+@media(max-width:720px){.autism-assessment{padding-top:1rem}.assessment-hero{padding:1.25rem;border-radius:1.2rem}.assessment-hero h1{font-size:clamp(2.3rem,10vw,3.5rem)}.assessment-hero figure img{height:18rem}.assessment-hero figcaption{font-size:.73rem}.assessment-section{margin:3rem 0}.assessment-intro{margin:3rem auto}.assessment-step-grid,.assessment-explainer,.assessment-bring-grid,.assessment-myth-grid,.assessment-referral,.assessment-visit,.assessment-related>div,.assessment-sources>div{grid-template-columns:1fr}.assessment-referral figure img{height:18rem}.assessment-faq details p{margin-left:0}}
+@media(prefers-reduced-motion:reduce){.autism-assessment *,.autism-assessment *::before,.autism-assessment *::after{transition:none!important;scroll-behavior:auto!important}}
