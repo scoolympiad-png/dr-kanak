@@ -220,7 +220,7 @@ for(const path of ['/vaccination/','/vaccination/schedule/','/vaccination/catch-
 /* Autism assessment education, not a guarantee of on-site diagnosis. */
 corePages.push({
  path:'/autism/assessment/',
- title:'Autism Assessment for Children: Parent Guide in Raipur',
+ title:'Autism Assessment Guide for Parents in Raipur',
  eyebrow:'Child development & autism',
  summary:'Wondering about autism? Learn how screening differs from diagnosis, what happens during developmental evaluation, and what to bring to a paediatric visit in Raipur.',
  kind:'autismAssessment',

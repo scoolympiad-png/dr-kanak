@@ -76,3 +76,7 @@ The Drive register contains the rest of the roadmap and should remain the source
 - Local appointment information says Dr Kanak consults at Mamta Hospital, Mowa, Raipur; does not falsely advertise guaranteed formal autism diagnosis or an on-site autism therapy department.
 - Keep national/global search reach through authoritative parent education, not fake clinic locations or duplicate city funnels.
 - Clinical review still required before adding a reviewed-by badge. Source docs: `docs/AUTISM-ASSESSMENT-SOURCES-20261029.md`.
+
+## Search authority programme link
+- Full private 30/60/90 day plan: `docs/DR-KANAK-SEARCH-AUTHORITY-90DAY-20261029.md`.
+- Build Chhattisgarh appointment relevance around the actual Mamta Raipur location; grow India/global educational visibility with evidence-based content. No fake city clinics, fabricated rankings or keyword-doorway pages.
