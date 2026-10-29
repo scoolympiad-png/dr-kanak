@@ -1,4 +1,5 @@
 import {Icon} from './icon';
+import {ActivityVisual} from './activity-visual';
 
 const stressArt=[
  {src:'/resources/stress-family-guide.webp',title:'Helping families manage stress',alt:'Colourful illustrated family stress guide with coping ideas, sleep, connection and emotional wellbeing'},
@@ -42,7 +43,7 @@ export function FamilyStressGuide(){
     <p>Stress visits every family. Discover everyday ways to help children feel heard, protect family routines and make space for small moments of calm.</p>
     <div className="wellbeing-hero-actions"><a className="button" href="#calm-steps">Try a calm-down plan <Icon name="arrow"/></a><a href="#family-gallery" className="button outline">See the picture guides <Icon name="down"/></a></div>
    </div>
-   <div className="wellbeing-hero-visual"><img src="/images/illustrative-family-consultation.webp" alt="Illustrative pediatrician talking with a parent and child" width="1280" height="960" fetchPriority="high"/></div>
+   <div className="wellbeing-hero-visual"><ActivityVisual path="/family-wellbeing/stress/" variation={0}/></div>
   </div>
   <section className="wellbeing-section">
     <span className="eyebrow">Start with understanding</span><h2>Notice stress. Make room for support.</h2>
@@ -93,7 +94,7 @@ export function AutismFamilyGuide(){
    <h1>Every child connects with the world <em>in their own way.</em></h1>
    <p>Explore autism with curiosity, respect and practical ideas for family life. Early understanding helps caregivers recognise needs and build on each child’s strengths.</p>
    <div className="wellbeing-hero-actions"><a className="button" href="#autism-support">Explore family support <Icon name="arrow"/></a><a href="#autism-assessment" className="button outline">When to seek assessment <Icon name="down"/></a></div>
-  </div><div className="wellbeing-hero-visual"><img src="/images/illustrative-play-consultation.webp" alt="Illustrative pediatrician using play-based activities with parent and child" width="1280" height="960" fetchPriority="high"/></div></div>
+  </div><div className="wellbeing-hero-visual"><ActivityVisual path="/family-wellbeing/autism/" variation={1}/></div></div>
   <section className="wellbeing-section"><span className="eyebrow">Every child is unique</span><h2>What is autism?</h2>
    <p className="wellbeing-lead">Autism is a neurodevelopmental condition. Autistic children may communicate, interact, learn, move or experience sensory surroundings differently. They have varied strengths, preferences and support needs, which can change over time.</p>
    <div className="wellbeing-insight-grid">
