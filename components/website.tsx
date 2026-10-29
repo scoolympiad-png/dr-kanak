@@ -162,13 +162,13 @@ function Vaccination(){return <>
  <div className="container vaccine-more-links"><a href="/vaccination/faq/">Frequently asked questions <Icon name="arrow"/></a><a href="/vaccination/teen-hpv/">Teen and HPV vaccination <Icon name="arrow"/></a><a href="/my-child/reminders/">Reminders & follow-up <Icon name="arrow"/></a></div>
  <section className="section container reminder-story">
   <div><span className="eyebrow">Making future visits easier</span><h2>Never lose track<br/>of the next visit.</h2>
-   <p>Keep your child's vaccination card handy. Ask our team about reminder options; personalised online reminders are coming soon.</p>
-   <TextLink href="/my-child/reminders/">How care reminders will work</TextLink>
+   <p>Keep your child’s vaccination card handy and ask Mamta’s team how to keep track of the next visit.</p>
+   <TextLink href="/my-child/reminders/">Ask about follow-up options</TextLink>
   </div>
   <ol className="care-steps">
    <li><span>1</span><div><h3>Review together</h3><p>The clinical team checks the vaccination history and writes a plan.</p></div></li>
-   <li><span>2</span><div><h3>Confirm guardian details</h3><p>When reminders become available, your family can choose its preferred contact method.</p></div></li>
-   <li><span>3</span><div><h3>Keep the record current</h3><p>Future reminders should reflect new doses and changes approved by the care team.</p></div></li>
+   <li><span>2</span><div><h3>Write down the next visit</h3><p>Keep the date your doctor recommends somewhere easy to find.</p></div></li>
+   <li><span>3</span><div><h3>Bring your updated card</h3><p>Include any vaccines given at another clinic, so the team can review the complete record.</p></div></li>
   </ol>
  </section>
  <section className="container vaccine-reference-note" aria-label="Editorial reference names">

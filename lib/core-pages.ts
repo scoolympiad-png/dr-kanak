@@ -207,7 +207,7 @@ corePages.push({
  path:'/vaccination/reminders/',
  title:'Vaccination Reminders and Family Care | Dr Kanak Ramnani',
  eyebrow:'Care reminders & vaccination',
- summary:'Understand how verified guardian consent and clinician-approved vaccination plans can support safe reminders at Mamta Hospital.',
+ summary:'Simple tips for keeping track of your child’s vaccination card, next visit and follow-up options with Dr Kanak at Mamta Hospital.',
  kind:'vaccineReminders',
  sources:[sources.vaccines,sources.vaccineUpdate,sources.uWin],
  related:['/vaccination/','/vaccination/schedule/','/vaccination/catch-up/','/my-child/reminders/','/visit/']

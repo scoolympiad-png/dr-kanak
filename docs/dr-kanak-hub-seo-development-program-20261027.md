@@ -62,3 +62,10 @@ The Drive register contains the rest of the roadmap and should remain the source
 - Canonical redirect recovers a malformed old communication URL with `/**`.
 - Clinical and private-service rollout requires Windows Patient OS source transfer and hospital-specific verification: see `docs/PATIENT-OS-MAMTA-VACCINATION-LAUNCH-20261029.md`.
 - Removed misleading fixed lastmod from sitemap; use verified per-page dates only when available.
+
+## Parent-first public copy safeguard — 29 October 2026
+- Every public page must answer a visitor's questions in a warm, clear, professional paediatric educator voice. Never use a public page as an implementation report, product readiness notice, system specification, internal checklist or sales/admin dashboard.
+- Do not publish 'Patient OS not activated', 'verified guardian', 'clinical plan version', integration status, CRM tenants, developer instructions, source audits, preview notes, pending deployment or marketing/SEO workflow terms in ordinary visitor-facing promotional sections.
+- Be accurate without overpromising: a visitor may ask Mamta about currently available reminders; do not imply automatic messaging, completed appointment booking or access to records exists until verified. A callback alone is not reminder enrolment. Communicate this naturally only where the distinction matters to the person.
+- Keep clinical safety and privacy in short, helpful family language; all technical controls and operational checklists stay in private docs and code.
+- Before commit, read the rendered text of the whole page and related CTA, modal, FAQs, navigation and linked follow-up pages — not just the highlighted issue.
