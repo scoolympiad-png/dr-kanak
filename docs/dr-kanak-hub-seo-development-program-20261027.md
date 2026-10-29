@@ -56,3 +56,9 @@ The Drive register contains the rest of the roadmap and should remain the source
 - Page component: `components/autism-sensory-support.tsx`; route registry: `lib/core-pages.ts`; styling: `app/globals.css`; backlinks: Autism hub and parent menu.
 - No survey, child identifying data, diagnostic assessment, sensory score or promise of treatment. Clinical signoff and public deployment confirmation have not been recorded.
 - Follow-up: investigate valid canonical page on the production domain, view it at mobile size, then update GSC and mark published only after verification.
+
+## 29 October 2026 — Patient OS vaccination gateway
+- Source-built `/vaccination/reminders/` parent information page with verified portal handoff and existing reminder callback route; no PHI collection or live alerts.
+- Canonical redirect recovers a malformed old communication URL with `/**`.
+- Clinical and private-service rollout requires Windows Patient OS source transfer and hospital-specific verification: see `docs/PATIENT-OS-MAMTA-VACCINATION-LAUNCH-20261029.md`.
+- Removed misleading fixed lastmod from sitemap; use verified per-page dates only when available.

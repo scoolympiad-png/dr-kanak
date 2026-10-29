@@ -1,9 +1,12 @@
 import handler from "vinext/server/fetch-handler";
 import { runWithConnectorBinding } from "../lib/connector-context";
 import type { ConnectorBinding } from "../lib/connector-contract.mjs";
+import {canonicalRedirectForPublicLink} from "../lib/canonical-path.mjs";
 
 const worker = {
   async fetch(request: Request, env: Cloudflare.Env, ctx: ExecutionContext<{ CONNECTORS?: ConnectorBinding }>) {
+    const repaired=canonicalRedirectForPublicLink(request.url);
+    if(repaired) return Response.redirect(repaired,308);
     if (new URL(request.url).hostname === "www.drkanak.com") {
       const canonical = new URL(request.url); canonical.hostname="drkanak.com";
       return Response.redirect(canonical.href,308);

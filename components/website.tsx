@@ -7,6 +7,7 @@ import {LearningHub,BrightMinds,WritingSupport,VaccinationLearning} from './lear
 import {AutismTopicHub,AutismEarlySigns,VaccineHubDirectory,HomepageHubShowcase} from './topic-hubs';
 import {AutismSensorySupport} from './autism-sensory-support';
 import {AutismCommunicationSupport} from './autism-communication-support';
+import {VaccinationCareProgramme} from './vaccination-care-programme';
 import {FamilyStressGuide,AutismFamilyGuide} from './family-wellbeing-guides';
 import {mamtaPrintedCardEarlyMilestones,vaccinationEditorialReferences} from '@/lib/vaccination-reference';
 
@@ -116,7 +117,7 @@ function Vaccination(){return <>
    <p>Explore each age, keep your child's vaccination records and ask Dr Kanak about the next visit.</p>
    <div className="button-row">
     <a className="button" href="/visit/">Plan a vaccination review <Icon name="arrow"/></a>
-    <a className="button outline" href="#mamta-vaccine-card">Explore the age guide <Icon name="down"/></a>
+    <a className="button outline" href="#mamta-vaccine-card">Explore the age guide <Icon name="down"/></a><a className="button outline" href="/vaccination/reminders/">How care reminders work <Icon name="arrow"/></a>
    </div><a className="vax-landing-download" href="/downloads/dr-kanak-family-vaccination-companion.pdf" download><Icon name="book"/> Save our free vaccination card <Icon name="arrow"/></a>
    
   </div>
@@ -201,6 +202,7 @@ export function ContentPage({p}:{p:PageData}){let body:ReactNode;
  case 'ageHub':body=<div className="container section"><AgeExplorer/><div className="age-full-grid">{ages.map(a=><a className={`age-full-card ${a.colour}`} key={a.slug} href={`/care-by-age/${a.slug}/`}><Icon name={a.icon}/><span className="eyebrow">{a.age}</span><h2>{a.name}</h2><p>{a.summary}</p><ul>{a.topics.map(t=><li key={t}>{t}</li>)}</ul><span className="text-link">Explore this stage <Icon name="arrow"/></span></a>)}</div></div>;break;
  case 'resourceHub':body=<div className="container section"><div className="resource-search-band"><div><h2>Find a helpful starting point.</h2><p>Search by topic, stage or care need.</p></div><a className="button outline" href="/search/"><Icon name="search"/>Search parent resources</a></div><div className="guide-grid library-grid">{guides.map((g,i)=><GuideCard key={g.slug} slug={g.slug} index={i}/>)}</div><div className="wellbeing-library-links"><a href="/family-wellbeing/stress/"><img src="/resources/stress-calm-down-steps.webp" width="240" height="180" loading="lazy" alt="Colourful family calm-down activity illustration"/><span><strong>Calmer days for families</strong><small>Stress, connection and everyday routines</small></span><Icon name="arrow"/></a><a href="/family-wellbeing/autism/"><img src="/resources/autism-understanding.webp" width="240" height="180" loading="lazy" alt="Colourful illustrated autism learning guide"/><span><strong>Understanding autism</strong><small>Strengths, support and developmental questions</small></span><Icon name="arrow"/></a></div><section className="adhd-home-feature"><div><span className="eyebrow">New for parents and teachers</span><h2>Attention, learning & ADHD resources</h2><p>Illustrated learning strategies, parent-friendly explanations and practical classroom ideas.</p><a className="button" href="/learning-and-adhd/">Explore ADHD guides <Icon name="arrow"/></a></div><img src="/resources/adhd-positive-writing-classroom.webp" alt="Colourful ADHD writing support guide" width="1224" height="1285" loading="lazy"/></section><Related paths={['/resources/','/videos/','/care-by-age/']}/></div>;break;
  case 'vaccination':body=<Vaccination/>;break;
+ case 'vaccineReminders':body=<VaccinationCareProgramme/>;break;
  case 'visit':body=<Visit/>;break;
  case 'trusted':body=<TrustedResources/>;break;
  case 'search':body=<div className="container section"><SearchView index={searchIndex}/></div>;break;
@@ -211,5 +213,5 @@ export function ContentPage({p}:{p:PageData}){let body:ReactNode;
  case 'faq':body=<div className="container section narrow"><FAQs items={p.faqs||[]}/><Sources p={p}/><Related paths={p.related||[]}/></div>;break;
  default:body=<Article p={p}/>;
  }
- return <>{!['learningHub','adhdBright','adhdWriting','vaccineLearning','stressGuide','autismGuide','autismHub','autismSigns','autismSensory','autismCommunication'].includes(p.kind||'')&&<PageIntro p={p}/>} {body}{!['vaccination','visit','portal','emergency','hindi'].includes(p.kind||'')&&<VisitBand/>}</>;
+ return <>{!['learningHub','adhdBright','adhdWriting','vaccineLearning','stressGuide','autismGuide','autismHub','autismSigns','autismSensory','autismCommunication','vaccineReminders'].includes(p.kind||'')&&<PageIntro p={p}/>} {body}{!['vaccination','visit','portal','emergency','hindi'].includes(p.kind||'')&&<VisitBand/>}</>;
 }

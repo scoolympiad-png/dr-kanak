@@ -201,3 +201,18 @@ for(const path of ['/autism/','/autism/sensory-needs/','/autism/early-signs/','/
  const page=corePages.find(p=>p.path===path);
  if(page&&!page.related?.includes('/autism/communication-support/'))page.related=[...(page.related||[]),'/autism/communication-support/'];
 }
+
+/* Parent reminder information only: the private Patient OS owns clinical events. */
+corePages.push({
+ path:'/vaccination/reminders/',
+ title:'Vaccination Reminders and Family Care | Dr Kanak Ramnani',
+ eyebrow:'Care reminders & vaccination',
+ summary:'Understand how verified guardian consent and clinician-approved vaccination plans can support safe reminders at Mamta Hospital.',
+ kind:'vaccineReminders',
+ sources:[sources.vaccines,sources.vaccineUpdate,sources.uWin],
+ related:['/vaccination/','/vaccination/schedule/','/vaccination/catch-up/','/my-child/reminders/','/visit/']
+});
+for(const path of ['/vaccination/','/vaccination/schedule/','/vaccination/catch-up/','/vaccination/faq/','/parent-resources/']){
+ const p=corePages.find(x=>x.path===path);
+ if(p&&!p.related?.includes('/vaccination/reminders/'))p.related=[...(p.related||[]),'/vaccination/reminders/'];
+}

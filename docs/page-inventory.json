@@ -376,5 +376,11 @@
     "title": "Autism Communication Support for Children | Parent Guide",
     "kind": "autismCommunication",
     "public": true
+  },
+  {
+    "path": "/vaccination/reminders/",
+    "title": "Vaccination Reminders and Family Care | Dr Kanak Ramnani",
+    "kind": "vaccineReminders",
+    "public": true
   }
 ]
