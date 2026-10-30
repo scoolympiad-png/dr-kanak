@@ -1,0 +1,14 @@
+/* Care Navigator text-question extension — website info only */
+.website-guide{margin:1.2rem 0;padding:1rem;border:1px solid #b9dce9;border-radius:1rem;background:linear-gradient(145deg,#f0fbff,#fff8fc)}
+.website-guide h3{font-size:1.15rem;line-height:1.35;color:#194d69;margin:0 0 .35rem}
+.website-guide .small-copy{margin:.45rem 0 1rem}
+.website-guide-form{display:flex;gap:.5rem;align-items:stretch;margin-top:.7rem}
+.website-guide-form input{flex:1;min-width:0;min-height:2.9rem;border:1px solid #a9c9d9;border-radius:.7rem;padding:.7rem .85rem;background:#fff;color:#173e56;font:inherit;font-size:.94rem}
+.website-guide-form .button{border-radius:.7rem;padding:.65rem 1.1rem;border:0;white-space:nowrap}
+.website-guide-turns{display:flex;flex-direction:column;gap:.7rem;max-height:300px;overflow:auto}
+.website-guide-turn{border:1px solid #d5e6f0;border-radius:.8rem;padding:.9rem;background:#fff;color:#325d70}
+.website-guide-turn p{font-size:.91rem;line-height:1.62;margin:.2rem 0 .55rem}
+.website-guide-turn p.website-guide-question{padding:.55rem .7rem;background:#e2f7fb;color:#154965;border-radius:.65rem;font-weight:800;overflow-wrap:anywhere}
+.website-guide-turn .text-link{font-size:.88rem}
+.website-guide-form :focus-visible{outline:3px solid #f2a82e;outline-offset:2px}
+@media(max-width:420px){.website-guide{padding:.8rem}.website-guide-form{flex-wrap:wrap}.website-guide-form .button{width:100%;justify-content:center}}
