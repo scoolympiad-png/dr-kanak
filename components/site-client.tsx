@@ -43,49 +43,9 @@ export function SiteNavigation(){
 
 function CareNavigator({config}:{config:Config|null}){
  const[topic,setTopic]=useState('');
- const[websiteQuestion,setWebsiteQuestion]=useState('');
- const[websiteTurns,setWebsiteTurns]=useState<{q:string;answer:string;link:string;label:string}[]>([]);
- const topicBank=[
-  {terms:'vaccin immunis vaccine tikakaran injection shot dose missed catch up',answer:'Explore vaccination education and bring your child’s previous immunisation card to a visit. The clinical team will check which vaccines and timings apply.',link:'/vaccination/',label:'Vaccination guide'},
-  {terms:'autism autistic speech communication behaviour developmental screening',answer:'Our autism and development guides explain possible signs, parent observations and support options. Assessment and diagnosis require a qualified clinician.',link:'/autism/',label:'Autism parent resources'},
-  {terms:'growth height weight feeding nutrition eating sleep',answer:'Find parent-friendly guidance about growth, feeding, sleep and age-based milestones. Your child’s clinician can interpret individual growth and health concerns.',link:'/care-by-age/',label:'Explore guidance by age'},
-  {terms:'book appointment visit opd consultation availability schedule time fee doctor',answer:'Dr Kanak consults at Mamta Super Speciality Hospital, Raipur. The hospital team confirms actual appointment times, consultation fees and availability.',link:'/visit/',label:'Plan a visit'},
-  {terms:'address location map mamta raipur mowa contact whatsapp call phone',answer:'Dr Kanak consults at Mamta Super Speciality Hospital, beside Mowa Police Station, Mowa, Raipur. Contact the hospital team to plan your visit.',link:'/contact/',label:'Contact and directions'},
-  {terms:'school adhd learning writing attention concentration reading',answer:'Explore resources for school readiness, attention, ADHD and learning support. Individual evaluation belongs with a qualified clinician.',link:'/learning-and-adhd/',label:'Learning and ADHD resources'},
-  {terms:'newborn infant baby toddler teenager teen child children age milestone',answer:'Explore the age-by-age guides from the newborn period through adolescence, including topics to discuss at your child’s next visit.',link:'/care-by-age/',label:'Care by age'},
-  {terms:'reminder reminders alerts notifications vaccination card enrol enroll',answer:'The vaccination reminder pages explain how families can prepare for future follow-ups. No reminder registration or vaccine schedule is confirmed by this website guide.',link:'/vaccination/reminders/',label:'Learn about reminders'}
- ];
- function askWebsite(e:React.FormEvent<HTMLFormElement>){
-  e.preventDefault();
-  const q=websiteQuestion.trim().slice(0,250);
-  if(!q)return;
-  const low=q.toLowerCase();
-  let item={answer:'I can help you find information on Dr Kanak’s website. For personal concerns or booking assistance, please speak with Mamta Hospital’s team.',link:'/visit/',label:'Contact the care team'};
-  if(/breath(?:ing)? (?:difficulty|problem)|cannot breathe|unconscious|seizure|serious bleeding|emergency|severe injury|बेहोश|सांस नहीं|आपातकाल/i.test(low)){
-   item={answer:'If your child may need urgent medical care, seek immediate medical help. Do not wait for this website guide.',link:'/emergency/',label:'Emergency contacts'};
-  }else if(/diagnos|prescri|dosage|medicine dose|test results?|medical report|my child has|my baby has|high fever|what medicine|what should i give/i.test(low)){
-   item={answer:'This website guide cannot assess symptoms, test reports or recommend medicines. Please contact the treating clinical team for personal advice.',link:'/visit/',label:'Contact the clinical team'};
-  }else{
-   const words=low.replace(/[^a-z\s]/g,' ').split(/\s+/).filter(w=>w.length>2);
-   const ranked=topicBank.map(b=>({b,score:words.reduce((n,w)=>n+(b.terms.split(' ').some(t=>t===w||w.length>3&&t.startsWith(w))?1:0),0)})).sort((a,b)=>b.score-a.score);
-   if(ranked[0]?.score>0)item=ranked[0].b;
-  }
-  setWebsiteTurns(prev=>[...prev.slice(-3),{q,answer:item.answer,link:item.link,label:item.label}]);
-  setWebsiteQuestion('');
- }
-
  return <><div className="navigator-intro"><span className="icon-disc blue"><Icon name="heart"/></span><h2>A helpful place to start.</h2><p>Find the right page or speak with Mamta’s team.</p></div>
   <div className="notice urgent"><strong>Does your child need urgent help?</strong><p>For breathing difficulty, unresponsiveness, a prolonged seizure or a severe problem, seek emergency care now.</p><a href="/emergency/">Emergency contacts <Icon name="arrow"/></a></div>
   {config?.chatUrl?<div className="notice sage"><h3>Have a question about your child’s care?</h3><p>Our care assistant can help you find information or the next place to start.</p><a className="button" href={config.chatUrl} target="_blank" rel="noopener noreferrer">Open care assistant <Icon name="external"/></a></div>:<><p className="small-copy">Choose a topic for website guidance. For a personal question, contact the clinical team.</p><div className="chip-list">{['Vaccination','My child’s age','Book a visit','Feeding & growth'].map(t=><button key={t} className={topic===t?'chip active':'chip'} onClick={()=>setTopic(t)}>{t}</button>)}</div>{topic&&<div className="navigator-answer" aria-live="polite"><p>{topic==='Vaccination'?'Bring all vaccination cards so the clinical team can review the record and next visit.':topic==='My child’s age'?'Explore guidance from the newborn days through the teenage years.':topic==='Book a visit'?'The hospital team can confirm Dr Kanak’s availability, the consultation fee and a suitable time.':'Find general parent guidance and discuss individual concerns at a consultation.'}</p><a className="text-link" href={topic==='Vaccination'?'/vaccination/':topic==='My child’s age'?'/care-by-age/':topic==='Book a visit'?'/visit/':'/parent-resources/'}>Explore this topic <Icon name="arrow"/></a></div>}</>}
-  <div className="website-guide">
-   <h3>Ask about this website</h3>
-   <p className="small-copy">Try a question about childhood vaccination, age-based care, developmental learning or planning a visit.</p>
-   <div className="website-guide-turns" aria-live="polite">
-    {websiteTurns.map((turn,i)=><div key={i} className="website-guide-turn"><p className="website-guide-question">{turn.q}</p><p>{turn.answer}</p><a className="text-link" href={turn.link}>{turn.label} <Icon name="arrow"/></a></div>)}
-   </div>
-   <form className="website-guide-form" onSubmit={askWebsite}><label className="sr-only" htmlFor="kanak-website-question">Your website question</label><input id="kanak-website-question" value={websiteQuestion} onChange={e=>setWebsiteQuestion(e.target.value)} maxLength={250} autoComplete="off" placeholder="Ask about our services or website"/><button type="submit" className="button">Ask</button></form>
-  </div>
-  <p className="small-copy">Website information only. Do not share medical records, names or phone numbers here. Questions stay in this browser and are not sent to a server.</p>
   <p className="small-copy">Please share medical records only through an authorised, verified care service. This navigator cannot assess symptoms or prescribe treatment.</p><a className="text-link" href={`tel:${site.phone}`}>Speak to Mamta <Icon name="phone"/></a>
  </>;
 }
