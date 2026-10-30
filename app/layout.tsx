@@ -3,6 +3,7 @@ import "./globals.css";
 import "./communication-support.css";
 import "./vaccination-reminders.css";
 import "./autism-assessment.css";
+import "./website-guide-chat.css";
 import { SiteNavigation } from '@/components/site-client';
 import { SiteFooter } from '@/components/website';
 import { StructuredData } from '@/components/structured-data';
