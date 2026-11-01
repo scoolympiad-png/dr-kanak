@@ -10,7 +10,7 @@ import { StructuredData } from '@/components/structured-data';
 export const metadata: Metadata = {
   title: {default:'Dr Kanak Ramnani | Paediatrician at Mamta Hospital, Raipur',template:'%s | Dr Kanak Ramnani'},
   description: 'Paediatric care, vaccination and practical parent guidance with Dr Kanak Ramnani at Mamta Super Speciality Hospital, Raipur.',
-  robots: {index:false,follow:false},
+  // Page-level SEO controls manage indexing; private and preview routes remain noindex.
   icons: {
     icon: [
       {url: "/favicon.ico", sizes: "any"},
