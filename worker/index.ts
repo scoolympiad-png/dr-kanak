@@ -36,7 +36,11 @@ const worker = {
     secured.headers.set('Referrer-Policy','strict-origin-when-cross-origin');
     secured.headers.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');
     secured.headers.set('Content-Security-Policy', "frame-ancestors 'self' https://chatgpt.com https://*.chatgpt.com; object-src 'none'; base-uri 'self'");
-    if (env.PUBLIC_LAUNCH !== 'true' || ['/my-child','/search','/api/'].some(path=>new URL(request.url).pathname.startsWith(path))) secured.headers.set('X-Robots-Tag','noindex, nofollow');
+    const incoming=new URL(request.url);
+    const publishedDomain=(env.PUBLIC_SITE_URL==='https://drkanak.com'||env.PUBLIC_SITE_URL==='https://drkanak.com/')
+      && incoming.protocol==='https:'&&incoming.hostname==='drkanak.com';
+    const publicIndexing=env.PUBLIC_LAUNCH==='true'&&publishedDomain;
+    if (!publicIndexing || ['/my-child','/search','/api/'].some(path=>incoming.pathname.startsWith(path))) secured.headers.set('X-Robots-Tag','noindex, nofollow');
     if (new URL(request.url).pathname.startsWith('/api/')) secured.headers.set('Cache-Control','no-store');
     return secured;
   },

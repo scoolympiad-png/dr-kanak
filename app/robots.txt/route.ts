@@ -1,6 +1,7 @@
 import {publicLaunchOrigin} from '@/lib/seo';
-export function GET(){
- const origin=publicLaunchOrigin();
+export function GET(request:Request){
+ const actual=new URL(request.url);
+ const origin=actual.protocol==='https:'&&actual.hostname==='drkanak.com'?publicLaunchOrigin():null;
  const body=origin
   ? `User-agent: *\nAllow: /\nDisallow: /my-child\nDisallow: /api/\nDisallow: /search\nSitemap: ${origin}/sitemap.xml\n`
   : 'User-agent: *\nDisallow: /\n';
