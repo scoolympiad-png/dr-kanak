@@ -5,7 +5,7 @@ import type {Metadata} from 'next';
 
 export function publicLaunchOrigin(){
  const configured=httpsUrl(env.PUBLIC_SITE_URL);
- if(env.PUBLIC_LAUNCH!=='true'||!configured)return null;
+ if(!configured)return null; // Production origin, never a preview domain
  const canonical=new URL(site.origin);
  const actual=new URL(configured);
  return actual.origin===canonical.origin?canonical.origin:null;
