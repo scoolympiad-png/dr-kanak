@@ -252,3 +252,24 @@ for(const path of ['/vaccination/','/vaccination/schedule/','/vaccination/catch-
  const p=corePages.find(x=>x.path===path);
  if(p&&!p.related?.includes('/vaccination/first-year/'))p.related=[...(p.related||[]),'/vaccination/first-year/'];
 }
+
+
+/* Post-diagnosis parent guidance. Clinical review required before claiming doctor approval. */
+corePages.push({
+ path:'/autism/after-diagnosis/',
+ title:'After an Autism Diagnosis: What Parents Can Do Next | Dr Kanak',
+ eyebrow:'Autism support for families',
+ summary:'A compassionate, practical guide after a child’s autism diagnosis: understand the report, explore individual supports, work with school and prepare for a paediatric visit in Raipur.',
+ kind:'autismAfterDiagnosis',
+ sources:[
+  {title:'World Health Organization: Autism',url:'https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders'},
+  {title:'American Academy of Pediatrics: Autism Resources — Family Guide',url:'https://www.aap.org/en/patient-care/developmental-behavioral-pediatrics-a-resource-guide-for-general-pediatricians/autism-spectrum-disorder-resources--family-guide/'},
+  {title:'CDC: Accessing services for autism',url:'https://www.cdc.gov/autism/treatment/accessing-services.html'},
+  {title:'NHS: Supporting an autistic child',url:'https://www.nhs.uk/conditions/autism/supporting-a-child/'}
+ ],
+ related:['/autism/','/autism/assessment/','/autism/communication-support/','/autism/sensory-needs/','/family-wellbeing/autism/','/visit/']
+});
+for(const path of ['/autism/','/autism/assessment/','/autism/early-signs/','/autism/communication-support/','/autism/sensory-needs/','/family-wellbeing/autism/','/parent-resources/']){
+ const p=corePages.find(x=>x.path===path);
+ if(p&&!p.related?.includes('/autism/after-diagnosis/'))p.related=[...(p.related||[]),'/autism/after-diagnosis/'];
+}
