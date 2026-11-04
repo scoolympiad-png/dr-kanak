@@ -273,3 +273,24 @@ for(const path of ['/autism/','/autism/assessment/','/autism/early-signs/','/aut
  const p=corePages.find(x=>x.path===path);
  if(p&&!p.related?.includes('/autism/after-diagnosis/'))p.related=[...(p.related||[]),'/autism/after-diagnosis/'];
 }
+
+
+/* General parent triage education; never a personalised emergency decision tool. */
+corePages.push({
+ path:'/parent-resources/when-to-see-a-paediatrician/',
+ title:'When Should I Take My Child to a Paediatrician? | Dr Kanak',
+ eyebrow:'Parents’ guide to child health',
+ summary:'Understand emergency warning signs, when to seek prompt medical advice and how to prepare for a routine child health visit with Dr Kanak Ramnani in Raipur.',
+ kind:'whenToSeePaediatrician',
+ sources:[
+  {title:'AAP HealthyChildren: Urgent Care, ER or Pediatrician?',url:'https://www.healthychildren.org/English/family-life/health-management/Pages/urgent-care-ER-or-pediatrician-a-parent-guide.aspx'},
+  {title:'NHS: When to get urgent medical help for babies and children under 5',url:'https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/'},
+  {title:'AAP HealthyChildren: Fever and Your Baby',url:'https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx'},
+  {title:'CDC: Developmental Milestones',url:'https://www.cdc.gov/act-early/milestones/index.html'}
+ ],
+ related:['/parent-resources/','/care/','/parent-resources/fever/','/parent-resources/milestones/','/parent-resources/seizure-first-aid/','/visit/']
+});
+for(const path of ['/care/','/parent-resources/','/care/common-illnesses/','/care/well-child/','/care/newborn/','/care/growth-development/']){
+ const p=corePages.find(x=>x.path===path);
+ if(p&&!p.related?.includes('/parent-resources/when-to-see-a-paediatrician/'))p.related=[...(p.related||[]),'/parent-resources/when-to-see-a-paediatrician/'];
+}
