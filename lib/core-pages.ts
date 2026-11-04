@@ -314,3 +314,23 @@ for(const path of ['/parent-resources/','/care/common-illnesses/','/care/','/par
  const p=corePages.find(x=>x.path===path);
  if(p&&!p.related?.includes('/parent-resources/child-cough-cold/'))p.related=[...(p.related||[]),'/parent-resources/child-cough-cold/'];
 }
+
+/* Seizure aftercare and parent questions, not a personalised seizure diagnosis or emergency plan. */
+corePages.push({
+ path:'/care/paediatric-neurology/seizure-questions/',
+ title:'Childhood Seizures: Questions to Ask Your Paediatrician | Dr Kanak',
+ eyebrow:'Child neurology and family guidance',
+ summary:'Prepare for a paediatric conversation after a suspected childhood seizure: first-aid safety, emergency signs, what to record, EEG and MRI questions and follow-up at Mamta Hospital, Raipur.',
+ kind:'seizureQuestions',
+ sources:[
+  {title:'CDC: First Aid for Seizures',url:'https://www.cdc.gov/epilepsy/first-aid-for-seizures/'},
+  {title:'AAP HealthyChildren: Seizure First Aid for Children',url:'https://www.healthychildren.org/English/health-issues/conditions/seizures/Pages/Seizure-First-Aid-for-Children.aspx'},
+  {title:'NICE NG217: Diagnosis and Assessment of Epilepsy',url:'https://www.nice.org.uk/guidance/ng217/chapter/diagnosis-and-assessment-of-epilepsy'},
+  {title:'NHS: Epilepsy',url:'https://www.nhs.uk/conditions/epilepsy/'}
+ ],
+ related:['/care/paediatric-neurology/','/parent-resources/seizure-first-aid/','/parent-resources/when-to-see-a-paediatrician/','/care/growth-development/','/visit/']
+});
+for(const path of ['/care/paediatric-neurology/','/care/','/parent-resources/','/parent-resources/when-to-see-a-paediatrician/']){
+ const p=corePages.find(x=>x.path===path);
+ if(p&&!p.related?.includes('/care/paediatric-neurology/seizure-questions/'))p.related=[...(p.related||[]),'/care/paediatric-neurology/seizure-questions/'];
+}
