@@ -294,3 +294,23 @@ for(const path of ['/care/','/parent-resources/','/care/common-illnesses/','/car
  const p=corePages.find(x=>x.path===path);
  if(p&&!p.related?.includes('/parent-resources/when-to-see-a-paediatrician/'))p.related=[...(p.related||[]),'/parent-resources/when-to-see-a-paediatrician/'];
 }
+
+/* Parent-oriented cough and cold information, not medical triage or dosing advice. */
+corePages.push({
+ path:'/parent-resources/child-cough-cold/',
+ title:'Cough and Cold in Children: A Practical Parent Guide | Dr Kanak',
+ eyebrow:'Child-health resources',
+ summary:'Clear parent guidance for coughs and colds in children: comfort measures, age-specific medication cautions, warning signs and when to consult a paediatrician in Raipur.',
+ kind:'childCoughCold',
+ sources:[
+  {title:'CDC: Manage Common Cold',url:'https://www.cdc.gov/common-cold/treatment/'},
+  {title:'AAP: Coughs and Colds — Medicines or Home Remedies?',url:'https://www.healthychildren.org/English/health-issues/conditions/chest-lungs/Pages/coughs-and-colds-medicines-or-home-remedies.aspx'},
+  {title:'NHS: Colds, coughs and ear infections in children',url:'https://www.nhs.uk/baby/health/colds-coughs-and-ear-infections-in-children/'},
+  {title:'NHS: Urgent care for young children',url:'https://www.nhs.uk/baby/health/when-to-get-urgent-medical-help-for-babies-and-children-under-5/'}
+ ],
+ related:['/parent-resources/when-to-see-a-paediatrician/','/care/common-illnesses/','/vaccination/','/visit/']
+});
+for(const path of ['/parent-resources/','/care/common-illnesses/','/care/','/parent-resources/when-to-see-a-paediatrician/','/care/newborn/']){
+ const p=corePages.find(x=>x.path===path);
+ if(p&&!p.related?.includes('/parent-resources/child-cough-cold/'))p.related=[...(p.related||[]),'/parent-resources/child-cough-cold/'];
+}
