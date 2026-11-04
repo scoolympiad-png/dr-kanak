@@ -236,3 +236,19 @@ for(const path of ['/autism/','/autism/early-signs/','/autism/communication-supp
  const p=corePages.find(x=>x.path===path);
  if(p&&!p.related?.includes('/autism/assessment/'))p.related=[...(p.related||[]),'/autism/assessment/'];
 }
+
+
+/* First-year immunisation education. No individual schedule, dose engine, or reminder activation. */
+corePages.push({
+ path:'/vaccination/first-year/',
+ title:'Baby Vaccinations in the First Year | Parent Guide | Dr Kanak',
+ eyebrow:'Vaccination and newborn care',
+ summary:'A practical first-year baby vaccination guide for Indian parents: understand the record, prepare for visits, and discuss age-appropriate vaccines with Dr Kanak Ramnani in Raipur.',
+ kind:'vaccineFirstYear',
+ sources:[sources.vaccineUpdate,sources.uWin,sources.vaccines],
+ related:['/vaccination/','/vaccination/schedule/','/vaccination/catch-up/','/vaccination/after-care/','/vaccination/reminders/','/visit/']
+});
+for(const path of ['/vaccination/','/vaccination/schedule/','/vaccination/catch-up/','/vaccination/reminders/','/parent-resources/','/care/newborn/']){
+ const p=corePages.find(x=>x.path===path);
+ if(p&&!p.related?.includes('/vaccination/first-year/'))p.related=[...(p.related||[]),'/vaccination/first-year/'];
+}
