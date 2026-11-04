@@ -8,6 +8,7 @@ import {AutismTopicHub,AutismEarlySigns,VaccineHubDirectory,HomepageHubShowcase}
 import {AutismSensorySupport} from './autism-sensory-support';
 import {AutismCommunicationSupport} from './autism-communication-support';
 import {AutismAssessmentGuide} from './autism-assessment-guide';
+import {AutismAfterDiagnosisGuide} from './autism-after-diagnosis';
 import {VaccinationCareProgramme} from './vaccination-care-programme';
 import {VaccineFirstYearGuide} from './vaccine-first-year';
 import {FamilyStressGuide,AutismFamilyGuide} from './family-wellbeing-guides';
@@ -197,6 +198,7 @@ export function ContentPage({p}:{p:PageData}){let body:ReactNode;
  case 'autismSensory':body=<AutismSensorySupport/>;break;
  case 'autismCommunication':body=<AutismCommunicationSupport/>;break;
  case 'autismAssessment':body=<AutismAssessmentGuide/>;break;
+ case 'autismAfterDiagnosis':body=<AutismAfterDiagnosisGuide/>;break;
  case 'learningHub':body=<LearningHub/>;break;
  case 'adhdBright':body=<BrightMinds/>;break;
  case 'adhdWriting':body=<WritingSupport/>;break;
@@ -217,5 +219,5 @@ export function ContentPage({p}:{p:PageData}){let body:ReactNode;
  case 'faq':body=<div className="container section narrow"><FAQs items={p.faqs||[]}/><Sources p={p}/><Related paths={p.related||[]}/></div>;break;
  default:body=<Article p={p}/>;
  }
- return <>{!['learningHub','adhdBright','adhdWriting','vaccineLearning','stressGuide','autismGuide','autismHub','autismSigns','autismSensory','autismCommunication','autismAssessment','vaccineReminders','vaccineFirstYear'].includes(p.kind||'')&&<PageIntro p={p}/>} {body}{!['vaccination','visit','portal','emergency','hindi'].includes(p.kind||'')&&<VisitBand/>}</>;
+ return <>{!['learningHub','adhdBright','adhdWriting','vaccineLearning','stressGuide','autismGuide','autismHub','autismSigns','autismSensory','autismCommunication','autismAssessment','autismAfterDiagnosis','vaccineReminders','vaccineFirstYear'].includes(p.kind||'')&&<PageIntro p={p}/>} {body}{!['vaccination','visit','portal','emergency','hindi'].includes(p.kind||'')&&<VisitBand/>}</>;
 }
