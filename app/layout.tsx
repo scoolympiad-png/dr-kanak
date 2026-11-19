@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body><StructuredData/><a className="skip-link" href="#main-content">Skip to content</a><SiteNavigation/><main id="main-content">{children}</main><SiteFooter/><script src="/api/nuvyqo-ai-bootstrap.js" defer></script></body>
+      <body><StructuredData/><a className="skip-link" href="#main-content">Skip to content</a><SiteNavigation/><main id="main-content">{children}</main><SiteFooter/><script async src="https://hospital-patientos.nuvyqo.com/api/public/website-ai/health?asset=widget" data-widget-id="nqw1_IYJdlChSyCO8_XDjSgh1KITcM1SBuPfXVbSPLkPpWs4"></script></body>
     </html>
   );
 }
