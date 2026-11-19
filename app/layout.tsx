@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body><StructuredData/><a className="skip-link" href="#main-content">Skip to content</a><SiteNavigation/><main id="main-content">{children}</main><SiteFooter/></body>
+      <body><StructuredData/><a className="skip-link" href="#main-content">Skip to content</a><SiteNavigation/><main id="main-content">{children}</main><SiteFooter/><script src="/api/nuvyqo-ai-bootstrap.js" defer></script></body>
     </html>
   );
 }
