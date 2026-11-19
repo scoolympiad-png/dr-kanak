@@ -10,3 +10,7 @@ PUBLIC_LAUNCH="false"
 # MAMTA_TENANT_ID=""
 # TURNSTILE_SITE_KEY=""
 # TURNSTILE_SECRET=""
+
+# One-time, PUBLIC widget ID from Patient OS Website & AI Chat AFTER approval.
+# Leave unset until the R95 public gateway is deployed and verified.
+# NUVYQO_AI_WIDGET_ID=""

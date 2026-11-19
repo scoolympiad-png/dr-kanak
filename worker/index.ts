@@ -11,6 +11,32 @@ const worker = {
       const canonical = new URL(request.url); canonical.hostname="drkanak.com";
       return Response.redirect(canonical.href,308);
     }
+
+    // A generic website installation. Only the Patient OS-issued public widget ID
+    // is used. No hospital identity, secret, API key or chatbot knowledge is kept here.
+    // Without configuration the endpoint is deliberately a JavaScript no-op.
+    if (new URL(request.url).pathname === "/api/nuvyqo-ai-bootstrap.js") {
+      const widgetId=(env.NUVYQO_AI_WIDGET_ID ?? "").trim();
+      const validId=/^[A-Za-z0-9_-]{24,128}$/.test(widgetId);
+      const configuredHost=(()=>{
+        try {return new URL(env.PUBLIC_SITE_URL ?? "").hostname.toLowerCase();}
+        catch {return "";}
+      })();
+      const currentHost=new URL(request.url).hostname.toLowerCase();
+      const isCanonical=Boolean(configuredHost) && configuredHost===currentHost;
+      const boot=validId && isCanonical
+        ? `(()=>{"use strict";if(document.querySelector("script[data-nuvyqo-ai-widget]"))return;const s=document.createElement("script");s.async=true;s.src="https://patientos.nuvyqo.com/embed/v1/widget.js";s.setAttribute("data-widget-id",${JSON.stringify(widgetId)});s.setAttribute("data-nuvyqo-ai-widget","");document.body.appendChild(s);})();`
+        : "/* Nuvyqo Patient OS: widget not provisioned. No public AI loaded. */";
+      return new Response(boot,{
+        status:200,
+        headers:{
+          "Content-Type":"application/javascript; charset=utf-8",
+          "Cache-Control":"no-store, max-age=0",
+          "X-Content-Type-Options":"nosniff",
+          "X-Robots-Tag":"noindex, nofollow"
+        }
+      });
+    }
     let binding = ctx.props?.CONNECTORS;
     // Local preview emulates the same request-scoped capability. This branch and
     // the auxiliary service binding are absent from production builds.
