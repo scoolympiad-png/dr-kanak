@@ -25,7 +25,7 @@ const worker = {
       const currentHost=new URL(request.url).hostname.toLowerCase();
       const isCanonical=Boolean(configuredHost) && configuredHost===currentHost;
       const boot=validId && isCanonical
-        ? `(()=>{"use strict";if(document.querySelector("script[data-nuvyqo-ai-widget]"))return;const s=document.createElement("script");s.async=true;s.src="https://patientos.nuvyqo.com/embed/v1/widget.js";s.setAttribute("data-widget-id",${JSON.stringify(widgetId)});s.setAttribute("data-nuvyqo-ai-widget","");document.body.appendChild(s);})();`
+        ? `(()=>{"use strict";if(document.querySelector("script[data-nuvyqo-ai-widget]"))return;const s=document.createElement("script");s.async=true;s.src="https://hospital-patientos.nuvyqo.com/embed/v1/widget.js";s.setAttribute("data-widget-id",${JSON.stringify(widgetId)});s.setAttribute("data-nuvyqo-ai-widget","");document.body.appendChild(s);})();`
         : "/* Nuvyqo Patient OS: widget not provisioned. No public AI loaded. */";
       return new Response(boot,{
         status:200,
